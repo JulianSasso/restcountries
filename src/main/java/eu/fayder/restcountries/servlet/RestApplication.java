@@ -1,6 +1,6 @@
 package eu.fayder.restcountries.servlet;
 
-import eu.fayder.restcountries.v1.rest.CountryRest;
+import eu.fayder.restcountries.v2.rest.CountryRest;
 import eu.fayder.restcountries.v2.rest.StripeRest;
 
 import javax.ws.rs.ApplicationPath;
