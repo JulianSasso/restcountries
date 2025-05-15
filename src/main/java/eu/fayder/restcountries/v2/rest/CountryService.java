@@ -8,14 +8,14 @@ import eu.fayder.restcountries.v2.domain.Language;
 import eu.fayder.restcountries.rest.CountryServiceBase;
 import eu.fayder.restcountries.v2.domain.Currency;
 import eu.fayder.restcountries.v2.domain.RegionalBloc;
-import org.apache.log4j.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CountryService extends CountryServiceBase {
 
-    private static final Logger LOG = Logger.getLogger(CountryService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CountryService.class);
 
     private static List<Country> countries;
 

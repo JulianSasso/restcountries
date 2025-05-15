@@ -7,8 +7,8 @@ import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import eu.fayder.restcountries.domain.BaseCountry;
 import eu.fayder.restcountries.domain.ICountryRestSymbols;
-import org.apache.log4j.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.Normalizer;
@@ -18,7 +18,7 @@ import java.util.List;
 
 public class CountryServiceBase {
 
-    private static final Logger LOG = Logger.getLogger(CountryServiceBase.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CountryServiceBase.class);
 
     protected <T extends BaseCountry> T getByAlpha(String alpha, List<T> countries) {
         int alphaLength = alpha.length();

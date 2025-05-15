@@ -7,7 +7,11 @@ import com.google.gson.*;
 import eu.fayder.restcountries.domain.ResponseEntity;
 import eu.fayder.restcountries.v2.domain.Country;
 import eu.fayder.restcountries.domain.ICountryRestSymbols;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -18,14 +22,14 @@ import java.util.Arrays;
 import java.util.List;
 
 @Provider
-@Path("/v2")
+@RequestMapping("rest/v2")
 @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
+@RestController
 public class CountryRest {
 
-    private static final Logger LOG = Logger.getLogger(CountryRest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CountryRest.class);
 
-    @GET
-    @Path("all")
+    @GetMapping("all")
     public Object getAllCountries(@QueryParam("fields") String fields) {
         return this.getCountries(fields);
     }
