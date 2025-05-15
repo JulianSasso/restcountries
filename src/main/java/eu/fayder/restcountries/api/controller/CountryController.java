@@ -1,12 +1,12 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-package eu.fayder.restcountries.v2.rest;
+package eu.fayder.restcountries.api.controller;
 
 import com.google.gson.*;
-import eu.fayder.restcountries.domain.ResponseEntity;
-import eu.fayder.restcountries.v2.domain.Country;
-import eu.fayder.restcountries.domain.ICountryRestSymbols;
+import eu.fayder.restcountries.domain.countryinfo.country.ResponseEntity;
+import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import eu.fayder.restcountries.application.usecase.CountryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -18,9 +18,10 @@ import java.util.List;
 
 @RequestMapping("rest/v2")
 @RestController
-public class CountryRest {
+public class CountryController {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CountryRest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CountryController.class);
+    private static final String SEPARATOR = ";";
 
     @GetMapping("all")
     public Object getAllCountries(@RequestParam(required = false) String fields) {
@@ -215,7 +216,7 @@ public class CountryRest {
         if (fields == null || fields.isEmpty()) {
             return country;
         } else {
-            return getCountryJson(country, Arrays.asList(fields.split(ICountryRestSymbols.SEMICOLON)));
+            return getCountryJson(country, Arrays.asList(fields.split(SEPARATOR)));
         }
     }
 
@@ -223,7 +224,7 @@ public class CountryRest {
         if (excludedFields == null || excludedFields.isEmpty()) {
             return countries;
         } else {
-            return getCountriesJson(countries, Arrays.asList(excludedFields.split(ICountryRestSymbols.SEMICOLON)));
+            return getCountriesJson(countries, Arrays.asList(excludedFields.split(SEPARATOR)));
         }
     }
 

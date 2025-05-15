@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.servlet;
+package eu.fayder.restcountries.api.mapper;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;

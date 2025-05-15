@@ -1,7 +1,10 @@
 package eu.fayder.restcountries.old.v2;
 
-import eu.fayder.restcountries.v2.domain.*;
-import eu.fayder.restcountries.v2.rest.CountryService;
+import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import eu.fayder.restcountries.domain.countryinfo.country.Currency;
+import eu.fayder.restcountries.domain.countryinfo.country.Language;
+import eu.fayder.restcountries.domain.countryinfo.country.Translations;
+import eu.fayder.restcountries.application.usecase.CountryService;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -154,7 +157,7 @@ public class CountryServiceTest {
 
 
     // TODO: Test fails
-    //  Cannot invoke "java.util.List.iterator()" because the return value of "eu.fayder.restcountries.v2.domain.Country.getRegionalBlocs()" is null
+    //  Cannot invoke "java.util.List.iterator()" because the return value of "eu.fayder.restcountries.domain.country.Country.getRegionalBlocs()" is null
     /*@Test
     public void getByRegionalBloc() throws Exception {
         List<Country> countries = CountryService.getInstance().getByRegionalBloc("eu");

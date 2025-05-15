@@ -1,12 +1,11 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-package eu.fayder.restcountries.rest;
+package eu.fayder.restcountries.domain.countryinfo;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-import eu.fayder.restcountries.domain.BaseCountry;
-import eu.fayder.restcountries.domain.ICountryRestSymbols;
+import eu.fayder.restcountries.domain.countryinfo.country.BaseCountry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.io.InputStream;
@@ -19,6 +18,7 @@ import java.util.List;
 public class CountryServiceBase {
 
     private static final Logger LOG = LoggerFactory.getLogger(CountryServiceBase.class);
+    private static final String SEPARATOR = ";";
 
     protected <T extends BaseCountry> T getByAlpha(String alpha, List<T> countries) {
         int alphaLength = alpha.length();
@@ -40,7 +40,7 @@ public class CountryServiceBase {
         List<BaseCountry> result = new ArrayList<>();
         if(codeList == null) return result;
 
-        List<String> codes = Arrays.asList(codeList.split(ICountryRestSymbols.SEMICOLON));
+        List<String> codes = Arrays.asList(codeList.split(SEPARATOR));
         for(String code : codes) {
             BaseCountry country = getByAlpha(code, countries);
             if(!result.contains(country))

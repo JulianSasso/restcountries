@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.servlet;
+package eu.fayder.restcountries.infrastructure.http;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

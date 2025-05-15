@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.v2.domain;
+package eu.fayder.restcountries.domain.countryinfo.country;
 
 /**
  * Created by fayder on 24/02/2017.

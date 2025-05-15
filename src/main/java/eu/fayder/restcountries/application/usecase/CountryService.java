@@ -1,13 +1,13 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-package eu.fayder.restcountries.v2.rest;
+package eu.fayder.restcountries.application.usecase;
 
-import eu.fayder.restcountries.v2.domain.Country;
-import eu.fayder.restcountries.v2.domain.Language;
-import eu.fayder.restcountries.rest.CountryServiceBase;
-import eu.fayder.restcountries.v2.domain.Currency;
-import eu.fayder.restcountries.v2.domain.RegionalBloc;
+import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import eu.fayder.restcountries.domain.countryinfo.country.Language;
+import eu.fayder.restcountries.domain.countryinfo.CountryServiceBase;
+import eu.fayder.restcountries.domain.countryinfo.country.Currency;
+import eu.fayder.restcountries.domain.countryinfo.country.RegionalBloc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
