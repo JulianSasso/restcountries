@@ -1,0 +1,258 @@
+[
+    {
+        "name": "Colombia",
+        "topLevelDomain": [
+            ".co"
+        ],
+        "alpha2Code": "CO",
+        "alpha3Code": "COL",
+        "callingCodes": [
+            "57"
+        ],
+        "capital": "Bogotá",
+        "altSpellings": [
+            "CO",
+            "Republic of Colombia",
+            "República de Colombia"
+        ],
+        "region": "Americas",
+        "subregion": "South America",
+        "population": 50882884,
+        "latlng": [
+            4.0,
+            -72.0
+        ],
+        "demonym": "Colombian",
+        "area": 1141748.0,
+        "gini": 55.9,
+        "timezones": [
+            "UTC-05:00"
+        ],
+        "borders": [
+            "BRA",
+            "ECU",
+            "PAN",
+            "PER",
+            "VEN"
+        ],
+        "nativeName": "Colombia",
+        "numericCode": "170",
+        "currencies": [
+            {
+                "code": "COP",
+                "name": "Colombian peso",
+                "symbol": "$"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "es",
+                "iso639_2": "spa",
+                "name": "Spanish",
+                "nativeName": "Español"
+            }
+        ],
+        "translations": {
+            "de": "Kolumbien",
+            "es": "Colombia",
+            "fr": "Colombie",
+            "ja": "コロンビア",
+            "it": "Colombia",
+            "br": "Colômbia",
+            "pt": "Colômbia",
+            "nl": "Colombia",
+            "hr": "Kolumbija",
+            "fa": "کلمبیا"
+        },
+        "flag": "https://restcountries.eu/data/col.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "PA",
+                "name": "Pacific Alliance",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "Alianza del Pacífico"
+                ]
+            },
+            {
+                "acronym": "USAN",
+                "name": "Union of South American Nations",
+                "otherAcronyms": [
+                    "UNASUR",
+                    "UNASUL",
+                    "UZAN"
+                ],
+                "otherNames": [
+                    "Unión de Naciones Suramericanas",
+                    "União de Nações Sul-Americanas",
+                    "Unie van Zuid-Amerikaanse Naties",
+                    "South American Union"
+                ]
+            }
+        ],
+        "cioc": "COL"
+    },
+    {
+        "name": "Norway",
+        "topLevelDomain": [
+            ".no"
+        ],
+        "alpha2Code": "NO",
+        "alpha3Code": "NOR",
+        "callingCodes": [
+            "47"
+        ],
+        "capital": "Oslo",
+        "altSpellings": [
+            "NO",
+            "Norge",
+            "Noreg",
+            "Kingdom of Norway",
+            "Kongeriket Norge",
+            "Kongeriket Noreg"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 5379475,
+        "latlng": [
+            62.0,
+            10.0
+        ],
+        "demonym": "Norwegian",
+        "area": 323802.0,
+        "gini": 25.8,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "FIN",
+            "SWE",
+            "RUS"
+        ],
+        "nativeName": "Norge",
+        "numericCode": "578",
+        "currencies": [
+            {
+                "code": "NOK",
+                "name": "Norwegian krone",
+                "symbol": "kr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "no",
+                "iso639_2": "nor",
+                "name": "Norwegian",
+                "nativeName": "Norsk"
+            },
+            {
+                "iso639_1": "nb",
+                "iso639_2": "nob",
+                "name": "Norwegian Bokmål",
+                "nativeName": "Norsk bokmål"
+            },
+            {
+                "iso639_1": "nn",
+                "iso639_2": "nno",
+                "name": "Norwegian Nynorsk",
+                "nativeName": "Norsk nynorsk"
+            }
+        ],
+        "translations": {
+            "de": "Norwegen",
+            "es": "Noruega",
+            "fr": "Norvège",
+            "ja": "ノルウェー",
+            "it": "Norvegia",
+            "br": "Noruega",
+            "pt": "Noruega",
+            "nl": "Noorwegen",
+            "hr": "Norveška",
+            "fa": "نروژ"
+        },
+        "flag": "https://restcountries.eu/data/nor.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EFTA",
+                "name": "European Free Trade Association",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "NOR"
+    },
+    {
+        "name": "Estonia",
+        "topLevelDomain": [
+            ".ee"
+        ],
+        "alpha2Code": "EE",
+        "alpha3Code": "EST",
+        "callingCodes": [
+            "372"
+        ],
+        "capital": "Tallinn",
+        "altSpellings": [
+            "EE",
+            "Eesti",
+            "Republic of Estonia",
+            "Eesti Vabariik"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 1331057,
+        "latlng": [
+            59.0,
+            26.0
+        ],
+        "demonym": "Estonian",
+        "area": 45227.0,
+        "gini": 36.0,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "LVA",
+            "RUS"
+        ],
+        "nativeName": "Eesti",
+        "numericCode": "233",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "et",
+                "iso639_2": "est",
+                "name": "Estonian",
+                "nativeName": "eesti"
+            }
+        ],
+        "translations": {
+            "de": "Estland",
+            "es": "Estonia",
+            "fr": "Estonie",
+            "ja": "エストニア",
+            "it": "Estonia",
+            "br": "Estônia",
+            "pt": "Estónia",
+            "nl": "Estland",
+            "hr": "Estonija",
+            "fa": "استونی"
+        },
+        "flag": "https://restcountries.eu/data/est.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "EST"
+    }
+]

@@ -116,6 +116,9 @@ public class CountryService extends CountryServiceBase {
     public List<Country> getByRegionalBloc(String regionalBloc) {
         List<Country> result = new ArrayList<>();
         for (Country country : countries) {
+            if(country.getRegionalBlocs() == null)
+                continue;
+
             for (RegionalBloc countryRegionalBloc : country.getRegionalBlocs()) {
                 if (countryRegionalBloc.getAcronym().toUpperCase().equals(regionalBloc.toUpperCase())
                         || countryRegionalBloc.getOtherAcronyms().contains(regionalBloc.toUpperCase())) {

@@ -46,7 +46,7 @@ public class CountryRest {
         return getResponse(Response.Status.NOT_FOUND);
     }
 
-    @GetMapping("alpha/")
+    @GetMapping("alpha")
     public Object getByAlphaList(@RequestParam("codes") String codes, @RequestParam(required = false) String fields) {
         LOG.info("Getting by list " + codes);
         if (isEmpty(codes) || codes.length() < 2 || (codes.length() > 3 && !codes.contains(";"))) {
@@ -83,7 +83,7 @@ public class CountryRest {
     }
 
     @GetMapping("name/{name}")
-    public Object getByName(@PathVariable("name") String name, @RequestParam("fullText") boolean fullText, @RequestParam(required = false) String fields) {
+    public Object getByName(@PathVariable("name") String name, @RequestParam(required = false, defaultValue = "false") Boolean fullText, @RequestParam(required = false) String fields) {
         LOG.info("Getting by name " + name);
         try {
             List<Country> countries = CountryService.getInstance().getByName(name, fullText);
