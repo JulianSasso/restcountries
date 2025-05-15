@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.v2;
+package eu.fayder.restcountries.old.v2;
 
 import eu.fayder.restcountries.v2.domain.*;
 import eu.fayder.restcountries.v2.rest.CountryService;
