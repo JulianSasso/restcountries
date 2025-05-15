@@ -4,11 +4,12 @@
 package eu.fayder.restcountries.api.controller;
 
 import com.google.gson.*;
+import eu.fayder.restcountries.domain.countryinfo.CountryInformationService;
 import eu.fayder.restcountries.domain.countryinfo.country.ResponseEntity;
 import eu.fayder.restcountries.domain.countryinfo.country.Country;
-import eu.fayder.restcountries.application.usecase.CountryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.core.Response;
@@ -20,6 +21,9 @@ import java.util.List;
 @RestController
 public class CountryController {
 
+    @Autowired
+    CountryInformationService countryService;
+
     private static final Logger LOG = LoggerFactory.getLogger(CountryController.class);
     private static final String SEPARATOR = ";";
 
@@ -30,7 +34,7 @@ public class CountryController {
 
     public Object getCountries(String fields) {
         LOG.info("Getting all");
-        List<Country> countries = CountryService.getInstance().getAll();
+        List<Country> countries = countryService.getAll();
         return parsedCountries(countries, fields);
     }
 
@@ -40,7 +44,7 @@ public class CountryController {
         if (isEmpty(alpha) || alpha.length() < 2 || alpha.length() > 3) {
             return getResponse(Response.Status.BAD_REQUEST);
         }
-        Country country = CountryService.getInstance().getByAlpha(alpha);
+        Country country = countryService.getByAlpha(alpha);
         if (country != null) {
             return parsedCountry(country, fields);
         }
@@ -54,7 +58,7 @@ public class CountryController {
             return getResponse(Response.Status.BAD_REQUEST);
         }
         try {
-            List<Country> countries = CountryService.getInstance().getByCodeList(codes);
+            List<Country> countries = countryService.getByCodeList(codes);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -72,7 +76,7 @@ public class CountryController {
             return getResponse(Response.Status.BAD_REQUEST);
         }
         try {
-            List<Country> countries = CountryService.getInstance().getByCurrency(currency);
+            List<Country> countries = countryService.getByCurrency(currency);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -87,7 +91,7 @@ public class CountryController {
     public Object getByName(@PathVariable("name") String name, @RequestParam(required = false, defaultValue = "false") Boolean fullText, @RequestParam(required = false) String fields) {
         LOG.info("Getting by name " + name);
         try {
-            List<Country> countries = CountryService.getInstance().getByName(name, fullText);
+            List<Country> countries = countryService.getByName(name, fullText);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -102,7 +106,7 @@ public class CountryController {
     public Object getByCallingCode(@PathVariable("callingcode") String callingcode, @RequestParam(required = false) String fields) {
         LOG.info("Getting by calling code " + callingcode);
         try {
-            List<Country> countries = CountryService.getInstance().getByCallingCode(callingcode);
+            List<Country> countries = countryService.getByCallingCode(callingcode);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -117,7 +121,7 @@ public class CountryController {
     public Object getByCapital(@PathVariable("capital") String capital, @RequestParam(required = false) String fields) {
         LOG.info("Getting by capital " + capital);
         try {
-            List<Country> countries = CountryService.getInstance().getByCapital(capital);
+            List<Country> countries = countryService.getByCapital(capital);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -132,7 +136,7 @@ public class CountryController {
     public Object getByRegion(@PathVariable("region") String region, @RequestParam(required = false) String fields) {
         LOG.info("Getting by region " + region);
         try {
-            List<Country> countries = CountryService.getInstance().getByRegion(region);
+            List<Country> countries = countryService.getByRegion(region);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -147,7 +151,7 @@ public class CountryController {
     public Object getBySubRegion(@PathVariable("subregion") String subregion, @RequestParam(required = false) String fields) {
         LOG.info("Getting by sub region " + subregion);
         try {
-            List<Country> countries = CountryService.getInstance().getBySubRegion(subregion);
+            List<Country> countries = countryService.getBySubregion(subregion);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -162,7 +166,7 @@ public class CountryController {
     public Object getByLanguage(@PathVariable("lang") String language, @RequestParam(required = false) String fields) {
         LOG.info("Getting by language " + language);
         try {
-            List<Country> countries = CountryService.getInstance().getByLanguage(language);
+            List<Country> countries = countryService.getByLanguage(language);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -177,7 +181,7 @@ public class CountryController {
     public Object getByDemonym(@PathVariable("demonym") String demonym, @RequestParam(required = false) String fields) {
         LOG.info("Getting by demonym " + demonym);
         try {
-            List<Country> countries = CountryService.getInstance().getByDemonym(demonym);
+            List<Country> countries = countryService.getByDemonym(demonym);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -192,7 +196,7 @@ public class CountryController {
     public Object getByRegionalBloc(@PathVariable("regionalbloc") String regionalBlock, @RequestParam(required = false) String fields) {
         LOG.info("Getting by regional bloc " + regionalBlock);
         try {
-            List<Country> countries = CountryService.getInstance().getByRegionalBloc(regionalBlock);
+            List<Country> countries = countryService.getByRegionalBloc(regionalBlock);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
