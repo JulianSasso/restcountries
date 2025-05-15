@@ -9,41 +9,32 @@ import eu.fayder.restcountries.v2.domain.Country;
 import eu.fayder.restcountries.domain.ICountryRestSymbols;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.Provider;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Provider
 @RequestMapping("rest/v2")
-@Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
 @RestController
 public class CountryRest {
 
     private static final Logger LOG = LoggerFactory.getLogger(CountryRest.class);
 
     @GetMapping("all")
-    public Object getAllCountries(@QueryParam("fields") String fields) {
+    public Object getAllCountries(@RequestParam(required = false) String fields) {
         return this.getCountries(fields);
     }
 
-    @GET
-    public Object getCountries(@QueryParam("fields") String fields) {
+    public Object getCountries(String fields) {
         LOG.info("Getting all");
         List<Country> countries = CountryService.getInstance().getAll();
         return parsedCountries(countries, fields);
     }
 
-    @GET
-    @Path("alpha/{alphacode}")
-    public Object getByAlpha(@PathParam("alphacode") String alpha, @QueryParam("fields") String fields) {
+    @GetMapping("alpha/{alphacode}")
+    public Object getByAlpha(@PathVariable("alphacode") String alpha, @RequestParam(required = false) String fields) {
         LOG.info("Getting by alpha " + alpha);
         if (isEmpty(alpha) || alpha.length() < 2 || alpha.length() > 3) {
             return getResponse(Response.Status.BAD_REQUEST);
@@ -55,9 +46,8 @@ public class CountryRest {
         return getResponse(Response.Status.NOT_FOUND);
     }
 
-    @GET
-    @Path("alpha/")
-    public Object getByAlphaList(@QueryParam("codes") String codes, @QueryParam("fields") String fields) {
+    @GetMapping("alpha/")
+    public Object getByAlphaList(@RequestParam("codes") String codes, @RequestParam(required = false) String fields) {
         LOG.info("Getting by list " + codes);
         if (isEmpty(codes) || codes.length() < 2 || (codes.length() > 3 && !codes.contains(";"))) {
             return getResponse(Response.Status.BAD_REQUEST);
@@ -74,9 +64,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("currency/{currency}")
-    public Object getByCurrency(@PathParam("currency") String currency, @QueryParam("fields") String fields) {
+    @GetMapping("currency/{currency}")
+    public Object getByCurrency(@PathVariable("currency") String currency, @RequestParam(required = false) String fields) {
         LOG.info("Getting by currency " + currency);
         if (isEmpty(currency) || currency.length() != 3) {
             return getResponse(Response.Status.BAD_REQUEST);
@@ -93,9 +82,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("name/{name}")
-    public Object getByName(@PathParam("name") String name, @QueryParam("fullText") boolean fullText, @QueryParam("fields") String fields) {
+    @GetMapping("name/{name}")
+    public Object getByName(@PathVariable("name") String name, @RequestParam("fullText") boolean fullText, @RequestParam(required = false) String fields) {
         LOG.info("Getting by name " + name);
         try {
             List<Country> countries = CountryService.getInstance().getByName(name, fullText);
@@ -109,9 +97,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("callingcode/{callingcode}")
-    public Object getByCallingCode(@PathParam("callingcode") String callingcode, @QueryParam("fields") String fields) {
+    @GetMapping("callingcode/{callingcode}")
+    public Object getByCallingCode(@PathVariable("callingcode") String callingcode, @RequestParam(required = false) String fields) {
         LOG.info("Getting by calling code " + callingcode);
         try {
             List<Country> countries = CountryService.getInstance().getByCallingCode(callingcode);
@@ -125,9 +112,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("capital/{capital}")
-    public Object getByCapital(@PathParam("capital") String capital, @QueryParam("fields") String fields) {
+    @GetMapping("capital/{capital}")
+    public Object getByCapital(@PathVariable("capital") String capital, @RequestParam(required = false) String fields) {
         LOG.info("Getting by capital " + capital);
         try {
             List<Country> countries = CountryService.getInstance().getByCapital(capital);
@@ -141,9 +127,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("region/{region}")
-    public Object getByRegion(@PathParam("region") String region, @QueryParam("fields") String fields) {
+    @GetMapping("region/{region}")
+    public Object getByRegion(@PathVariable("region") String region, @RequestParam(required = false) String fields) {
         LOG.info("Getting by region " + region);
         try {
             List<Country> countries = CountryService.getInstance().getByRegion(region);
@@ -157,9 +142,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("subregion/{subregion}")
-    public Object getBySubRegion(@PathParam("subregion") String subregion, @QueryParam("fields") String fields) {
+    @GetMapping("subregion/{subregion}")
+    public Object getBySubRegion(@PathVariable("subregion") String subregion, @RequestParam(required = false) String fields) {
         LOG.info("Getting by sub region " + subregion);
         try {
             List<Country> countries = CountryService.getInstance().getBySubRegion(subregion);
@@ -173,9 +157,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("lang/{lang}")
-    public Object getByLanguage(@PathParam("lang") String language, @QueryParam("fields") String fields) {
+    @GetMapping("lang/{lang}")
+    public Object getByLanguage(@PathVariable("lang") String language, @RequestParam(required = false) String fields) {
         LOG.info("Getting by language " + language);
         try {
             List<Country> countries = CountryService.getInstance().getByLanguage(language);
@@ -189,9 +172,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("demonym/{demonym}")
-    public Object getByDemonym(@PathParam("demonym") String demonym, @QueryParam("fields") String fields) {
+    @GetMapping("demonym/{demonym}")
+    public Object getByDemonym(@PathVariable("demonym") String demonym, @RequestParam(required = false) String fields) {
         LOG.info("Getting by demonym " + demonym);
         try {
             List<Country> countries = CountryService.getInstance().getByDemonym(demonym);
@@ -205,9 +187,8 @@ public class CountryRest {
         }
     }
 
-    @GET
-    @Path("regionalbloc/{regionalbloc}")
-    public Object getByRegionalBloc(@PathParam("regionalbloc") String regionalBlock, @QueryParam("fields") String fields) {
+    @GetMapping("regionalbloc/{regionalbloc}")
+    public Object getByRegionalBloc(@PathVariable("regionalbloc") String regionalBlock, @RequestParam(required = false) String fields) {
         LOG.info("Getting by regional bloc " + regionalBlock);
         try {
             List<Country> countries = CountryService.getInstance().getByRegionalBloc(regionalBlock);
@@ -221,11 +202,6 @@ public class CountryRest {
         }
     }
 
-    @POST
-    public Object doPOST() {
-        LOG.info("Handling POST Request");
-        return getResponse(Response.Status.METHOD_NOT_ALLOWED);
-    }
 
     private Response getResponse(Response.Status status) {
         Gson gson = new Gson();
