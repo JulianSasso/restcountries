@@ -3,22 +3,5 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package eu.fayder.restcountries.domain.countryinfo.country;
 
-public class ResponseEntity {
-	
-	private final int status;
-	private final String message;
-	
-	public ResponseEntity(int status, String message) {
-		this.status = status;
-		this.message = message;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public int getStatus() {
-		return status;
-	}
-
+public record ResponseEntity(int status, String message) {
 }

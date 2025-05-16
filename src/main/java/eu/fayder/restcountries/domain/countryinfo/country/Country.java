@@ -10,25 +10,25 @@ import java.util.List;
 @Getter
 public class Country {
 
-    protected String name;
+    private String name;
 
     private List<String> topLevelDomain;
 
-    protected String alpha2Code;
+    private String alpha2Code;
 
     private String alpha3Code;
 
     private List<String> callingCodes;
 
-    protected String capital;
+    private String capital;
 
     private List<String> altSpellings;
 
-    protected String region;
+    private String region;
 
-    protected String subregion;
+    private String subregion;
 
-    protected Integer population;
+    private Integer population;
 
     // Coordinates: Latitude and Longitude
     private List<Double> latlng;
@@ -37,21 +37,26 @@ public class Country {
 
     private Double area;
 
-    protected Double gini;
+    private Double gini;
 
     private List<String> timezones;
 
-    protected List<String> borders;
+    private List<String> borders;
 
-    protected String nativeName;
+    private String nativeName;
 
     private String numericCode;
 
     private List<Currency> currencies;
+
     private List<Language> languages;
+
     private Translations translations;
+
     private String flag;
+
     private List<RegionalBloc> regionalBlocs;
+
     private String cioc;
 
 }

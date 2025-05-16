@@ -2,6 +2,9 @@ package eu.fayder.restcountries;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import eu.fayder.restcountries.api.controller.CountryController;
+import eu.fayder.restcountries.application.usecase.CountryInformationServiceImpl;
+import eu.fayder.restcountries.boot.config.AppConfig;
 import eu.fayder.restcountries.testUtils.JsonTestUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,7 +16,12 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT/*,
+        classes = {
+                CountryController.class,
+                CountryInformationServiceImpl.class,
+        }*/)
 public class CountryRestIT {
 
     @LocalServerPort

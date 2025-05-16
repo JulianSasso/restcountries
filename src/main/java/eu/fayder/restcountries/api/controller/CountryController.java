@@ -22,7 +22,7 @@ import java.util.List;
 public class CountryController {
 
     @Autowired
-    CountryInformationService countryService;
+    private CountryInformationService countryService;
 
     private static final Logger LOG = LoggerFactory.getLogger(CountryController.class);
     private static final String SEPARATOR = ";";
