@@ -6,6 +6,7 @@ package eu.fayder.restcountries.domain.countryinfo.country;
 import lombok.Getter;
 
 import java.util.List;
+import java.util.Map;
 
 @Getter
 public class Country {
@@ -51,7 +52,9 @@ public class Country {
 
     private List<Language> languages;
 
-    private Translations translations;
+    //private Translations translations;
+
+    private Map<String, String> translations;
 
     private String flag;
 

@@ -1,7 +1,9 @@
 package eu.fayder.restcountries.application.usecase;
 
 import eu.fayder.restcountries.domain.countryinfo.CountryInformationService;
+import eu.fayder.restcountries.domain.countryinfo.CountryRepository;
 import eu.fayder.restcountries.domain.countryinfo.country.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
@@ -14,12 +16,20 @@ import java.nio.charset.StandardCharsets;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CountryInformationServiceImpl implements CountryInformationService {
 
     private static final Logger LOG = LoggerFactory.getLogger(CountryInformationServiceImpl.class);
     private static final String SEPARATOR = ";";
+
+    private final CountryRepository countryRepository;
+
+    @Autowired
+    public CountryInformationServiceImpl(CountryRepository countryRepository) {
+        this.countryRepository = countryRepository;
+    }
 
     // TODO: Mover a repository
     private static final List<Country> countries = loadJson("countriesV2.json");

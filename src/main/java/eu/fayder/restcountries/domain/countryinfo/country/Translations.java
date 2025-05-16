@@ -14,11 +14,16 @@ public class Translations {
     private String nl;
     private String hr;
     private String fa;
+
     private String de;
 	private String es;
 	private String fr;
 	private String ja;
 	private String it;
+
+	private String ru;
+	private String pl;
+	private String cs;
 
 	public void setDe(String de) {
 		this.de = de;

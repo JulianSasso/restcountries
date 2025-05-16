@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = {
-        "eu.fayder.restcountries.application.usecase"
+        "eu.fayder.restcountries.application.usecase",
+        "eu.fayder.restcountries.infrastructure.persistence",
 })
 public class AppConfig {
 }

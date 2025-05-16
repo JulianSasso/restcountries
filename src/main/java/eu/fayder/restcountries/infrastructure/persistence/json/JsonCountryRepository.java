@@ -5,26 +5,24 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.fayder.restcountries.domain.countryinfo.CountryRepository;
 import eu.fayder.restcountries.domain.countryinfo.country.Country;
 import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 import java.io.InputStream;
 import java.util.List;
 import java.util.Optional;
 
-//@Repository
+@Repository
 public class JsonCountryRepository implements CountryRepository {
 
     private List<Country> countries;
-
-    @Value("${countriesV2.json}")
-    private String jsonPath;
+    private static final String JSON_PATH = "countriesV2.json";
 
     @PostConstruct
     private void init() {
+        System.out.println("Loading countries from JSON file: " + JSON_PATH);
         try {
             ObjectMapper mapper = new ObjectMapper();
-            InputStream is = getClass().getClassLoader().getResourceAsStream(jsonPath);
+            InputStream is = getClass().getClassLoader().getResourceAsStream(JSON_PATH);
             countries = mapper.readValue(is, new TypeReference<>() {});
         } catch (Exception e) {
             throw new RuntimeException("Error loading countries JSON", e);
