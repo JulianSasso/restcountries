@@ -25,7 +25,9 @@ public interface CountryRepository {
 
     List<Country> findByCurrency(String currency);
 
-    List<Country> findByLanguage(String language);
+    List<Country> findByLanguageTwoLetterIsoCode(String language);
+
+    List<Country> findByLanguageThreeLetterIsoCode(String language);
 
     List<Country> findByDemonym(String demonym);
 
