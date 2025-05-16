@@ -7,7 +7,7 @@ import lombok.Getter;
  */
 @Getter
 // TODO: Esto deberia ser un Map<Enum, String> o algo asi
-public class Translations extends CountryTranslations {
+public class Translations {
 
     private String br;
     private String pt;
