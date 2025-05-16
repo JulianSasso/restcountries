@@ -22,7 +22,7 @@ public class CountryInformationServiceImpl implements CountryInformationService 
     private static final String SEPARATOR = ";";
 
     // TODO: Mover a repository
-    private static List<Country> countries = (List<Country>) loadJson("countriesV2.json", Country.class);
+    private static List<Country> countries = loadJson("countriesV2.json");
 
     @Override
     public List<Country> getAll() {
@@ -222,9 +222,9 @@ public class CountryInformationServiceImpl implements CountryInformationService 
                 .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
 
-    protected static List<? extends BaseCountry> loadJson(String filename, Class<? extends BaseCountry> clazz) {
+    protected static List<Country> loadJson(String filename) {
         LOG.debug("Loading JSON " + filename);
-        List<BaseCountry> countries = new ArrayList<>();
+        List<Country> countries = new ArrayList<>();
         InputStream is = CountryInformationServiceImpl.class.getClassLoader().getResourceAsStream(filename);
         Gson gson = new Gson();
         JsonReader reader;
@@ -232,7 +232,7 @@ public class CountryInformationServiceImpl implements CountryInformationService 
             reader = new JsonReader(new InputStreamReader(is, "UTF-8"));
             reader.beginArray();
             while(reader.hasNext()) {
-                BaseCountry country = gson.fromJson(reader, clazz);
+                Country country = gson.fromJson(reader, Country.class);
                 countries.add(country);
             }
         } catch (Exception e) {
