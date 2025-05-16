@@ -10,9 +10,9 @@ import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.text.Normalizer;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -22,7 +22,7 @@ public class CountryInformationServiceImpl implements CountryInformationService 
     private static final String SEPARATOR = ";";
 
     // TODO: Mover a repository
-    private static List<Country> countries = loadJson("countriesV2.json");
+    private static final List<Country> countries = loadJson("countriesV2.json");
 
     @Override
     public List<Country> getAll() {
@@ -51,7 +51,7 @@ public class CountryInformationServiceImpl implements CountryInformationService 
         List<Country> result = new ArrayList<>();
         if(codeList == null) return result;
 
-        List<String> codes = Arrays.asList(codeList.split(SEPARATOR));
+        String[] codes = codeList.split(SEPARATOR);
         for(String code : codes) {
             Country country = getByAlpha(code);
             if(!result.contains(country))
@@ -169,7 +169,7 @@ public class CountryInformationServiceImpl implements CountryInformationService 
                 continue;
 
             for (RegionalBloc countryRegionalBloc : country.getRegionalBlocs()) {
-                if (countryRegionalBloc.getAcronym().toUpperCase().equals(regionalBloc.toUpperCase())
+                if (countryRegionalBloc.getAcronym().equalsIgnoreCase(regionalBloc)
                         || countryRegionalBloc.getOtherAcronyms().contains(regionalBloc.toUpperCase())) {
                     result.add(country);
                 }
@@ -229,7 +229,7 @@ public class CountryInformationServiceImpl implements CountryInformationService 
         Gson gson = new Gson();
         JsonReader reader;
         try {
-            reader = new JsonReader(new InputStreamReader(is, "UTF-8"));
+            reader = new JsonReader(new InputStreamReader(is, StandardCharsets.UTF_8));
             reader.beginArray();
             while(reader.hasNext()) {
                 Country country = gson.fromJson(reader, Country.class);
