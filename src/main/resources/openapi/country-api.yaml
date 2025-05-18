@@ -59,6 +59,8 @@ paths:
           required: true
           schema:
             type: string
+            minLength: 2
+            maxLength: 3
         - $ref: '#/components/parameters/fieldsParam'
       responses:
         '200':
@@ -161,14 +163,14 @@ paths:
                 items:
                   $ref: '#/components/schemas/CountryResponse'
 
-  /v2/callingcode/{callingcode}:
+  /v2/callingcode/{callingCode}:
     get:
       operationId: getCountriesByCallingCode
       summary: Search countries by calling code
       tags:
         - country
       parameters:
-        - name: callingcode
+        - name: callingCode
           in: path
           required: true
           schema:
@@ -208,14 +210,14 @@ paths:
                 items:
                   $ref: '#/components/schemas/CountryResponse'
 
-  /v2/regionalbloc/{regionalbloc}:
+  /v2/regionalbloc/{regionalBloc}:
     get:
       operationId: getCountriesByRegionalBloc
       summary: Search countries by regional bloc
       tags:
         - country
       parameters:
-        - name: regionalbloc
+        - name: regionalBloc
           in: path
           required: true
           schema:
@@ -224,6 +226,29 @@ paths:
       responses:
         '200':
           description: Countries in the specified regional bloc
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CountryResponse'
+
+  /v2/demonym/{demonym}:
+    get:
+      operationId: getCountriesByDemonym
+      summary: Search countries by demonym
+      tags:
+        - country
+      parameters:
+        - name: demonym
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/fieldsParam'
+      responses:
+        '200':
+          description: Countries with the specified demonym
           content:
             application/json:
               schema:
@@ -253,6 +278,8 @@ components:
           items: { type: string }
         alpha2Code:
           type: string
+          minLength: 2
+          maxLength: 3
         alpha3Code:
           type: string
         callingCodes:
