@@ -11,4 +11,5 @@ public class CountriesApplication {
     public static void main(String[] args) {
         SpringApplication.run(CountriesApplication.class, args);
     }
+
 }
