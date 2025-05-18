@@ -24,51 +24,109 @@ public class CountryControllerOpenApi implements CountryApi {
     @Override
     @GetMapping("all")
     public ResponseEntity<List<CountryResponse>> getAllCountries(String fields) {
-        return ResponseEntity.ok(countryService.getAll().stream().map(countryMapper::toResponse).toList());
+        return ResponseEntity.ok(countryService.getAll()
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
+    @GetMapping("alpha")
     public ResponseEntity<List<CountryResponse>> getCountriesByAlphaCodes(String codes, String fields) {
-        return CountryApi.super.getCountriesByAlphaCodes(codes, fields);
+        if(codes == null || codes.isEmpty()) {
+            return ResponseEntity.badRequest().build();
+        }
+
+        Set<String> codeSet = Set.of(codes.split(";"));
+        return ResponseEntity.ok(countryService.getByAlphaCodeList(codeSet)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<List<CountryResponse>> getCountriesByCallingCode(String callingcode, String fields) {
-        return CountryApi.super.getCountriesByCallingCode(callingcode, fields);
+    @GetMapping("alpha/{code}")
+    public ResponseEntity<CountryResponse> getCountryByAlphaCode(@PathVariable String code, String fields) {
+        if(code == null || code.length() < 2 || code.length() > 3) {
+            return ResponseEntity.badRequest().build();
+        }
+
+        return countryService.getByAlpha(code)
+                .map(countryMapper::toResponse)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+
+    @Override
+    @GetMapping("callingcode/{callingCode}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByCallingCode(@PathVariable String callingCode, String fields) {
+        return ResponseEntity.ok(countryService.getByCallingCode(callingCode)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<List<CountryResponse>> getCountriesByCapital(String capital, String fields) {
-        return CountryApi.super.getCountriesByCapital(capital, fields);
+    @GetMapping("capital/{capital}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByCapital(@PathVariable String capital, String fields) {
+        return ResponseEntity.ok(countryService.getByCapital(capital)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<List<CountryResponse>> getCountriesByCurrency(String currency, String fields) {
-        return CountryApi.super.getCountriesByCurrency(currency, fields);
+    @GetMapping("currency/{currency}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByCurrency(@PathVariable String currency, String fields) {
+        return ResponseEntity.ok(countryService.getByCurrency(currency)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<List<CountryResponse>> getCountriesByLanguage(String language, String fields) {
-        return CountryApi.super.getCountriesByLanguage(language, fields);
+    @GetMapping("lang/{language}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByLanguage(@PathVariable String language, String fields) {
+        return ResponseEntity.ok(countryService.getByLanguage(language)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<List<CountryResponse>> getCountriesByName(String name, String fields) {
-        return CountryApi.super.getCountriesByName(name, fields);
+    @GetMapping("name/{name}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByName(@PathVariable String name, String fields) {
+        return ResponseEntity.ok(countryService.getByNameContaining(name)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<List<CountryResponse>> getCountriesByRegion(String region, String fields) {
-        return CountryApi.super.getCountriesByRegion(region, fields);
+    @GetMapping("region/{region}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByRegion(@PathVariable String region, String fields) {
+        return ResponseEntity.ok(countryService.getByRegion(region)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<List<CountryResponse>> getCountriesByRegionalBloc(String regionalbloc, String fields) {
-        return CountryApi.super.getCountriesByRegionalBloc(regionalbloc, fields);
+    @GetMapping("regionalbloc/{regionalBloc}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByRegionalBloc(@PathVariable String regionalBloc, String fields) {
+        return ResponseEntity.ok(countryService.getByRegionalBloc(regionalBloc)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
     @Override
-    public ResponseEntity<CountryResponse> getCountryByAlphaCode(String code, String fields) {
-        return CountryApi.super.getCountryByAlphaCode(code, fields);
+    @GetMapping("demonym/{demonym}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByDemonym(@PathVariable String demonym, String fields) {
+        return ResponseEntity.ok(countryService.getByDemonym(demonym)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 }
