@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.fayder.restcountries.domain.countryinfo.CountryRepository;
 import eu.fayder.restcountries.domain.countryinfo.country.Country;
 import jakarta.annotation.PostConstruct;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
 import java.io.InputStream;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
+@ConditionalOnProperty(name = "repository.type", havingValue = "json")
 public class JsonCountryRepository implements CountryRepository {
 
     private List<Country> countries;
