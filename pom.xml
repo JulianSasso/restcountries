@@ -179,6 +179,7 @@
                             <apiPackage>eu.fayder.restcountries.api</apiPackage>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
+                                <useTags>true</useTags>
                             </configOptions>
                             <generatorName>spring</generatorName>
                             <inputSpec>${project.basedir}/src/main/resources/openapi/country-api.yaml</inputSpec>
