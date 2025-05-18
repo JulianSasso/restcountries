@@ -22,7 +22,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
   /v2/name/{name}:
     get:
@@ -45,7 +45,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
   /v2/alpha/{code}:
     get:
@@ -59,6 +59,8 @@ paths:
           required: true
           schema:
             type: string
+            minLength: 2
+            maxLength: 3
         - $ref: '#/components/parameters/fieldsParam'
       responses:
         '200':
@@ -66,7 +68,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Country'
+                $ref: '#/components/schemas/CountryResponse'
 
   /v2/alpha:
     get:
@@ -90,7 +92,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
   /v2/currency/{currency}:
     get:
@@ -113,7 +115,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
   /v2/lang/{language}:
     get:
@@ -136,7 +138,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
   /v2/capital/{capital}:
     get:
@@ -159,16 +161,16 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
-  /v2/callingcode/{callingcode}:
+  /v2/callingcode/{callingCode}:
     get:
       operationId: getCountriesByCallingCode
       summary: Search countries by calling code
       tags:
         - country
       parameters:
-        - name: callingcode
+        - name: callingCode
           in: path
           required: true
           schema:
@@ -182,7 +184,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
   /v2/region/{region}:
     get:
@@ -196,7 +198,7 @@ paths:
           required: true
           schema:
             type: string
-            enum: [Africa, Americas, Asia, Europe, Oceania]
+            enum: [ Africa, Americas, Asia, Europe, Oceania ]
         - $ref: '#/components/parameters/fieldsParam'
       responses:
         '200':
@@ -206,16 +208,16 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
 
-  /v2/regionalbloc/{regionalbloc}:
+  /v2/regionalbloc/{regionalBloc}:
     get:
       operationId: getCountriesByRegionalBloc
       summary: Search countries by regional bloc
       tags:
         - country
       parameters:
-        - name: regionalbloc
+        - name: regionalBloc
           in: path
           required: true
           schema:
@@ -229,7 +231,30 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Country'
+                  $ref: '#/components/schemas/CountryResponse'
+
+  /v2/demonym/{demonym}:
+    get:
+      operationId: getCountriesByDemonym
+      summary: Search countries by demonym
+      tags:
+        - country
+      parameters:
+        - name: demonym
+          in: path
+          required: true
+          schema:
+            type: string
+        - $ref: '#/components/parameters/fieldsParam'
+      responses:
+        '200':
+          description: Countries with the specified demonym
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CountryResponse'
 
 components:
   parameters:
@@ -243,7 +268,7 @@ components:
         Filter the fields to include in the response (e.g. `name;capital;currencies`)
 
   schemas:
-    Country:
+    CountryResponse:
       type: object
       properties:
         name:
@@ -253,6 +278,8 @@ components:
           items: { type: string }
         alpha2Code:
           type: string
+          minLength: 2
+          maxLength: 3
         alpha3Code:
           type: string
         callingCodes:
@@ -291,27 +318,11 @@ components:
         currencies:
           type: array
           items:
-            type: object
-            properties:
-              code:
-                type: string
-              name:
-                type: string
-              symbol:
-                type: string
+            $ref: '#/components/schemas/CurrencyResponse'
         languages:
           type: array
           items:
-            type: object
-            properties:
-              iso639_1:
-                type: string
-              iso639_2:
-                type: string
-              name:
-                type: string
-              nativeName:
-                type: string
+            $ref: '#/components/schemas/LanguageResponse'
         translations:
           type: object
           additionalProperties:
@@ -322,18 +333,7 @@ components:
         regionalBlocs:
           type: array
           items:
-            type: object
-            properties:
-              acronym:
-                type: string
-              name:
-                type: string
-              otherAcronyms:
-                type: array
-                items: { type: string }
-              otherNames:
-                type: array
-                items: { type: string }
+            $ref: '#/components/schemas/RegionalBlocResponse'
         cioc:
           type: string
       required:
@@ -356,3 +356,53 @@ components:
         - languages
         - translations
         - flag
+
+    CurrencyResponse:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        symbol:
+          type: string
+      required:
+        - code
+        - name
+        - symbol
+
+    LanguageResponse:
+      type: object
+      properties:
+        iso639_1:
+          type: string
+        iso639_2:
+          type: string
+        name:
+          type: string
+        nativeName:
+          type: string
+      required:
+        - iso639_1
+        - iso639_2
+        - name
+        - nativeName
+
+    RegionalBlocResponse:
+      type: object
+      properties:
+        acronym:
+          type: string
+        name:
+          type: string
+        otherAcronyms:
+          type: array
+          items: { type: string }
+        otherNames:
+          type: array
+          items: { type: string }
+      required:
+        - acronym
+        - name
+        - otherAcronyms
+        - otherNames

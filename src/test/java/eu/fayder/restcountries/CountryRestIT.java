@@ -6,9 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import eu.fayder.restcountries.api.controller.CountryController;
-import eu.fayder.restcountries.application.usecase.CountryInformationServiceImpl;
-import eu.fayder.restcountries.boot.config.AppConfig;
+import eu.fayder.restcountries.boot.CountriesApplication;
 import eu.fayder.restcountries.testUtils.JsonTestUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -24,12 +22,8 @@ import java.util.Map;
 
 // TODO: Dejar de ignorar el campo _children.translations._children
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(
-        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT/*,
-        classes = {
-                CountryController.class,
-                CountryInformationServiceImpl.class,
-        }*/)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
+classes = CountriesApplication.class)
 public class CountryRestIT {
 
     @LocalServerPort
@@ -238,7 +232,7 @@ public class CountryRestIT {
         String region = "europe";
         String onlyNamesParam = "fields=name";
         String url = "http://localhost:" + port + "/rest/v2/region/" + region + "?" + onlyNamesParam;
-        String expectedJson = JsonTestUtils.loadFileContent("expected/europeRegionMatchesOnlyNames.json");
+        String expectedJson = JsonTestUtils.loadFileContent("expected/europeRegionMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -260,7 +254,7 @@ public class CountryRestIT {
         String bloc = "eu";
         String onlyNamesParam = "fields=name";
         String url = "http://localhost:" + port + "/rest/v2/regionalbloc/" + bloc + "?" + onlyNamesParam;
-        String expectedJson = JsonTestUtils.loadFileContent("expected/euRegionalBlocMatchesOnlyNames.json");
+        String expectedJson = JsonTestUtils.loadFileContent("expected/euRegionalBlocMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);

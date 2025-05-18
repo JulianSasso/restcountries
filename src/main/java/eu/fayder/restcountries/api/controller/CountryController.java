@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.ws.rs.core.Response;
 import java.util.*;
 
-@RequestMapping("rest/v2")
-@RestController
+//@RequestMapping("rest/v2")
+//@RestController
 @RequiredArgsConstructor
 public class CountryController {
 

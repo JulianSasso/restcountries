@@ -112,7 +112,6 @@
             <version>${jackson-databind-nullable.version}</version>
         </dependency>
 
-
         <!-- TODO: ============================== OLD (DELETE UNUSED) ==================================== -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
@@ -168,6 +167,23 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <release>17</release>
+                    <annotationProcessorPaths>
+                        <path>
+                            <artifactId>lombok</artifactId>
+                            <groupId>org.projectlombok</groupId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <groupId>org.projectlombok</groupId>
+                            <version>${lombok-mapstruct-binding.version}</version>
+                        </path>
+                        <path>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <groupId>org.mapstruct</groupId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
@@ -181,6 +197,7 @@
                             <apiPackage>eu.fayder.restcountries.api</apiPackage>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
+                                <useTags>true</useTags>
                             </configOptions>
                             <generatorName>spring</generatorName>
                             <inputSpec>${project.basedir}/src/main/resources/openapi/country-api.yaml</inputSpec>

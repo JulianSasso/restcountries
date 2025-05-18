@@ -1,0 +1,4451 @@
+[
+    {
+        "name": "Åland Islands",
+        "topLevelDomain": [
+            ".ax"
+        ],
+        "alpha2Code": "AX",
+        "alpha3Code": "ALA",
+        "callingCodes": [
+            "358"
+        ],
+        "capital": "Mariehamn",
+        "altSpellings": [
+            "AX",
+            "Aaland",
+            "Aland",
+            "Ahvenanmaa"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 28875,
+        "latlng": [
+            60.116667,
+            19.9
+        ],
+        "demonym": "Ålandish",
+        "area": 1580.0,
+        "gini": null,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [],
+        "nativeName": "Åland",
+        "numericCode": "248",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sv",
+                "iso639_2": "swe",
+                "name": "Swedish",
+                "nativeName": "svenska"
+            }
+        ],
+        "translations": {
+            "br": "Ilhas de Aland",
+            "de": "Åland",
+            "es": "Alandia",
+            "fa": "جزایر الند",
+            "fr": "Åland",
+            "hr": "Ålandski otoci",
+            "it": "Isole Aland",
+            "ja": "オーランド諸島",
+            "nl": "Ålandeilanden",
+            "pt": "Ilhas de Aland",
+            "pl": "Wyspy Alandzkie",
+            "cs": "Ålandy",
+            "ru": "Åland Islands",
+            "zh": "奥兰群岛",
+            "hu": "Åland-szigetek",
+            "se": "Åland"
+        },
+        "flag": "https://restcountries.eu/data/ala.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": ""
+    },
+    {
+        "name": "Albania",
+        "topLevelDomain": [
+            ".al"
+        ],
+        "alpha2Code": "AL",
+        "alpha3Code": "ALB",
+        "callingCodes": [
+            "355"
+        ],
+        "capital": "Tirana",
+        "altSpellings": [
+            "AL",
+            "Shqipëri",
+            "Shqipëria",
+            "Shqipnia"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 2837743,
+        "latlng": [
+            41.0,
+            20.0
+        ],
+        "demonym": "Albanian",
+        "area": 28748.0,
+        "gini": 34.5,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "MNE",
+            "GRC",
+            "MKD",
+            "UNK"
+        ],
+        "nativeName": "Shqipëria",
+        "numericCode": "008",
+        "currencies": [
+            {
+                "code": "ALL",
+                "name": "Albanian lek",
+                "symbol": "L"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sq",
+                "iso639_2": "sqi",
+                "name": "Albanian",
+                "nativeName": "Shqip"
+            }
+        ],
+        "translations": {
+            "br": "Albânia",
+            "de": "Albanien",
+            "es": "Albania",
+            "fa": "آلبانی",
+            "fr": "Albanie",
+            "hr": "Albanija",
+            "it": "Albania",
+            "ja": "アルバニア",
+            "nl": "Albanië",
+            "pt": "Albânia",
+            "ru": "Албания",
+            "pl": "Albania",
+            "cs": "Albánie",
+            "zh": "阿尔巴尼亚共和国",
+            "hu": "Albánia",
+            "se": "Albanien"
+        },
+        "flag": "https://restcountries.eu/data/alb.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "ALB"
+    },
+    {
+        "name": "Andorra",
+        "topLevelDomain": [
+            ".ad"
+        ],
+        "alpha2Code": "AD",
+        "alpha3Code": "AND",
+        "callingCodes": [
+            "376"
+        ],
+        "capital": "Andorra la Vella",
+        "altSpellings": [
+            "AD",
+            "Principality of Andorra",
+            "Principat d'Andorra"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 77265,
+        "latlng": [
+            42.5,
+            1.5
+        ],
+        "demonym": "Andorran",
+        "area": 468.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "FRA",
+            "ESP"
+        ],
+        "nativeName": "Andorra",
+        "numericCode": "020",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ca",
+                "iso639_2": "cat",
+                "name": "Catalan",
+                "nativeName": "català"
+            }
+        ],
+        "translations": {
+            "br": "Andorra",
+            "de": "Andorra",
+            "es": "Andorra",
+            "fa": "آندورا",
+            "fr": "Andorre",
+            "hr": "Andora",
+            "it": "Andorra",
+            "ja": "アンドラ",
+            "nl": "Andorra",
+            "pt": "Andorra",
+            "ru": "Андорра",
+            "pl": "Andora",
+            "cs": "Andorra",
+            "zh": "安道尔公国",
+            "hu": "Andorra",
+            "se": "Andorra"
+        },
+        "flag": "https://restcountries.eu/data/and.svg",
+        "regionalBlocs": [],
+        "cioc": "AND"
+    },
+    {
+        "name": "Austria",
+        "topLevelDomain": [
+            ".at"
+        ],
+        "alpha2Code": "AT",
+        "alpha3Code": "AUT",
+        "callingCodes": [
+            "43"
+        ],
+        "capital": "Vienna",
+        "altSpellings": [
+            "AT",
+            "Österreich",
+            "Osterreich",
+            "Oesterreich"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 8917205,
+        "latlng": [
+            47.33333333,
+            13.33333333
+        ],
+        "demonym": "Austrian",
+        "area": 83871.0,
+        "gini": 26.0,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "CZE",
+            "DEU",
+            "HUN",
+            "ITA",
+            "LIE",
+            "SVK",
+            "SVN",
+            "CHE"
+        ],
+        "nativeName": "Österreich",
+        "numericCode": "040",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "de",
+                "iso639_2": "deu",
+                "name": "German",
+                "nativeName": "Deutsch"
+            }
+        ],
+        "translations": {
+            "br": "Áustria",
+            "de": "Österreich",
+            "es": "Austria",
+            "fa": "اتریش",
+            "fr": "Autriche",
+            "hr": "Austrija",
+            "it": "Austria",
+            "ja": "オーストリア",
+            "nl": "Oostenrijk",
+            "pt": "Áustria",
+            "ru": "Австрия",
+            "pl": "Austria",
+            "cs": "Rakousko",
+            "zh": "奥地利共和国",
+            "hu": "Ausztria",
+            "se": "Österrike"
+        },
+        "flag": "https://restcountries.eu/data/aut.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "AUT"
+    },
+    {
+        "name": "Belarus",
+        "topLevelDomain": [
+            ".by"
+        ],
+        "alpha2Code": "BY",
+        "alpha3Code": "BLR",
+        "callingCodes": [
+            "375"
+        ],
+        "capital": "Minsk",
+        "altSpellings": [
+            "BY",
+            "Bielaruś",
+            "Republic of Belarus",
+            "Белоруссия",
+            "Республика Беларусь",
+            "Belorussiya",
+            "Respublika Belarus’"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 9398861,
+        "latlng": [
+            53.0,
+            28.0
+        ],
+        "demonym": "Belarusian",
+        "area": 207600.0,
+        "gini": 26.5,
+        "timezones": [
+            "UTC+03:00"
+        ],
+        "borders": [
+            "LVA",
+            "LTU",
+            "POL",
+            "RUS",
+            "UKR"
+        ],
+        "nativeName": "Белару́сь",
+        "numericCode": "112",
+        "currencies": [
+            {
+                "code": "BYN",
+                "name": "New Belarusian ruble",
+                "symbol": "Br"
+            },
+            {
+                "code": "BYR",
+                "name": "Old Belarusian ruble",
+                "symbol": "Br"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "be",
+                "iso639_2": "bel",
+                "name": "Belarusian",
+                "nativeName": "беларуская мова"
+            },
+            {
+                "iso639_1": "ru",
+                "iso639_2": "rus",
+                "name": "Russian",
+                "nativeName": "Русский"
+            }
+        ],
+        "translations": {
+            "br": "Bielorrússia",
+            "de": "Weißrussland",
+            "es": "Bielorrusia",
+            "fa": "بلاروس",
+            "fr": "Biélorussie",
+            "hr": "Bjelorusija",
+            "it": "Bielorussia",
+            "ja": "ベラルーシ",
+            "nl": "Wit-Rusland",
+            "pt": "Bielorrússia",
+            "ru": "Белоруссия",
+            "pl": "Białoruś",
+            "cs": "Bělorusko",
+            "zh": "白俄罗斯共和国",
+            "hu": "Fehéroroszország",
+            "se": "Vitryssland"
+        },
+        "flag": "https://restcountries.eu/data/blr.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EEU",
+                "name": "Eurasian Economic Union",
+                "otherAcronyms": [
+                    "EAEU"
+                ],
+                "otherNames": []
+            }
+        ],
+        "cioc": "BLR"
+    },
+    {
+        "name": "Belgium",
+        "topLevelDomain": [
+            ".be"
+        ],
+        "alpha2Code": "BE",
+        "alpha3Code": "BEL",
+        "callingCodes": [
+            "32"
+        ],
+        "capital": "Brussels",
+        "altSpellings": [
+            "BE",
+            "België",
+            "Belgie",
+            "Belgien",
+            "Belgique",
+            "Kingdom of Belgium",
+            "Koninkrijk België",
+            "Royaume de Belgique",
+            "Königreich Belgien"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 11555997,
+        "latlng": [
+            50.83333333,
+            4.0
+        ],
+        "demonym": "Belgian",
+        "area": 30528.0,
+        "gini": 33.0,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "FRA",
+            "DEU",
+            "LUX",
+            "NLD"
+        ],
+        "nativeName": "België",
+        "numericCode": "056",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "nl",
+                "iso639_2": "nld",
+                "name": "Dutch",
+                "nativeName": "Nederlands"
+            },
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            },
+            {
+                "iso639_1": "de",
+                "iso639_2": "deu",
+                "name": "German",
+                "nativeName": "Deutsch"
+            }
+        ],
+        "translations": {
+            "br": "Bélgica",
+            "de": "Belgien",
+            "es": "Bélgica",
+            "fa": "بلژیک",
+            "fr": "Belgique",
+            "hr": "Belgija",
+            "it": "Belgio",
+            "ja": "ベルギー",
+            "nl": "België",
+            "pt": "Bélgica",
+            "ru": "Бельгия",
+            "pl": "Belgia",
+            "cs": "Belgie",
+            "zh": "比利时王国",
+            "hu": "Belgium",
+            "se": "Belgien"
+        },
+        "flag": "https://restcountries.eu/data/bel.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "BEL"
+    },
+    {
+        "name": "Bosnia and Herzegovina",
+        "topLevelDomain": [
+            ".ba"
+        ],
+        "alpha2Code": "BA",
+        "alpha3Code": "BIH",
+        "callingCodes": [
+            "387"
+        ],
+        "capital": "Sarajevo",
+        "altSpellings": [
+            "BA",
+            "Bosnia-Herzegovina",
+            "Босна и Херцеговина"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 3280815,
+        "latlng": [
+            44.0,
+            18.0
+        ],
+        "demonym": "Bosnian, Herzegovinian",
+        "area": 51209.0,
+        "gini": 36.2,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "HRV",
+            "MNE",
+            "SRB"
+        ],
+        "nativeName": "Bosna i Hercegovina",
+        "numericCode": "070",
+        "currencies": [
+            {
+                "code": "BAM",
+                "name": "Bosnia and Herzegovina convertible mark",
+                "symbol": "KM"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "bs",
+                "iso639_2": "bos",
+                "name": "Bosnian",
+                "nativeName": "bosanski jezik"
+            },
+            {
+                "iso639_1": "hr",
+                "iso639_2": "hrv",
+                "name": "Croatian",
+                "nativeName": "hrvatski jezik"
+            },
+            {
+                "iso639_1": "sr",
+                "iso639_2": "srp",
+                "name": "Serbian",
+                "nativeName": "српски језик"
+            }
+        ],
+        "translations": {
+            "br": "Bósnia e Herzegovina",
+            "de": "Bosnien und Herzegowina",
+            "es": "Bosnia y Herzegovina",
+            "fa": "بوسنی و هرزگوین",
+            "fr": "Bosnie-Herzégovine",
+            "hr": "Bosna i Hercegovina",
+            "it": "Bosnia ed Erzegovina",
+            "ja": "ボスニア・ヘルツェゴビナ",
+            "nl": "Bosnië en Herzegovina",
+            "pt": "Bósnia e Herzegovina",
+            "ru": "Босния и Герцеговина",
+            "pl": "Bośnia i Hercegowina",
+            "cs": "Bosna a Hercegovina",
+            "zh": "波斯尼亚和黑塞哥维那",
+            "hu": "Bosznia-Hercegovina",
+            "se": "Bosnien och Hercegovina"
+        },
+        "flag": "https://restcountries.eu/data/bih.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "BIH"
+    },
+    {
+        "name": "Bulgaria",
+        "topLevelDomain": [
+            ".bg"
+        ],
+        "alpha2Code": "BG",
+        "alpha3Code": "BGR",
+        "callingCodes": [
+            "359"
+        ],
+        "capital": "Sofia",
+        "altSpellings": [
+            "BG",
+            "Republic of Bulgaria",
+            "Република България"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 6927288,
+        "latlng": [
+            43.0,
+            25.0
+        ],
+        "demonym": "Bulgarian",
+        "area": 110879.0,
+        "gini": 28.2,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "GRC",
+            "MKD",
+            "ROU",
+            "SRB",
+            "TUR"
+        ],
+        "nativeName": "България",
+        "numericCode": "100",
+        "currencies": [
+            {
+                "code": "BGN",
+                "name": "Bulgarian lev",
+                "symbol": "лв"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "bg",
+                "iso639_2": "bul",
+                "name": "Bulgarian",
+                "nativeName": "български език"
+            }
+        ],
+        "translations": {
+            "br": "Bulgária",
+            "de": "Bulgarien",
+            "es": "Bulgaria",
+            "fa": "بلغارستان",
+            "fr": "Bulgarie",
+            "hr": "Bugarska",
+            "it": "Bulgaria",
+            "ja": "ブルガリア",
+            "nl": "Bulgarije",
+            "pt": "Bulgária",
+            "ru": "Болгария",
+            "pl": "Bułgaria",
+            "cs": "Bulharsko",
+            "zh": "保加利亚共和国",
+            "hu": "Bulgária",
+            "se": "Bulgarien"
+        },
+        "flag": "https://restcountries.eu/data/bgr.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "BUL"
+    },
+    {
+        "name": "Croatia",
+        "topLevelDomain": [
+            ".hr"
+        ],
+        "alpha2Code": "HR",
+        "alpha3Code": "HRV",
+        "callingCodes": [
+            "385"
+        ],
+        "capital": "Zagreb",
+        "altSpellings": [
+            "HR",
+            "Hrvatska",
+            "Republic of Croatia",
+            "Republika Hrvatska"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 4047200,
+        "latlng": [
+            45.16666666,
+            15.5
+        ],
+        "demonym": "Croatian",
+        "area": 56594.0,
+        "gini": 33.7,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "BIH",
+            "HUN",
+            "MNE",
+            "SRB",
+            "SVN"
+        ],
+        "nativeName": "Hrvatska",
+        "numericCode": "191",
+        "currencies": [
+            {
+                "code": "HRK",
+                "name": "Croatian kuna",
+                "symbol": "kn"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "hr",
+                "iso639_2": "hrv",
+                "name": "Croatian",
+                "nativeName": "hrvatski jezik"
+            }
+        ],
+        "translations": {
+            "br": "Croácia",
+            "de": "Kroatien",
+            "es": "Croacia",
+            "fa": "کرواسی",
+            "fr": "Croatie",
+            "hr": "Hrvatska",
+            "it": "Croazia",
+            "ja": "クロアチア",
+            "nl": "Kroatië",
+            "pt": "Croácia",
+            "ru": "Хорватия",
+            "pl": "Chorwacja",
+            "cs": "Chorvatsko",
+            "zh": "克罗地亚共和国",
+            "hu": "Horvátország",
+            "se": "Kroatien"
+        },
+        "flag": "https://restcountries.eu/data/hrv.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "CRO"
+    },
+    {
+        "name": "Cyprus",
+        "topLevelDomain": [
+            ".cy"
+        ],
+        "alpha2Code": "CY",
+        "alpha3Code": "CYP",
+        "callingCodes": [
+            "357"
+        ],
+        "capital": "Nicosia",
+        "altSpellings": [
+            "CY",
+            "Kýpros",
+            "Kıbrıs",
+            "Republic of Cyprus",
+            "Κυπριακή Δημοκρατία",
+            "Kıbrıs Cumhuriyeti"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 1207361,
+        "latlng": [
+            35.0,
+            33.0
+        ],
+        "demonym": "Cypriot",
+        "area": 9251.0,
+        "gini": null,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [],
+        "nativeName": "Κύπρος",
+        "numericCode": "196",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "el",
+                "iso639_2": "ell",
+                "name": "Greek (modern)",
+                "nativeName": "ελληνικά"
+            },
+            {
+                "iso639_1": "tr",
+                "iso639_2": "tur",
+                "name": "Turkish",
+                "nativeName": "Türkçe"
+            },
+            {
+                "iso639_1": "hy",
+                "iso639_2": "hye",
+                "name": "Armenian",
+                "nativeName": "Հայերեն"
+            }
+        ],
+        "translations": {
+            "br": "Chipre",
+            "de": "Zypern",
+            "es": "Chipre",
+            "fa": "قبرس",
+            "fr": "Chypre",
+            "hr": "Cipar",
+            "it": "Cipro",
+            "ja": "キプロス",
+            "nl": "Cyprus",
+            "pt": "Chipre",
+            "ru": "Кипр",
+            "pl": "Cypr",
+            "cs": "Kypr",
+            "zh": "塞浦路斯共和国",
+            "hu": "Ciprus",
+            "se": "Cypern"
+        },
+        "flag": "https://restcountries.eu/data/cyp.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "CYP"
+    },
+    {
+        "name": "Czech Republic",
+        "topLevelDomain": [
+            ".cz"
+        ],
+        "alpha2Code": "CZ",
+        "alpha3Code": "CZE",
+        "callingCodes": [
+            "420"
+        ],
+        "capital": "Prague",
+        "altSpellings": [
+            "CZ",
+            "Česká republika",
+            "Česko"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 10698896,
+        "latlng": [
+            49.75,
+            15.5
+        ],
+        "demonym": "Czech",
+        "area": 78865.0,
+        "gini": 26.0,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "DEU",
+            "POL",
+            "SVK"
+        ],
+        "nativeName": "Česká republika",
+        "numericCode": "203",
+        "currencies": [
+            {
+                "code": "CZK",
+                "name": "Czech koruna",
+                "symbol": "Kč"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "cs",
+                "iso639_2": "ces",
+                "name": "Czech",
+                "nativeName": "čeština"
+            },
+            {
+                "iso639_1": "sk",
+                "iso639_2": "slk",
+                "name": "Slovak",
+                "nativeName": "slovenčina"
+            }
+        ],
+        "translations": {
+            "br": "República Tcheca",
+            "de": "Tschechische Republik",
+            "es": "República Checa",
+            "fa": "جمهوری چک",
+            "fr": "République tchèque",
+            "hr": "Češka",
+            "it": "Repubblica Ceca",
+            "ja": "チェコ",
+            "nl": "Tsjechië",
+            "pt": "República Checa",
+            "ru": "Чехия",
+            "pl": "Czechy",
+            "cs": "Česká republika",
+            "zh": "捷克共和国",
+            "hu": "Csehország",
+            "se": "Tjeckien"
+        },
+        "flag": "https://restcountries.eu/data/cze.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "CZE"
+    },
+    {
+        "name": "Denmark",
+        "topLevelDomain": [
+            ".dk"
+        ],
+        "alpha2Code": "DK",
+        "alpha3Code": "DNK",
+        "callingCodes": [
+            "45"
+        ],
+        "capital": "Copenhagen",
+        "altSpellings": [
+            "DK",
+            "Danmark",
+            "Kingdom of Denmark",
+            "Kongeriget Danmark"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 5831404,
+        "latlng": [
+            56.0,
+            10.0
+        ],
+        "demonym": "Danish",
+        "area": 43094.0,
+        "gini": 24.0,
+        "timezones": [
+            "UTC-04:00",
+            "UTC-03:00",
+            "UTC-01:00",
+            "UTC",
+            "UTC+01:00"
+        ],
+        "borders": [
+            "DEU"
+        ],
+        "nativeName": "Danmark",
+        "numericCode": "208",
+        "currencies": [
+            {
+                "code": "DKK",
+                "name": "Danish krone",
+                "symbol": "kr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "da",
+                "iso639_2": "dan",
+                "name": "Danish",
+                "nativeName": "dansk"
+            }
+        ],
+        "translations": {
+            "br": "Dinamarca",
+            "de": "Dänemark",
+            "es": "Dinamarca",
+            "fa": "دانمارک",
+            "fr": "Danemark",
+            "hr": "Danska",
+            "it": "Danimarca",
+            "ja": "デンマーク",
+            "nl": "Denemarken",
+            "pt": "Dinamarca",
+            "ru": "Дания",
+            "pl": "Dania",
+            "cs": "Dánsko",
+            "zh": "丹麦王国",
+            "hu": "Dánia",
+            "se": "Danmark"
+        },
+        "flag": "https://restcountries.eu/data/dnk.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "DEN"
+    },
+    {
+        "name": "Estonia",
+        "topLevelDomain": [
+            ".ee"
+        ],
+        "alpha2Code": "EE",
+        "alpha3Code": "EST",
+        "callingCodes": [
+            "372"
+        ],
+        "capital": "Tallinn",
+        "altSpellings": [
+            "EE",
+            "Eesti",
+            "Republic of Estonia",
+            "Eesti Vabariik"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 1331057,
+        "latlng": [
+            59.0,
+            26.0
+        ],
+        "demonym": "Estonian",
+        "area": 45227.0,
+        "gini": 36.0,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "LVA",
+            "RUS"
+        ],
+        "nativeName": "Eesti",
+        "numericCode": "233",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "et",
+                "iso639_2": "est",
+                "name": "Estonian",
+                "nativeName": "eesti"
+            }
+        ],
+        "translations": {
+            "br": "Estônia",
+            "de": "Estland",
+            "es": "Estonia",
+            "fa": "استونی",
+            "fr": "Estonie",
+            "hr": "Estonija",
+            "it": "Estonia",
+            "ja": "エストニア",
+            "nl": "Estland",
+            "pt": "Estónia",
+            "ru": "Эстония",
+            "pl": "Estonia",
+            "cs": "Estonsko",
+            "zh": "爱沙尼亚共和国",
+            "hu": "Észtország",
+            "se": "Estland"
+        },
+        "flag": "https://restcountries.eu/data/est.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "EST"
+    },
+    {
+        "name": "Faroe Islands",
+        "topLevelDomain": [
+            ".fo"
+        ],
+        "alpha2Code": "FO",
+        "alpha3Code": "FRO",
+        "callingCodes": [
+            "298"
+        ],
+        "capital": "Tórshavn",
+        "altSpellings": [
+            "FO",
+            "Føroyar",
+            "Færøerne"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 48865,
+        "latlng": [
+            62.0,
+            -7.0
+        ],
+        "demonym": "Faroese",
+        "area": 1393.0,
+        "gini": null,
+        "timezones": [
+            "UTC+00:00"
+        ],
+        "borders": [],
+        "nativeName": "Føroyar",
+        "numericCode": "234",
+        "currencies": [
+            {
+                "code": "DKK",
+                "name": "Danish krone",
+                "symbol": "kr"
+            },
+            {
+                "code": "(none)",
+                "name": "Faroese króna",
+                "symbol": "kr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "fo",
+                "iso639_2": "fao",
+                "name": "Faroese",
+                "nativeName": "føroyskt"
+            }
+        ],
+        "translations": {
+            "br": "Ilhas Faroé",
+            "de": "Färöer-Inseln",
+            "es": "Islas Faroe",
+            "fa": "جزایر فارو",
+            "fr": "Îles Féroé",
+            "hr": "Farski Otoci",
+            "it": "Isole Far Oer",
+            "ja": "フェロー諸島",
+            "nl": "Faeröer",
+            "pt": "Ilhas Faroé",
+            "pl": "Wyspy Owcze",
+            "cs": "Faerské ostrovy",
+            "ru": "Faroe Islands",
+            "zh": "法罗群岛",
+            "hu": "Feröer",
+            "se": "Färöarna"
+        },
+        "flag": "https://restcountries.eu/data/fro.svg",
+        "regionalBlocs": null,
+        "cioc": ""
+    },
+    {
+        "name": "Finland",
+        "topLevelDomain": [
+            ".fi"
+        ],
+        "alpha2Code": "FI",
+        "alpha3Code": "FIN",
+        "callingCodes": [
+            "358"
+        ],
+        "capital": "Helsinki",
+        "altSpellings": [
+            "FI",
+            "Suomi",
+            "Republic of Finland",
+            "Suomen tasavalta",
+            "Republiken Finland"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 5530719,
+        "latlng": [
+            64.0,
+            26.0
+        ],
+        "demonym": "Finnish",
+        "area": 338424.0,
+        "gini": 26.9,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "NOR",
+            "SWE",
+            "RUS"
+        ],
+        "nativeName": "Suomi",
+        "numericCode": "246",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "fi",
+                "iso639_2": "fin",
+                "name": "Finnish",
+                "nativeName": "suomi"
+            },
+            {
+                "iso639_1": "sv",
+                "iso639_2": "swe",
+                "name": "Swedish",
+                "nativeName": "svenska"
+            }
+        ],
+        "translations": {
+            "br": "Finlândia",
+            "de": "Finnland",
+            "es": "Finlandia",
+            "fa": "فنلاند",
+            "fr": "Finlande",
+            "hr": "Finska",
+            "it": "Finlandia",
+            "ja": "フィンランド",
+            "nl": "Finland",
+            "pt": "Finlândia",
+            "ru": "Финляндия",
+            "pl": "Finlandia",
+            "cs": "Finsko",
+            "zh": "芬兰共和国",
+            "hu": "Finnország",
+            "se": "Finland"
+        },
+        "flag": "https://restcountries.eu/data/fin.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "FIN"
+    },
+    {
+        "name": "France",
+        "topLevelDomain": [
+            ".fr"
+        ],
+        "alpha2Code": "FR",
+        "alpha3Code": "FRA",
+        "callingCodes": [
+            "33"
+        ],
+        "capital": "Paris",
+        "altSpellings": [
+            "FR",
+            "French Republic",
+            "République française"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 67391582,
+        "latlng": [
+            46.0,
+            2.0
+        ],
+        "demonym": "French",
+        "area": 640679.0,
+        "gini": 32.7,
+        "timezones": [
+            "UTC-10:00",
+            "UTC-09:30",
+            "UTC-09:00",
+            "UTC-08:00",
+            "UTC-04:00",
+            "UTC-03:00",
+            "UTC+01:00",
+            "UTC+03:00",
+            "UTC+04:00",
+            "UTC+05:00",
+            "UTC+10:00",
+            "UTC+11:00",
+            "UTC+12:00"
+        ],
+        "borders": [
+            "AND",
+            "BEL",
+            "DEU",
+            "ITA",
+            "LUX",
+            "MCO",
+            "ESP",
+            "CHE"
+        ],
+        "nativeName": "France",
+        "numericCode": "250",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            }
+        ],
+        "translations": {
+            "br": "França",
+            "de": "Frankreich",
+            "es": "Francia",
+            "fa": "فرانسه",
+            "fr": "France",
+            "hr": "Francuska",
+            "it": "Francia",
+            "ja": "フランス",
+            "nl": "Frankrijk",
+            "pt": "França",
+            "ru": "Франция",
+            "pl": "Francja",
+            "cs": "Francie",
+            "zh": "法兰西共和国",
+            "hu": "Franciaország",
+            "se": "Frankrike"
+        },
+        "flag": "https://restcountries.eu/data/fra.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "FRA"
+    },
+    {
+        "name": "Germany",
+        "topLevelDomain": [
+            ".de"
+        ],
+        "alpha2Code": "DE",
+        "alpha3Code": "DEU",
+        "callingCodes": [
+            "49"
+        ],
+        "capital": "Berlin",
+        "altSpellings": [
+            "DE",
+            "Federal Republic of Germany",
+            "Bundesrepublik Deutschland"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 83240525,
+        "latlng": [
+            51.0,
+            9.0
+        ],
+        "demonym": "German",
+        "area": 357114.0,
+        "gini": 28.3,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "BEL",
+            "CZE",
+            "DNK",
+            "FRA",
+            "LUX",
+            "NLD",
+            "POL",
+            "CHE"
+        ],
+        "nativeName": "Deutschland",
+        "numericCode": "276",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "de",
+                "iso639_2": "deu",
+                "name": "German",
+                "nativeName": "Deutsch"
+            }
+        ],
+        "translations": {
+            "br": "Alemanha",
+            "de": "Deutschland",
+            "es": "Alemania",
+            "fa": "آلمان",
+            "fr": "Allemagne",
+            "hr": "Njemačka",
+            "it": "Germania",
+            "ja": "ドイツ",
+            "nl": "Duitsland",
+            "pt": "Alemanha",
+            "ru": "Германия",
+            "pl": "Niemcy",
+            "cs": "Německo",
+            "zh": "德意志联邦共和国",
+            "hu": "Németország",
+            "se": "Tyskland"
+        },
+        "flag": "https://restcountries.eu/data/deu.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "GER"
+    },
+    {
+        "name": "Gibraltar",
+        "topLevelDomain": [
+            ".gi"
+        ],
+        "alpha2Code": "GI",
+        "alpha3Code": "GIB",
+        "callingCodes": [
+            "350"
+        ],
+        "capital": "Gibraltar",
+        "altSpellings": [
+            "GI"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 33691,
+        "latlng": [
+            36.13333333,
+            -5.35
+        ],
+        "demonym": "Gibraltar",
+        "area": 6.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "ESP"
+        ],
+        "nativeName": "Gibraltar",
+        "numericCode": "292",
+        "currencies": [
+            {
+                "code": "GIP",
+                "name": "Gibraltar pound",
+                "symbol": "£"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            }
+        ],
+        "translations": {
+            "br": "Gibraltar",
+            "de": "Gibraltar",
+            "es": "Gibraltar",
+            "fa": "جبل‌طارق",
+            "fr": "Gibraltar",
+            "hr": "Gibraltar",
+            "it": "Gibilterra",
+            "ja": "ジブラルタル",
+            "nl": "Gibraltar",
+            "pt": "Gibraltar",
+            "pl": "Gibraltar",
+            "cs": "Gibraltar",
+            "ru": "Gibraltar",
+            "zh": "直布罗陀",
+            "hu": "Gibraltár",
+            "se": "Gibraltar"
+        },
+        "flag": "https://restcountries.eu/data/gib.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": ""
+    },
+    {
+        "name": "Greece",
+        "topLevelDomain": [
+            ".gr"
+        ],
+        "alpha2Code": "GR",
+        "alpha3Code": "GRC",
+        "callingCodes": [
+            "30"
+        ],
+        "capital": "Athens",
+        "altSpellings": [
+            "GR",
+            "Elláda",
+            "Hellenic Republic",
+            "Ελληνική Δημοκρατία"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 10715549,
+        "latlng": [
+            39.0,
+            22.0
+        ],
+        "demonym": "Greek",
+        "area": 131990.0,
+        "gini": 34.3,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "ALB",
+            "BGR",
+            "TUR",
+            "MKD"
+        ],
+        "nativeName": "Ελλάδα",
+        "numericCode": "300",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "el",
+                "iso639_2": "ell",
+                "name": "Greek (modern)",
+                "nativeName": "ελληνικά"
+            }
+        ],
+        "translations": {
+            "br": "Grécia",
+            "de": "Griechenland",
+            "es": "Grecia",
+            "fa": "یونان",
+            "fr": "Grèce",
+            "hr": "Grčka",
+            "it": "Grecia",
+            "ja": "ギリシャ",
+            "nl": "Griekenland",
+            "pt": "Grécia",
+            "ru": "Греция",
+            "pl": "Grecja",
+            "cs": "Řecko",
+            "zh": "希腊共和国",
+            "hu": "Görögország",
+            "se": "Grekland"
+        },
+        "flag": "https://restcountries.eu/data/grc.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "GRE"
+    },
+    {
+        "name": "Guernsey",
+        "topLevelDomain": [
+            ".gg"
+        ],
+        "alpha2Code": "GG",
+        "alpha3Code": "GGY",
+        "callingCodes": [
+            "44"
+        ],
+        "capital": "St. Peter Port",
+        "altSpellings": [
+            "GG",
+            "Bailiwick of Guernsey",
+            "Bailliage de Guernesey"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 62999,
+        "latlng": [
+            49.46666666,
+            -2.58333333
+        ],
+        "demonym": "Channel Islander",
+        "area": 78.0,
+        "gini": null,
+        "timezones": [
+            "UTC+00:00"
+        ],
+        "borders": [],
+        "nativeName": "Guernsey",
+        "numericCode": "831",
+        "currencies": [
+            {
+                "code": "GBP",
+                "name": "British pound",
+                "symbol": "£"
+            },
+            {
+                "code": "(none)",
+                "name": "Guernsey pound",
+                "symbol": "£"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            },
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            }
+        ],
+        "translations": {
+            "br": "Guernsey",
+            "de": "Guernsey",
+            "es": "Guernsey",
+            "fa": "گرنزی",
+            "fr": "Guernesey",
+            "hr": "Guernsey",
+            "it": "Guernsey",
+            "ja": "ガーンジー",
+            "nl": "Guernsey",
+            "pt": "Guernsey",
+            "pl": "Guernsey",
+            "cs": "Guernsey",
+            "ru": "Guernsey",
+            "zh": "根西岛",
+            "hu": "Guernsey",
+            "se": "Guernsey"
+        },
+        "flag": "https://restcountries.eu/data/ggy.svg",
+        "regionalBlocs": [],
+        "cioc": ""
+    },
+    {
+        "name": "Vatican City",
+        "topLevelDomain": [
+            ".va"
+        ],
+        "alpha2Code": "VA",
+        "alpha3Code": "VAT",
+        "callingCodes": [
+            "379"
+        ],
+        "capital": "Vatican City",
+        "altSpellings": [
+            "Sancta Sedes",
+            "Vatican",
+            "The Vatican"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 451,
+        "latlng": [
+            41.9,
+            12.45
+        ],
+        "demonym": "",
+        "area": 0.44,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "ITA"
+        ],
+        "nativeName": "Città del Vaticano",
+        "numericCode": "336",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "la",
+                "iso639_2": "lat",
+                "name": "Latin",
+                "nativeName": "latine"
+            },
+            {
+                "iso639_1": "it",
+                "iso639_2": "ita",
+                "name": "Italian",
+                "nativeName": "Italiano"
+            },
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            },
+            {
+                "iso639_1": "de",
+                "iso639_2": "deu",
+                "name": "German",
+                "nativeName": "Deutsch"
+            }
+        ],
+        "translations": {
+            "br": "Vaticano",
+            "de": "Vatikanstadt",
+            "es": "Santa Sede",
+            "fa": "سریر مقدس",
+            "fr": "Vatican",
+            "hr": "Sveta Stolica",
+            "it": "Santa Sede",
+            "ja": "聖座",
+            "nl": "Vaticaanstad",
+            "pt": "Vaticano",
+            "pl": "Stolica Apostolska",
+            "cs": "Svatý stolec",
+            "ru": "Holy See",
+            "zh": "梵蒂冈城国",
+            "hu": "Vatikán",
+            "se": "Vatikanstaten"
+        },
+        "flag": "https://restcountries.eu/data/vat.svg",
+        "regionalBlocs": [],
+        "cioc": ""
+    },
+    {
+        "name": "Hungary",
+        "topLevelDomain": [
+            ".hu"
+        ],
+        "alpha2Code": "HU",
+        "alpha3Code": "HUN",
+        "callingCodes": [
+            "36"
+        ],
+        "capital": "Budapest",
+        "altSpellings": [
+            "HU"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 9749763,
+        "latlng": [
+            47.0,
+            20.0
+        ],
+        "demonym": "Hungarian",
+        "area": 93028.0,
+        "gini": 31.2,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "HRV",
+            "ROU",
+            "SRB",
+            "SVK",
+            "SVN",
+            "UKR"
+        ],
+        "nativeName": "Magyarország",
+        "numericCode": "348",
+        "currencies": [
+            {
+                "code": "HUF",
+                "name": "Hungarian forint",
+                "symbol": "Ft"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "hu",
+                "iso639_2": "hun",
+                "name": "Hungarian",
+                "nativeName": "magyar"
+            }
+        ],
+        "translations": {
+            "br": "Hungria",
+            "de": "Ungarn",
+            "es": "Hungría",
+            "fa": "مجارستان",
+            "fr": "Hongrie",
+            "hr": "Mađarska",
+            "it": "Ungheria",
+            "ja": "ハンガリー",
+            "nl": "Hongarije",
+            "pt": "Hungria",
+            "ru": "Венгрия",
+            "pl": "Węgry",
+            "cs": "Maďarsko",
+            "zh": "匈牙利",
+            "hu": "Magyarország",
+            "se": "Ungern"
+        },
+        "flag": "https://restcountries.eu/data/hun.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "HUN"
+    },
+    {
+        "name": "Iceland",
+        "topLevelDomain": [
+            ".is"
+        ],
+        "alpha2Code": "IS",
+        "alpha3Code": "ISL",
+        "callingCodes": [
+            "354"
+        ],
+        "capital": "Reykjavík",
+        "altSpellings": [
+            "IS",
+            "Island",
+            "Republic of Iceland",
+            "Lýðveldið Ísland"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 366425,
+        "latlng": [
+            65.0,
+            -18.0
+        ],
+        "demonym": "Icelander",
+        "area": 103000.0,
+        "gini": null,
+        "timezones": [
+            "UTC"
+        ],
+        "borders": [],
+        "nativeName": "Ísland",
+        "numericCode": "352",
+        "currencies": [
+            {
+                "code": "ISK",
+                "name": "Icelandic króna",
+                "symbol": "kr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "is",
+                "iso639_2": "isl",
+                "name": "Icelandic",
+                "nativeName": "Íslenska"
+            }
+        ],
+        "translations": {
+            "br": "Islândia",
+            "de": "Island",
+            "es": "Islandia",
+            "fa": "ایسلند",
+            "fr": "Islande",
+            "hr": "Island",
+            "it": "Islanda",
+            "ja": "アイスランド",
+            "nl": "IJsland",
+            "pt": "Islândia",
+            "ru": "Исландия",
+            "pl": "Islandia",
+            "cs": "Island",
+            "zh": "冰岛",
+            "hu": "Izland",
+            "se": "Island"
+        },
+        "flag": "https://restcountries.eu/data/isl.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EFTA",
+                "name": "European Free Trade Association",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "ISL"
+    },
+    {
+        "name": "Ireland",
+        "topLevelDomain": [
+            ".ie"
+        ],
+        "alpha2Code": "IE",
+        "alpha3Code": "IRL",
+        "callingCodes": [
+            "353"
+        ],
+        "capital": "Dublin",
+        "altSpellings": [
+            "IE",
+            "Éire",
+            "Republic of Ireland",
+            "Poblacht na hÉireann"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 4994724,
+        "latlng": [
+            53.0,
+            -8.0
+        ],
+        "demonym": "Irish",
+        "area": 70273.0,
+        "gini": 34.3,
+        "timezones": [
+            "UTC"
+        ],
+        "borders": [
+            "GBR"
+        ],
+        "nativeName": "Éire",
+        "numericCode": "372",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ga",
+                "iso639_2": "gle",
+                "name": "Irish",
+                "nativeName": "Gaeilge"
+            },
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            }
+        ],
+        "translations": {
+            "br": "Irlanda",
+            "de": "Irland",
+            "es": "Irlanda",
+            "fa": "ایرلند",
+            "fr": "Irlande",
+            "hr": "Irska",
+            "it": "Irlanda",
+            "ja": "アイルランド",
+            "nl": "Ierland",
+            "pt": "Irlanda",
+            "ru": "Ирландия",
+            "pl": "Irlandia",
+            "cs": "Irsko",
+            "zh": "爱尔兰共和国",
+            "hu": "Írország",
+            "se": "Irland"
+        },
+        "flag": "https://restcountries.eu/data/irl.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "IRL"
+    },
+    {
+        "name": "Isle of Man",
+        "topLevelDomain": [
+            ".im"
+        ],
+        "alpha2Code": "IM",
+        "alpha3Code": "IMN",
+        "callingCodes": [
+            "44"
+        ],
+        "capital": "Douglas",
+        "altSpellings": [
+            "IM",
+            "Ellan Vannin",
+            "Mann",
+            "Mannin"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 85032,
+        "latlng": [
+            54.25,
+            -4.5
+        ],
+        "demonym": "Manx",
+        "area": 572.0,
+        "gini": null,
+        "timezones": [
+            "UTC+00:00"
+        ],
+        "borders": [],
+        "nativeName": "Isle of Man",
+        "numericCode": "833",
+        "currencies": [
+            {
+                "code": "GBP",
+                "name": "British pound",
+                "symbol": "£"
+            },
+            {
+                "code": "IMP[G]",
+                "name": "Manx pound",
+                "symbol": "£"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            },
+            {
+                "iso639_1": "gv",
+                "iso639_2": "glv",
+                "name": "Manx",
+                "nativeName": "Gaelg"
+            }
+        ],
+        "translations": {
+            "br": "Ilha de Man",
+            "de": "Insel Man",
+            "es": "Isla de Man",
+            "fa": "جزیره من",
+            "fr": "Île de Man",
+            "hr": "Otok Man",
+            "it": "Isola di Man",
+            "ja": "マン島",
+            "nl": "Isle of Man",
+            "pt": "Ilha de Man",
+            "pl": "Wyspa Man",
+            "cs": "Ostrov Man",
+            "ru": "Isle of Man",
+            "zh": "马恩岛",
+            "hu": "Man",
+            "se": "Isle of Man"
+        },
+        "flag": "https://restcountries.eu/data/imn.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": ""
+    },
+    {
+        "name": "Italy",
+        "topLevelDomain": [
+            ".it"
+        ],
+        "alpha2Code": "IT",
+        "alpha3Code": "ITA",
+        "callingCodes": [
+            "39"
+        ],
+        "capital": "Rome",
+        "altSpellings": [
+            "IT",
+            "Italian Republic",
+            "Repubblica italiana"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 59554023,
+        "latlng": [
+            42.83333333,
+            12.83333333
+        ],
+        "demonym": "Italian",
+        "area": 301336.0,
+        "gini": 36.0,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "FRA",
+            "SMR",
+            "SVN",
+            "CHE",
+            "VAT"
+        ],
+        "nativeName": "Italia",
+        "numericCode": "380",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "it",
+                "iso639_2": "ita",
+                "name": "Italian",
+                "nativeName": "Italiano"
+            }
+        ],
+        "translations": {
+            "br": "Itália",
+            "de": "Italien",
+            "es": "Italia",
+            "fa": "ایتالیا",
+            "fr": "Italie",
+            "hr": "Italija",
+            "it": "Italia",
+            "ja": "イタリア",
+            "nl": "Italië",
+            "pt": "Itália",
+            "ru": "Италия",
+            "pl": "Włochy",
+            "cs": "Itálie",
+            "zh": "意大利共和国",
+            "hu": "Olaszország",
+            "se": "Italien"
+        },
+        "flag": "https://restcountries.eu/data/ita.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "ITA"
+    },
+    {
+        "name": "Jersey",
+        "topLevelDomain": [
+            ".je"
+        ],
+        "alpha2Code": "JE",
+        "alpha3Code": "JEY",
+        "callingCodes": [
+            "44"
+        ],
+        "capital": "Saint Helier",
+        "altSpellings": [
+            "JE",
+            "Bailiwick of Jersey",
+            "Bailliage de Jersey",
+            "Bailliage dé Jèrri"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 100800,
+        "latlng": [
+            49.25,
+            -2.16666666
+        ],
+        "demonym": "Channel Islander",
+        "area": 116.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [],
+        "nativeName": "Jersey",
+        "numericCode": "832",
+        "currencies": [
+            {
+                "code": "GBP",
+                "name": "British pound",
+                "symbol": "£"
+            },
+            {
+                "code": "JEP[G]",
+                "name": "Jersey pound",
+                "symbol": "£"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            },
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            }
+        ],
+        "translations": {
+            "br": "Jersey",
+            "de": "Jersey",
+            "es": "Jersey",
+            "fa": "جرزی",
+            "fr": "Jersey",
+            "hr": "Jersey",
+            "it": "Isola di Jersey",
+            "ja": "ジャージー",
+            "nl": "Jersey",
+            "pt": "Jersey",
+            "pl": "Jersey",
+            "cs": "Jersey",
+            "ru": "Jersey",
+            "zh": "泽西岛",
+            "hu": "Jersey",
+            "se": "Jersey"
+        },
+        "flag": "https://restcountries.eu/data/jey.svg",
+        "regionalBlocs": [],
+        "cioc": ""
+    },
+    {
+        "name": "Latvia",
+        "topLevelDomain": [
+            ".lv"
+        ],
+        "alpha2Code": "LV",
+        "alpha3Code": "LVA",
+        "callingCodes": [
+            "371"
+        ],
+        "capital": "Riga",
+        "altSpellings": [
+            "LV",
+            "Republic of Latvia",
+            "Latvijas Republika"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 1901548,
+        "latlng": [
+            57.0,
+            25.0
+        ],
+        "demonym": "Latvian",
+        "area": 64559.0,
+        "gini": 36.6,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "BLR",
+            "EST",
+            "LTU",
+            "RUS"
+        ],
+        "nativeName": "Latvija",
+        "numericCode": "428",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "lv",
+                "iso639_2": "lav",
+                "name": "Latvian",
+                "nativeName": "latviešu valoda"
+            }
+        ],
+        "translations": {
+            "br": "Letônia",
+            "de": "Lettland",
+            "es": "Letonia",
+            "fa": "لتونی",
+            "fr": "Lettonie",
+            "hr": "Latvija",
+            "it": "Lettonia",
+            "ja": "ラトビア",
+            "nl": "Letland",
+            "pt": "Letónia",
+            "ru": "Латвия",
+            "pl": "Łotwa",
+            "cs": "Lotyšsko",
+            "zh": "拉脱维亚共和国",
+            "hu": "Lettország",
+            "se": "Lettland"
+        },
+        "flag": "https://restcountries.eu/data/lva.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "LAT"
+    },
+    {
+        "name": "Liechtenstein",
+        "topLevelDomain": [
+            ".li"
+        ],
+        "alpha2Code": "LI",
+        "alpha3Code": "LIE",
+        "callingCodes": [
+            "423"
+        ],
+        "capital": "Vaduz",
+        "altSpellings": [
+            "LI",
+            "Principality of Liechtenstein",
+            "Fürstentum Liechtenstein"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 38137,
+        "latlng": [
+            47.26666666,
+            9.53333333
+        ],
+        "demonym": "Liechtensteiner",
+        "area": 160.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "CHE"
+        ],
+        "nativeName": "Liechtenstein",
+        "numericCode": "438",
+        "currencies": [
+            {
+                "code": "CHF",
+                "name": "Swiss franc",
+                "symbol": "Fr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "de",
+                "iso639_2": "deu",
+                "name": "German",
+                "nativeName": "Deutsch"
+            }
+        ],
+        "translations": {
+            "br": "Liechtenstein",
+            "de": "Liechtenstein",
+            "es": "Liechtenstein",
+            "fa": "لیختن‌اشتاین",
+            "fr": "Liechtenstein",
+            "hr": "Lihtenštajn",
+            "it": "Liechtenstein",
+            "ja": "リヒテンシュタイン",
+            "nl": "Liechtenstein",
+            "pt": "Listenstaine",
+            "ru": "Лихтенштейн",
+            "pl": "Liechtenstein",
+            "cs": "Lichtenštejnsko",
+            "zh": "列支敦士登公国",
+            "hu": "Liechtenstein",
+            "se": "Liechtenstein"
+        },
+        "flag": "https://restcountries.eu/data/lie.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EFTA",
+                "name": "European Free Trade Association",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "LIE"
+    },
+    {
+        "name": "Lithuania",
+        "topLevelDomain": [
+            ".lt"
+        ],
+        "alpha2Code": "LT",
+        "alpha3Code": "LTU",
+        "callingCodes": [
+            "370"
+        ],
+        "capital": "Vilnius",
+        "altSpellings": [
+            "LT",
+            "Republic of Lithuania",
+            "Lietuvos Respublika"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 2794700,
+        "latlng": [
+            56.0,
+            24.0
+        ],
+        "demonym": "Lithuanian",
+        "area": 65300.0,
+        "gini": 37.6,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "BLR",
+            "LVA",
+            "POL",
+            "RUS"
+        ],
+        "nativeName": "Lietuva",
+        "numericCode": "440",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "lt",
+                "iso639_2": "lit",
+                "name": "Lithuanian",
+                "nativeName": "lietuvių kalba"
+            }
+        ],
+        "translations": {
+            "br": "Lituânia",
+            "de": "Litauen",
+            "es": "Lituania",
+            "fa": "لیتوانی",
+            "fr": "Lituanie",
+            "hr": "Litva",
+            "it": "Lituania",
+            "ja": "リトアニア",
+            "nl": "Litouwen",
+            "pt": "Lituânia",
+            "ru": "Литва",
+            "pl": "Litwa",
+            "cs": "Litva",
+            "zh": "立陶宛共和国",
+            "hu": "Litvánia",
+            "se": "Litauen"
+        },
+        "flag": "https://restcountries.eu/data/ltu.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "LTU"
+    },
+    {
+        "name": "Luxembourg",
+        "topLevelDomain": [
+            ".lu"
+        ],
+        "alpha2Code": "LU",
+        "alpha3Code": "LUX",
+        "callingCodes": [
+            "352"
+        ],
+        "capital": "Luxembourg",
+        "altSpellings": [
+            "LU",
+            "Grand Duchy of Luxembourg",
+            "Grand-Duché de Luxembourg",
+            "Großherzogtum Luxemburg",
+            "Groussherzogtum Lëtzebuerg"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 632275,
+        "latlng": [
+            49.75,
+            6.16666666
+        ],
+        "demonym": "Luxembourger",
+        "area": 2586.0,
+        "gini": 30.8,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "BEL",
+            "FRA",
+            "DEU"
+        ],
+        "nativeName": "Lëtzebuerg",
+        "numericCode": "442",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            },
+            {
+                "iso639_1": "de",
+                "iso639_2": "deu",
+                "name": "German",
+                "nativeName": "Deutsch"
+            },
+            {
+                "iso639_1": "lb",
+                "iso639_2": "ltz",
+                "name": "Luxembourgish",
+                "nativeName": "Lëtzebuergesch"
+            }
+        ],
+        "translations": {
+            "br": "Luxemburgo",
+            "de": "Luxemburg",
+            "es": "Luxemburgo",
+            "fa": "لوکزامبورگ",
+            "fr": "Luxembourg",
+            "hr": "Luksemburg",
+            "it": "Lussemburgo",
+            "ja": "ルクセンブルク",
+            "nl": "Luxemburg",
+            "pt": "Luxemburgo",
+            "ru": "Люксембург",
+            "pl": "Luksemburg",
+            "cs": "Lucembursko",
+            "zh": "卢森堡大公国",
+            "hu": "Luxemburg",
+            "se": "Luxemburg"
+        },
+        "flag": "https://restcountries.eu/data/lux.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "LUX"
+    },
+    {
+        "name": "North Macedonia",
+        "topLevelDomain": [
+            ".mk"
+        ],
+        "alpha2Code": "MK",
+        "alpha3Code": "MKD",
+        "callingCodes": [
+            "389"
+        ],
+        "capital": "Skopje",
+        "altSpellings": [
+            "MK",
+            "Republic of North Macedonia",
+            "Република Македонија"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 2083380,
+        "latlng": [
+            41.83333333,
+            22.0
+        ],
+        "demonym": "Macedonian",
+        "area": 25713.0,
+        "gini": 43.2,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "ALB",
+            "BGR",
+            "GRC",
+            "UNK",
+            "SRB"
+        ],
+        "nativeName": "северна Македонија",
+        "numericCode": "807",
+        "currencies": [
+            {
+                "code": "MKD",
+                "name": "Macedonian denar",
+                "symbol": "ден"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "mk",
+                "iso639_2": "mkd",
+                "name": "Macedonian",
+                "nativeName": "македонски јазик"
+            }
+        ],
+        "translations": {
+            "br": "Macedônia",
+            "de": "Mazedonien",
+            "es": "Macedonia",
+            "fa": "North Macedonia",
+            "fr": "Macédoine",
+            "hr": "Makedonija",
+            "it": "Macedonia",
+            "ja": "マケドニア旧ユーゴスラビア共和国",
+            "nl": "Macedonië",
+            "pt": "Macedónia",
+            "ru": "Северная Македония",
+            "pl": "Macedonia",
+            "cs": "Makedonie",
+            "zh": "北馬其頓共和國",
+            "hu": "Macedónia",
+            "se": "Nordmakedonien"
+        },
+        "flag": "https://restcountries.eu/data/mkd.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "MKD"
+    },
+    {
+        "name": "Malta",
+        "topLevelDomain": [
+            ".mt"
+        ],
+        "alpha2Code": "MT",
+        "alpha3Code": "MLT",
+        "callingCodes": [
+            "356"
+        ],
+        "capital": "Valletta",
+        "altSpellings": [
+            "MT",
+            "Republic of Malta",
+            "Repubblika ta' Malta"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 525285,
+        "latlng": [
+            35.83333333,
+            14.58333333
+        ],
+        "demonym": "Maltese",
+        "area": 316.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [],
+        "nativeName": "Malta",
+        "numericCode": "470",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "mt",
+                "iso639_2": "mlt",
+                "name": "Maltese",
+                "nativeName": "Malti"
+            },
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            }
+        ],
+        "translations": {
+            "br": "Malta",
+            "de": "Malta",
+            "es": "Malta",
+            "fa": "مالت",
+            "fr": "Malte",
+            "hr": "Malta",
+            "it": "Malta",
+            "ja": "マルタ",
+            "nl": "Malta",
+            "pt": "Malta",
+            "ru": "Мальта",
+            "pl": "Malta",
+            "cs": "Malta",
+            "zh": "马耳他共和国",
+            "hu": "Málta",
+            "se": "Malta"
+        },
+        "flag": "https://restcountries.eu/data/mlt.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "MLT"
+    },
+    {
+        "name": "Moldova (Republic of)",
+        "topLevelDomain": [
+            ".md"
+        ],
+        "alpha2Code": "MD",
+        "alpha3Code": "MDA",
+        "callingCodes": [
+            "373"
+        ],
+        "capital": "Chișinău",
+        "altSpellings": [
+            "MD",
+            "Republic of Moldova",
+            "Republica Moldova"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 2617820,
+        "latlng": [
+            47.0,
+            29.0
+        ],
+        "demonym": "Moldovan",
+        "area": 33846.0,
+        "gini": 33.0,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "ROU",
+            "UKR"
+        ],
+        "nativeName": "Moldova",
+        "numericCode": "498",
+        "currencies": [
+            {
+                "code": "MDL",
+                "name": "Moldovan leu",
+                "symbol": "L"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ro",
+                "iso639_2": "ron",
+                "name": "Romanian",
+                "nativeName": "Română"
+            }
+        ],
+        "translations": {
+            "br": "Moldávia",
+            "de": "Moldawie",
+            "es": "Moldavia",
+            "fa": "مولداوی",
+            "fr": "Moldavie",
+            "hr": "Moldova",
+            "it": "Moldavia",
+            "ja": "モルドバ共和国",
+            "nl": "Moldavië",
+            "pt": "Moldávia",
+            "ru": "Молдавия",
+            "pl": "Mołdawia",
+            "cs": "Moldavsko",
+            "zh": "摩尔多瓦共和国",
+            "hu": "Moldova",
+            "se": "Moldavien"
+        },
+        "flag": "https://restcountries.eu/data/mda.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "MDA"
+    },
+    {
+        "name": "Monaco",
+        "topLevelDomain": [
+            ".mc"
+        ],
+        "alpha2Code": "MC",
+        "alpha3Code": "MCO",
+        "callingCodes": [
+            "377"
+        ],
+        "capital": "Monaco",
+        "altSpellings": [
+            "MC",
+            "Principality of Monaco",
+            "Principauté de Monaco"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 39244,
+        "latlng": [
+            43.73333333,
+            7.4
+        ],
+        "demonym": "Monegasque",
+        "area": 2.02,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "FRA"
+        ],
+        "nativeName": "Monaco",
+        "numericCode": "492",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            }
+        ],
+        "translations": {
+            "br": "Mônaco",
+            "de": "Monaco",
+            "es": "Mónaco",
+            "fa": "موناکو",
+            "fr": "Monaco",
+            "hr": "Monako",
+            "it": "Principato di Monaco",
+            "ja": "モナコ",
+            "nl": "Monaco",
+            "pt": "Mónaco",
+            "ru": "Монако",
+            "pl": "Monako",
+            "cs": "Monako",
+            "zh": "摩纳哥公国",
+            "hu": "Monaco",
+            "se": "Monaco"
+        },
+        "flag": "https://restcountries.eu/data/mco.svg",
+        "regionalBlocs": [],
+        "cioc": "MON"
+    },
+    {
+        "name": "Montenegro",
+        "topLevelDomain": [
+            ".me"
+        ],
+        "alpha2Code": "ME",
+        "alpha3Code": "MNE",
+        "callingCodes": [
+            "382"
+        ],
+        "capital": "Podgorica",
+        "altSpellings": [
+            "ME",
+            "Crna Gora"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 621718,
+        "latlng": [
+            42.5,
+            19.3
+        ],
+        "demonym": "Montenegrin",
+        "area": 13812.0,
+        "gini": 30.0,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "ALB",
+            "BIH",
+            "HRV",
+            "UNK",
+            "SRB"
+        ],
+        "nativeName": "Црна Гора",
+        "numericCode": "499",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sr",
+                "iso639_2": "srp",
+                "name": "Serbian",
+                "nativeName": "српски језик"
+            },
+            {
+                "iso639_1": "bs",
+                "iso639_2": "bos",
+                "name": "Bosnian",
+                "nativeName": "bosanski jezik"
+            },
+            {
+                "iso639_1": "sq",
+                "iso639_2": "sqi",
+                "name": "Albanian",
+                "nativeName": "Shqip"
+            },
+            {
+                "iso639_1": "hr",
+                "iso639_2": "hrv",
+                "name": "Croatian",
+                "nativeName": "hrvatski jezik"
+            }
+        ],
+        "translations": {
+            "br": "Montenegro",
+            "de": "Montenegro",
+            "es": "Montenegro",
+            "fa": "مونته‌نگرو",
+            "fr": "Monténégro",
+            "hr": "Crna Gora",
+            "it": "Montenegro",
+            "ja": "モンテネグロ",
+            "nl": "Montenegro",
+            "pt": "Montenegro",
+            "ru": "Черногория",
+            "pl": "Czarnogóra",
+            "cs": "Černá Hora",
+            "zh": "黑山",
+            "hu": "Montenegró",
+            "se": "Montenegro"
+        },
+        "flag": "https://restcountries.eu/data/mne.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "MNE"
+    },
+    {
+        "name": "Netherlands",
+        "topLevelDomain": [
+            ".nl"
+        ],
+        "alpha2Code": "NL",
+        "alpha3Code": "NLD",
+        "callingCodes": [
+            "31"
+        ],
+        "capital": "Amsterdam",
+        "altSpellings": [
+            "NL",
+            "Holland",
+            "Nederland"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 17441139,
+        "latlng": [
+            52.5,
+            5.75
+        ],
+        "demonym": "Dutch",
+        "area": 41850.0,
+        "gini": 30.9,
+        "timezones": [
+            "UTC-04:00",
+            "UTC+01:00"
+        ],
+        "borders": [
+            "BEL",
+            "DEU"
+        ],
+        "nativeName": "Nederland",
+        "numericCode": "528",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "nl",
+                "iso639_2": "nld",
+                "name": "Dutch",
+                "nativeName": "Nederlands"
+            }
+        ],
+        "translations": {
+            "br": "Holanda",
+            "de": "Niederlande",
+            "es": "Países Bajos",
+            "fa": "پادشاهی هلند",
+            "fr": "Pays-Bas",
+            "hr": "Nizozemska",
+            "it": "Paesi Bassi",
+            "ja": "オランダ",
+            "nl": "Nederland",
+            "pt": "Países Baixos",
+            "ru": "Нидерланды",
+            "pl": "Holandia",
+            "cs": "Nizozemsko",
+            "zh": "荷兰",
+            "hu": "Hollandia",
+            "se": "Nederländerna"
+        },
+        "flag": "https://restcountries.eu/data/nld.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "NED"
+    },
+    {
+        "name": "Norway",
+        "topLevelDomain": [
+            ".no"
+        ],
+        "alpha2Code": "NO",
+        "alpha3Code": "NOR",
+        "callingCodes": [
+            "47"
+        ],
+        "capital": "Oslo",
+        "altSpellings": [
+            "NO",
+            "Norge",
+            "Noreg",
+            "Kingdom of Norway",
+            "Kongeriket Norge",
+            "Kongeriket Noreg"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 5379475,
+        "latlng": [
+            62.0,
+            10.0
+        ],
+        "demonym": "Norwegian",
+        "area": 323802.0,
+        "gini": 25.8,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "FIN",
+            "SWE",
+            "RUS"
+        ],
+        "nativeName": "Norge",
+        "numericCode": "578",
+        "currencies": [
+            {
+                "code": "NOK",
+                "name": "Norwegian krone",
+                "symbol": "kr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "no",
+                "iso639_2": "nor",
+                "name": "Norwegian",
+                "nativeName": "Norsk"
+            },
+            {
+                "iso639_1": "nb",
+                "iso639_2": "nob",
+                "name": "Norwegian Bokmål",
+                "nativeName": "Norsk bokmål"
+            },
+            {
+                "iso639_1": "nn",
+                "iso639_2": "nno",
+                "name": "Norwegian Nynorsk",
+                "nativeName": "Norsk nynorsk"
+            }
+        ],
+        "translations": {
+            "br": "Noruega",
+            "de": "Norwegen",
+            "es": "Noruega",
+            "fa": "نروژ",
+            "fr": "Norvège",
+            "hr": "Norveška",
+            "it": "Norvegia",
+            "ja": "ノルウェー",
+            "nl": "Noorwegen",
+            "pt": "Noruega",
+            "ru": "Норвегия",
+            "pl": "Norwegia",
+            "cs": "Norsko",
+            "zh": "挪威王国",
+            "hu": "Norvégia",
+            "se": "Norge"
+        },
+        "flag": "https://restcountries.eu/data/nor.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EFTA",
+                "name": "European Free Trade Association",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "NOR"
+    },
+    {
+        "name": "Poland",
+        "topLevelDomain": [
+            ".pl"
+        ],
+        "alpha2Code": "PL",
+        "alpha3Code": "POL",
+        "callingCodes": [
+            "48"
+        ],
+        "capital": "Warsaw",
+        "altSpellings": [
+            "PL",
+            "Republic of Poland",
+            "Rzeczpospolita Polska"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 37950802,
+        "latlng": [
+            52.0,
+            20.0
+        ],
+        "demonym": "Polish",
+        "area": 312679.0,
+        "gini": 34.1,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "BLR",
+            "CZE",
+            "DEU",
+            "LTU",
+            "RUS",
+            "SVK",
+            "UKR"
+        ],
+        "nativeName": "Polska",
+        "numericCode": "616",
+        "currencies": [
+            {
+                "code": "PLN",
+                "name": "Polish złoty",
+                "symbol": "zł"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "pl",
+                "iso639_2": "pol",
+                "name": "Polish",
+                "nativeName": "język polski"
+            }
+        ],
+        "translations": {
+            "br": "Polônia",
+            "de": "Polen",
+            "es": "Polonia",
+            "fa": "لهستان",
+            "fr": "Pologne",
+            "hr": "Poljska",
+            "it": "Polonia",
+            "ja": "ポーランド",
+            "nl": "Polen",
+            "pt": "Polónia",
+            "ru": "Польша",
+            "pl": "Polska",
+            "cs": "Polsko",
+            "zh": "波兰共和国",
+            "hu": "Lengyelország",
+            "se": "Polen"
+        },
+        "flag": "https://restcountries.eu/data/pol.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "POL"
+    },
+    {
+        "name": "Portugal",
+        "topLevelDomain": [
+            ".pt"
+        ],
+        "alpha2Code": "PT",
+        "alpha3Code": "PRT",
+        "callingCodes": [
+            "351"
+        ],
+        "capital": "Lisbon",
+        "altSpellings": [
+            "PT",
+            "Portuguesa",
+            "Portuguese Republic",
+            "República Portuguesa"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 10305564,
+        "latlng": [
+            39.5,
+            -8.0
+        ],
+        "demonym": "Portuguese",
+        "area": 92090.0,
+        "gini": 38.5,
+        "timezones": [
+            "UTC-01:00",
+            "UTC"
+        ],
+        "borders": [
+            "ESP"
+        ],
+        "nativeName": "Portugal",
+        "numericCode": "620",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "pt",
+                "iso639_2": "por",
+                "name": "Portuguese",
+                "nativeName": "Português"
+            }
+        ],
+        "translations": {
+            "br": "Portugal",
+            "de": "Portugal",
+            "es": "Portugal",
+            "fa": "پرتغال",
+            "fr": "Portugal",
+            "hr": "Portugal",
+            "it": "Portogallo",
+            "ja": "ポルトガル",
+            "nl": "Portugal",
+            "pt": "Portugal",
+            "ru": "Португалия",
+            "pl": "Portugalia",
+            "cs": "Portugalsko",
+            "zh": "葡萄牙共和国",
+            "hu": "Portugália",
+            "se": "Portugal"
+        },
+        "flag": "https://restcountries.eu/data/prt.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "POR"
+    },
+    {
+        "name": "Republic of Kosovo",
+        "topLevelDomain": [
+            ""
+        ],
+        "alpha2Code": "XK",
+        "alpha3Code": "UNK",
+        "callingCodes": [
+            "383"
+        ],
+        "capital": "Pristina",
+        "altSpellings": [
+            "XK",
+            "Република Косово"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 1775378,
+        "latlng": [
+            42.666667,
+            21.166667
+        ],
+        "demonym": "Kosovar",
+        "area": 10908.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "ALB",
+            "MKD",
+            "MNE",
+            "SRB"
+        ],
+        "nativeName": "Republika e Kosovës",
+        "numericCode": null,
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sq",
+                "iso639_2": "sqi",
+                "name": "Albanian",
+                "nativeName": "Shqip"
+            },
+            {
+                "iso639_1": "sr",
+                "iso639_2": "srp",
+                "name": "Serbian",
+                "nativeName": "српски језик"
+            }
+        ],
+        "translations": {
+            "br": "Kosovo",
+            "es": "Kosovo",
+            "fa": "کوزوو",
+            "hr": "Kosovo",
+            "pt": "Kosovo",
+            "pl": "Kosowo",
+            "cs": "Kosovo",
+            "de": "Republic of Kosovo",
+            "fr": "Republic of Kosovo",
+            "it": "Republic of Kosovo",
+            "ja": "Republic of Kosovo",
+            "nl": "Republiek van Kosovo",
+            "ru": "Republic of Kosovo",
+            "zh": "科索沃",
+            "hu": "Koszovó",
+            "se": "Kosovo"
+        },
+        "flag": "https://restcountries.eu/data/kos.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": null
+    },
+    {
+        "name": "Romania",
+        "topLevelDomain": [
+            ".ro"
+        ],
+        "alpha2Code": "RO",
+        "alpha3Code": "ROU",
+        "callingCodes": [
+            "40"
+        ],
+        "capital": "Bucharest",
+        "altSpellings": [
+            "RO",
+            "Rumania",
+            "Roumania",
+            "România"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 19286123,
+        "latlng": [
+            46.0,
+            25.0
+        ],
+        "demonym": "Romanian",
+        "area": 238391.0,
+        "gini": 30.0,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "BGR",
+            "HUN",
+            "MDA",
+            "SRB",
+            "UKR"
+        ],
+        "nativeName": "România",
+        "numericCode": "642",
+        "currencies": [
+            {
+                "code": "RON",
+                "name": "Romanian leu",
+                "symbol": "lei"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ro",
+                "iso639_2": "ron",
+                "name": "Romanian",
+                "nativeName": "Română"
+            }
+        ],
+        "translations": {
+            "br": "Romênia",
+            "de": "Rumänien",
+            "es": "Rumania",
+            "fa": "رومانی",
+            "fr": "Roumanie",
+            "hr": "Rumunjska",
+            "it": "Romania",
+            "ja": "ルーマニア",
+            "nl": "Roemenië",
+            "pt": "Roménia",
+            "ru": "Румыния",
+            "pl": "Rumunia",
+            "cs": "Rumunsko",
+            "zh": "罗马尼亚",
+            "hu": "Románia",
+            "se": "Rumänien"
+        },
+        "flag": "https://restcountries.eu/data/rou.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "ROU"
+    },
+    {
+        "name": "Russian Federation",
+        "topLevelDomain": [
+            ".ru"
+        ],
+        "alpha2Code": "RU",
+        "alpha3Code": "RUS",
+        "callingCodes": [
+            "7"
+        ],
+        "capital": "Moscow",
+        "altSpellings": [
+            "RU",
+            "Rossiya",
+            "Russian Federation",
+            "Российская Федерация",
+            "Rossiyskaya Federatsiya"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 144104080,
+        "latlng": [
+            60.0,
+            100.0
+        ],
+        "demonym": "Russian",
+        "area": 17124442,
+        "gini": 40.1,
+        "timezones": [
+            "UTC+03:00",
+            "UTC+04:00",
+            "UTC+06:00",
+            "UTC+07:00",
+            "UTC+08:00",
+            "UTC+09:00",
+            "UTC+10:00",
+            "UTC+11:00",
+            "UTC+12:00"
+        ],
+        "borders": [
+            "AZE",
+            "BLR",
+            "CHN",
+            "EST",
+            "FIN",
+            "GEO",
+            "KAZ",
+            "PRK",
+            "LVA",
+            "LTU",
+            "MNG",
+            "NOR",
+            "POL",
+            "UKR"
+        ],
+        "nativeName": "Россия",
+        "numericCode": "643",
+        "currencies": [
+            {
+                "code": "RUB",
+                "name": "Russian ruble",
+                "symbol": "₽"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ru",
+                "iso639_2": "rus",
+                "name": "Russian",
+                "nativeName": "Русский"
+            }
+        ],
+        "translations": {
+            "br": "Rússia",
+            "de": "Russland",
+            "es": "Rusia",
+            "fa": "روسیه",
+            "fr": "Russie",
+            "hr": "Rusija",
+            "it": "Russia",
+            "ja": "ロシア連邦",
+            "nl": "Rusland",
+            "pt": "Rússia",
+            "ru": "Россия",
+            "pl": "Rosja",
+            "cs": "Rusko",
+            "zh": "俄罗斯联邦",
+            "hu": "Oroszország",
+            "se": "Ryssland"
+        },
+        "flag": "https://restcountries.eu/data/rus.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EEU",
+                "name": "Eurasian Economic Union",
+                "otherAcronyms": [
+                    "EAEU"
+                ],
+                "otherNames": []
+            }
+        ],
+        "cioc": "RUS"
+    },
+    {
+        "name": "San Marino",
+        "topLevelDomain": [
+            ".sm"
+        ],
+        "alpha2Code": "SM",
+        "alpha3Code": "SMR",
+        "callingCodes": [
+            "378"
+        ],
+        "capital": "City of San Marino",
+        "altSpellings": [
+            "SM",
+            "Republic of San Marino",
+            "Repubblica di San Marino"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 33938,
+        "latlng": [
+            43.76666666,
+            12.41666666
+        ],
+        "demonym": "Sammarinese",
+        "area": 61.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "ITA"
+        ],
+        "nativeName": "San Marino",
+        "numericCode": "674",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "it",
+                "iso639_2": "ita",
+                "name": "Italian",
+                "nativeName": "Italiano"
+            }
+        ],
+        "translations": {
+            "br": "San Marino",
+            "de": "San Marino",
+            "es": "San Marino",
+            "fa": "سان مارینو",
+            "fr": "Saint-Marin",
+            "hr": "San Marino",
+            "it": "San Marino",
+            "ja": "サンマリノ",
+            "nl": "San Marino",
+            "pt": "São Marinho",
+            "ru": "Сан-Марино",
+            "pl": "San Marino",
+            "cs": "San Marino",
+            "zh": "圣马力诺共和国",
+            "hu": "San Marino",
+            "se": "San Marino"
+        },
+        "flag": "https://restcountries.eu/data/smr.svg",
+        "regionalBlocs": [],
+        "cioc": "SMR"
+    },
+    {
+        "name": "Serbia",
+        "topLevelDomain": [
+            ".rs"
+        ],
+        "alpha2Code": "RS",
+        "alpha3Code": "SRB",
+        "callingCodes": [
+            "381"
+        ],
+        "capital": "Belgrade",
+        "altSpellings": [
+            "RS",
+            "Srbija",
+            "Republic of Serbia",
+            "Република Србија",
+            "Republika Srbija"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 6908224,
+        "latlng": [
+            44.0,
+            21.0
+        ],
+        "demonym": "Serbian",
+        "area": 88361.0,
+        "gini": 27.8,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "BIH",
+            "BGR",
+            "HRV",
+            "HUN",
+            "UNK",
+            "MKD",
+            "MNE",
+            "ROU"
+        ],
+        "nativeName": "Србија",
+        "numericCode": "688",
+        "currencies": [
+            {
+                "code": "RSD",
+                "name": "Serbian dinar",
+                "symbol": "дин."
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sr",
+                "iso639_2": "srp",
+                "name": "Serbian",
+                "nativeName": "српски језик"
+            }
+        ],
+        "translations": {
+            "br": "Sérvia",
+            "de": "Serbien",
+            "es": "Serbia",
+            "fa": "صربستان",
+            "fr": "Serbie",
+            "hr": "Srbija",
+            "it": "Serbia",
+            "ja": "セルビア",
+            "nl": "Servië",
+            "pt": "Sérvia",
+            "ru": "Сербия",
+            "pl": "Serbia",
+            "cs": "Srbsko",
+            "zh": "塞尔维亚共和国",
+            "hu": "Szerbia",
+            "se": "Serbien"
+        },
+        "flag": "https://restcountries.eu/data/srb.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "SRB"
+    },
+    {
+        "name": "Slovakia",
+        "topLevelDomain": [
+            ".sk"
+        ],
+        "alpha2Code": "SK",
+        "alpha3Code": "SVK",
+        "callingCodes": [
+            "421"
+        ],
+        "capital": "Bratislava",
+        "altSpellings": [
+            "SK",
+            "Slovak Republic",
+            "Slovenská republika"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 5458827,
+        "latlng": [
+            48.66666666,
+            19.5
+        ],
+        "demonym": "Slovak",
+        "area": 49037.0,
+        "gini": 26.0,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "CZE",
+            "HUN",
+            "POL",
+            "UKR"
+        ],
+        "nativeName": "Slovensko",
+        "numericCode": "703",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sk",
+                "iso639_2": "slk",
+                "name": "Slovak",
+                "nativeName": "slovenčina"
+            }
+        ],
+        "translations": {
+            "br": "Eslováquia",
+            "de": "Slowakei",
+            "es": "República Eslovaca",
+            "fa": "اسلواکی",
+            "fr": "Slovaquie",
+            "hr": "Slovačka",
+            "it": "Slovacchia",
+            "ja": "スロバキア",
+            "nl": "Slowakije",
+            "pt": "Eslováquia",
+            "ru": "Словакия",
+            "pl": "Słowacja",
+            "cs": "Slovensko",
+            "zh": "斯洛伐克共和国",
+            "hu": "Szlovákia",
+            "se": "Slovakien"
+        },
+        "flag": "https://restcountries.eu/data/svk.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "SVK"
+    },
+    {
+        "name": "Slovenia",
+        "topLevelDomain": [
+            ".si"
+        ],
+        "alpha2Code": "SI",
+        "alpha3Code": "SVN",
+        "callingCodes": [
+            "386"
+        ],
+        "capital": "Ljubljana",
+        "altSpellings": [
+            "SI",
+            "Republic of Slovenia",
+            "Republika Slovenija"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 2100126,
+        "latlng": [
+            46.11666666,
+            14.81666666
+        ],
+        "demonym": "Slovene",
+        "area": 20273.0,
+        "gini": 31.2,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "HRV",
+            "ITA",
+            "HUN"
+        ],
+        "nativeName": "Slovenija",
+        "numericCode": "705",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sl",
+                "iso639_2": "slv",
+                "name": "Slovene",
+                "nativeName": "slovenski jezik"
+            }
+        ],
+        "translations": {
+            "br": "Eslovênia",
+            "de": "Slowenien",
+            "es": "Eslovenia",
+            "fa": "اسلوونی",
+            "fr": "Slovénie",
+            "hr": "Slovenija",
+            "it": "Slovenia",
+            "ja": "スロベニア",
+            "nl": "Slovenië",
+            "pt": "Eslovénia",
+            "ru": "Словения",
+            "pl": "Słowenia",
+            "cs": "Slovinsko",
+            "zh": "斯洛文尼亚共和国",
+            "hu": "Szlovénia",
+            "se": "Slovenien"
+        },
+        "flag": "https://restcountries.eu/data/svn.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "SLO"
+    },
+    {
+        "name": "Spain",
+        "topLevelDomain": [
+            ".es"
+        ],
+        "alpha2Code": "ES",
+        "alpha3Code": "ESP",
+        "callingCodes": [
+            "34"
+        ],
+        "capital": "Madrid",
+        "altSpellings": [
+            "ES",
+            "Kingdom of Spain",
+            "Reino de España"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 47351567,
+        "latlng": [
+            40.0,
+            -4.0
+        ],
+        "demonym": "Spanish",
+        "area": 505992.0,
+        "gini": 34.7,
+        "timezones": [
+            "UTC",
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AND",
+            "FRA",
+            "GIB",
+            "PRT",
+            "MAR"
+        ],
+        "nativeName": "España",
+        "numericCode": "724",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "es",
+                "iso639_2": "spa",
+                "name": "Spanish",
+                "nativeName": "Español"
+            }
+        ],
+        "translations": {
+            "br": "Espanha",
+            "de": "Spanien",
+            "es": "España",
+            "fa": "اسپانیا",
+            "fr": "Espagne",
+            "hr": "Španjolska",
+            "it": "Spagna",
+            "ja": "スペイン",
+            "nl": "Spanje",
+            "pt": "Espanha",
+            "ru": "Испания",
+            "pl": "Hiszpania",
+            "cs": "Španělsko",
+            "zh": "西班牙王国",
+            "hu": "Spanyolország",
+            "se": "Spanien"
+        },
+        "flag": "https://restcountries.eu/data/esp.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "ESP"
+    },
+    {
+        "name": "Svalbard and Jan Mayen",
+        "topLevelDomain": [
+            ".sj"
+        ],
+        "alpha2Code": "SJ",
+        "alpha3Code": "SJM",
+        "callingCodes": [
+            "47"
+        ],
+        "capital": "Longyearbyen",
+        "altSpellings": [
+            "SJ",
+            "Svalbard and Jan Mayen Islands"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 2562,
+        "latlng": [
+            78.0,
+            20.0
+        ],
+        "demonym": "Norwegian",
+        "area": null,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [],
+        "nativeName": "Svalbard og Jan Mayen",
+        "numericCode": "744",
+        "currencies": [
+            {
+                "code": "NOK",
+                "name": "Norwegian krone",
+                "symbol": "kr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "no",
+                "iso639_2": "nor",
+                "name": "Norwegian",
+                "nativeName": "Norsk"
+            }
+        ],
+        "translations": {
+            "br": "Svalbard",
+            "de": "Svalbard und Jan Mayen",
+            "es": "Islas Svalbard y Jan Mayen",
+            "fa": "سوالبارد و یان ماین",
+            "fr": "Svalbard et Jan Mayen",
+            "hr": "Svalbard i Jan Mayen",
+            "it": "Svalbard e Jan Mayen",
+            "ja": "スヴァールバル諸島およびヤンマイエン島",
+            "nl": "Svalbard en Jan Mayen",
+            "pt": "Svalbard",
+            "pl": "Svalbard",
+            "cs": "Špicberky a Jan Mayen",
+            "ru": "Svalbard and Jan Mayen",
+            "zh": "斯瓦尔巴特",
+            "hu": "Spitzbergák és Jan Mayen-szigetek",
+            "se": "Svalbard och Jan Mayen"
+        },
+        "flag": "https://restcountries.eu/data/sjm.svg",
+        "regionalBlocs": [],
+        "cioc": ""
+    },
+    {
+        "name": "Sweden",
+        "topLevelDomain": [
+            ".se"
+        ],
+        "alpha2Code": "SE",
+        "alpha3Code": "SWE",
+        "callingCodes": [
+            "46"
+        ],
+        "capital": "Stockholm",
+        "altSpellings": [
+            "SE",
+            "Kingdom of Sweden",
+            "Konungariket Sverige"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 10353442,
+        "latlng": [
+            62.0,
+            15.0
+        ],
+        "demonym": "Swedish",
+        "area": 450295.0,
+        "gini": 25.0,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "FIN",
+            "NOR"
+        ],
+        "nativeName": "Sverige",
+        "numericCode": "752",
+        "currencies": [
+            {
+                "code": "SEK",
+                "name": "Swedish krona",
+                "symbol": "kr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sv",
+                "iso639_2": "swe",
+                "name": "Swedish",
+                "nativeName": "svenska"
+            }
+        ],
+        "translations": {
+            "br": "Suécia",
+            "de": "Schweden",
+            "es": "Suecia",
+            "fa": "سوئد",
+            "fr": "Suède",
+            "hr": "Švedska",
+            "it": "Svezia",
+            "ja": "スウェーデン",
+            "nl": "Zweden",
+            "pt": "Suécia",
+            "ru": "Швеция",
+            "pl": "Szwecja",
+            "cs": "Švédsko",
+            "zh": "瑞典王国",
+            "hu": "Svédország",
+            "se": "Sverige"
+        },
+        "flag": "https://restcountries.eu/data/swe.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "SWE"
+    },
+    {
+        "name": "Switzerland",
+        "topLevelDomain": [
+            ".ch"
+        ],
+        "alpha2Code": "CH",
+        "alpha3Code": "CHE",
+        "callingCodes": [
+            "41"
+        ],
+        "capital": "Bern",
+        "altSpellings": [
+            "CH",
+            "Swiss Confederation",
+            "Schweiz",
+            "Suisse",
+            "Svizzera",
+            "Svizra"
+        ],
+        "region": "Europe",
+        "subregion": "Western Europe",
+        "population": 8636896,
+        "latlng": [
+            47.0,
+            8.0
+        ],
+        "demonym": "Swiss",
+        "area": 41284.0,
+        "gini": 33.7,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "AUT",
+            "FRA",
+            "ITA",
+            "LIE",
+            "DEU"
+        ],
+        "nativeName": "Schweiz",
+        "numericCode": "756",
+        "currencies": [
+            {
+                "code": "CHF",
+                "name": "Swiss franc",
+                "symbol": "Fr"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "de",
+                "iso639_2": "deu",
+                "name": "German",
+                "nativeName": "Deutsch"
+            },
+            {
+                "iso639_1": "fr",
+                "iso639_2": "fra",
+                "name": "French",
+                "nativeName": "français"
+            },
+            {
+                "iso639_1": "it",
+                "iso639_2": "ita",
+                "name": "Italian",
+                "nativeName": "Italiano"
+            },
+            {
+                "iso639_1": "rm",
+                "iso639_2": "roh",
+                "name": "Romansh",
+                "nativeName": "Rumantsch"
+            }
+        ],
+        "translations": {
+            "br": "Suíça",
+            "de": "Schweiz",
+            "es": "Suiza",
+            "fa": "سوئیس",
+            "fr": "Suisse",
+            "hr": "Švicarska",
+            "it": "Svizzera",
+            "ja": "スイス",
+            "nl": "Zwitserland",
+            "pt": "Suíça",
+            "ru": "Швейцария",
+            "pl": "Szwajcaria",
+            "cs": "Švýcarsko",
+            "zh": "瑞士联邦",
+            "hu": "Svájc",
+            "se": "Schweiz"
+        },
+        "flag": "https://restcountries.eu/data/che.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EFTA",
+                "name": "European Free Trade Association",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "SUI"
+    },
+    {
+        "name": "Ukraine",
+        "topLevelDomain": [
+            ".ua"
+        ],
+        "alpha2Code": "UA",
+        "alpha3Code": "UKR",
+        "callingCodes": [
+            "380"
+        ],
+        "capital": "Kyiv",
+        "altSpellings": [
+            "UA",
+            "Ukrayina"
+        ],
+        "region": "Europe",
+        "subregion": "Eastern Europe",
+        "population": 44134693,
+        "latlng": [
+            49.0,
+            32.0
+        ],
+        "demonym": "Ukrainian",
+        "area": 603700.0,
+        "gini": 26.4,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [
+            "BLR",
+            "HUN",
+            "MDA",
+            "POL",
+            "ROU",
+            "RUS",
+            "SVK"
+        ],
+        "nativeName": "Україна",
+        "numericCode": "804",
+        "currencies": [
+            {
+                "code": "UAH",
+                "name": "Ukrainian hryvnia",
+                "symbol": "₴"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "uk",
+                "iso639_2": "ukr",
+                "name": "Ukrainian",
+                "nativeName": "Українська"
+            }
+        ],
+        "translations": {
+            "br": "Ucrânia",
+            "de": "Ukraine",
+            "es": "Ucrania",
+            "fa": "وکراین",
+            "fr": "Ukraine",
+            "hr": "Ukrajina",
+            "it": "Ucraina",
+            "ja": "ウクライナ",
+            "nl": "Oekraïne",
+            "pt": "Ucrânia",
+            "ru": "Украина",
+            "pl": "Ukraina",
+            "cs": "Ukrajina",
+            "zh": "乌克兰",
+            "hu": "Ukrajna",
+            "se": "Ukraina"
+        },
+        "flag": "https://restcountries.eu/data/ukr.svg",
+        "regionalBlocs": [],
+        "cioc": "UKR"
+    },
+    {
+        "name": "United Kingdom of Great Britain and Northern Ireland",
+        "topLevelDomain": [
+            ".uk"
+        ],
+        "alpha2Code": "GB",
+        "alpha3Code": "GBR",
+        "callingCodes": [
+            "44"
+        ],
+        "capital": "London",
+        "altSpellings": [
+            "GB",
+            "UK",
+            "Great Britain"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 67215293,
+        "latlng": [
+            54.0,
+            -2.0
+        ],
+        "demonym": "British",
+        "area": 242900.0,
+        "gini": 34.0,
+        "timezones": [
+            "UTC-08:00",
+            "UTC-05:00",
+            "UTC-04:00",
+            "UTC-03:00",
+            "UTC-02:00",
+            "UTC",
+            "UTC+01:00",
+            "UTC+02:00",
+            "UTC+06:00"
+        ],
+        "borders": [
+            "IRL"
+        ],
+        "nativeName": "United Kingdom",
+        "numericCode": "826",
+        "currencies": [
+            {
+                "code": "GBP",
+                "name": "British pound",
+                "symbol": "£"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            }
+        ],
+        "translations": {
+            "br": "Reino Unido",
+            "de": "Vereinigtes Königreich",
+            "es": "Reino Unido",
+            "fa": "بریتانیای کبیر و ایرلند شمالی",
+            "fr": "Royaume-Uni",
+            "hr": "Ujedinjeno Kraljevstvo",
+            "it": "Regno Unito",
+            "ja": "イギリス",
+            "nl": "Verenigd Koninkrijk",
+            "pt": "Reino Unido",
+            "ru": "Великобритания",
+            "pl": "Wielka Brytania",
+            "cs": "Spojené království",
+            "zh": "大不列颠及北爱尔兰联合王国",
+            "hu": "Nagy-Britannia",
+            "se": "Storbritannien"
+        },
+        "flag": "https://restcountries.eu/data/gbr.svg",
+        "regionalBlocs": null,
+        "cioc": "GBR"
+    }
+]
