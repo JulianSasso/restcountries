@@ -7,13 +7,14 @@ import eu.fayder.restcountries.domain.countryinfo.CountryInformationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.ws.rs.core.Response;
 import java.util.List;
+import java.util.Set;
 
-@RequestMapping("rest/v3")
+@RequestMapping("rest/v2")
 @RestController
 @RequiredArgsConstructor
 public class CountryControllerOpenApi implements CountryApi {
