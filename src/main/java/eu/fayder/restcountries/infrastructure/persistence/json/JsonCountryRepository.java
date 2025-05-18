@@ -8,6 +8,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
 import java.io.InputStream;
+import java.text.Normalizer;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,8 +51,13 @@ public class JsonCountryRepository implements CountryRepository {
 
     @Override
     public List<Country> findByNameContaining(String countryName) {
+        String normalizedCountryName = normalize(countryName);
         return countries.stream()
-                .filter(country -> containsIgnoreCase(country.getName(), countryName))
+                .filter(country ->
+                        containsIgnoreCase(normalize(country.getName()), normalizedCountryName)
+                        || country.getAltSpellings().stream()
+                                .anyMatch(altSpelling
+                                        -> containsIgnoreCase(normalize(altSpelling), normalizedCountryName)))
                 .toList();
     }
 
@@ -64,8 +70,9 @@ public class JsonCountryRepository implements CountryRepository {
 
     @Override
     public List<Country> findByCapitalContaining(String partialCapital) {
+        String normalizedPartialCapital = normalize(partialCapital);
         return countries.stream()
-                .filter(country -> containsIgnoreCase(country.getCapital(), partialCapital))
+                .filter(country -> containsIgnoreCase(normalize(country.getCapital()), normalizedPartialCapital))
                 .toList();
     }
 
@@ -83,6 +90,7 @@ public class JsonCountryRepository implements CountryRepository {
                 .toList();
     }
 
+    // TODO: Asegurarnos que no llegan NULL a este punto
     @Override
     public List<Country> findByCurrency(String currency) {
         return countries.stream()
@@ -109,8 +117,9 @@ public class JsonCountryRepository implements CountryRepository {
 
     @Override
     public List<Country> findByDemonym(String demonym) {
+        String normalizedDemonym = normalize(demonym);
         return countries.stream()
-                .filter(country -> country.getDemonym().equalsIgnoreCase(demonym))
+                .filter(country -> normalize(country.getDemonym()).equalsIgnoreCase(normalizedDemonym))
                 .toList();
     }
 
@@ -124,5 +133,10 @@ public class JsonCountryRepository implements CountryRepository {
 
     private boolean containsIgnoreCase(String str, String searchStr) {
         return str != null && searchStr != null && str.toLowerCase().contains(searchStr.toLowerCase());
+    }
+
+    private String normalize(String string) {
+        return Normalizer.normalize(string, Normalizer.Form.NFD)
+                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
 }

@@ -7,22 +7,21 @@ import com.google.gson.*;
 import eu.fayder.restcountries.domain.countryinfo.CountryInformationService;
 import eu.fayder.restcountries.domain.countryinfo.country.ResponseEntity;
 import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.core.Response;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @RequestMapping("rest/v2")
 @RestController
+@RequiredArgsConstructor
 public class CountryController {
 
-    @Autowired
-    private CountryInformationService countryService;
+    private final CountryInformationService countryService;
 
     private static final Logger LOG = LoggerFactory.getLogger(CountryController.class);
     private static final String SEPARATOR = ";";
@@ -44,9 +43,9 @@ public class CountryController {
         if (isEmpty(alpha) || alpha.length() < 2 || alpha.length() > 3) {
             return getResponse(Response.Status.BAD_REQUEST);
         }
-        Country country = countryService.getByAlpha(alpha);
-        if (country != null) {
-            return parsedCountry(country, fields);
+        Optional<Country> optCountry = countryService.getByAlpha(alpha);
+        if (optCountry.isPresent()) {
+            return parsedCountry(optCountry.get(), fields);
         }
         return getResponse(Response.Status.NOT_FOUND);
     }
@@ -58,7 +57,8 @@ public class CountryController {
             return getResponse(Response.Status.BAD_REQUEST);
         }
         try {
-            List<Country> countries = countryService.getByCodeList(codes);
+            Set<String> codeSet = Set.of(codes.split(SEPARATOR));
+            List<Country> countries = countryService.getByAlphaCodeList(codeSet);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }
@@ -91,7 +91,7 @@ public class CountryController {
     public Object getByName(@PathVariable("name") String name, @RequestParam(required = false, defaultValue = "false") Boolean fullText, @RequestParam(required = false) String fields) {
         LOG.info("Getting by name " + name);
         try {
-            List<Country> countries = countryService.getByName(name, fullText);
+            List<Country> countries = countryService.getByNameContaining(name);
             if (!countries.isEmpty()) {
                 return parsedCountries(countries, fields);
             }

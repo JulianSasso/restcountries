@@ -3,16 +3,18 @@ package eu.fayder.restcountries.domain.countryinfo;
 import eu.fayder.restcountries.domain.countryinfo.country.Country;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 public interface CountryInformationService {
 
     List<Country> getAll();
 
-    Country getByAlpha(String alpha);
+    Optional<Country> getByAlpha(String alpha);
 
-    List<Country> getByCodeList(String codeList);
+    List<Country> getByAlphaCodeList(Set<String> codes);
 
-    List<Country> getByName(String name, boolean fullText);
+    List<Country> getByNameContaining(String name);
 
     List<Country> getByCallingCode(String callingCode);
 
