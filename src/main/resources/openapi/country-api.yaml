@@ -4,11 +4,14 @@ info:
   description: API for retrieving information about countries.
   version: 1.0.0
 servers:
-  - url: https://restcountries.eu/rest/v2
+  - url: /rest
 paths:
-  /all:
+  /v2/all:
     get:
+      operationId: getAllCountries
       summary: Get all countries
+      tags:
+        - country
       parameters:
         - $ref: '#/components/parameters/fieldsParam'
       responses:
@@ -21,21 +24,18 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /name/{name}:
+  /v2/name/{name}:
     get:
+      operationId: getCountriesByName
       summary: Search countries by name
+      tags:
+        - country
       parameters:
         - name: name
           in: path
           required: true
           schema:
             type: string
-        - name: fullText
-          in: query
-          required: false
-          schema:
-            type: boolean
-          description: Search using the full country name
         - $ref: '#/components/parameters/fieldsParam'
       responses:
         '200':
@@ -47,9 +47,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /alpha/{code}:
+  /v2/alpha/{code}:
     get:
+      operationId: getCountryByAlphaCode
       summary: Search country by ISO 3166-1 code
+      tags:
+        - country
       parameters:
         - name: code
           in: path
@@ -65,9 +68,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/Country'
 
-  /alpha:
+  /v2/alpha:
     get:
+      operationId: getCountriesByAlphaCodes
       summary: Search countries by list of codes
+      tags:
+        - country
       parameters:
         - name: codes
           in: query
@@ -86,9 +92,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /currency/{currency}:
+  /v2/currency/{currency}:
     get:
+      operationId: getCountriesByCurrency
       summary: Search countries by currency code
+      tags:
+        - country
       parameters:
         - name: currency
           in: path
@@ -106,9 +115,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /lang/{language}:
+  /v2/lang/{language}:
     get:
+      operationId: getCountriesByLanguage
       summary: Search countries by language code
+      tags:
+        - country
       parameters:
         - name: language
           in: path
@@ -126,9 +138,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /capital/{capital}:
+  /v2/capital/{capital}:
     get:
+      operationId: getCountriesByCapital
       summary: Search countries by capital city
+      tags:
+        - country
       parameters:
         - name: capital
           in: path
@@ -146,9 +161,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /callingcode/{callingcode}:
+  /v2/callingcode/{callingcode}:
     get:
+      operationId: getCountriesByCallingCode
       summary: Search countries by calling code
+      tags:
+        - country
       parameters:
         - name: callingcode
           in: path
@@ -166,9 +184,12 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /region/{region}:
+  /v2/region/{region}:
     get:
+      operationId: getCountriesByRegion
       summary: Search countries by region
+      tags:
+        - country
       parameters:
         - name: region
           in: path
@@ -187,16 +208,18 @@ paths:
                 items:
                   $ref: '#/components/schemas/Country'
 
-  /regionalbloc/{regionalbloc}:
+  /v2/regionalbloc/{regionalbloc}:
     get:
+      operationId: getCountriesByRegionalBloc
       summary: Search countries by regional bloc
+      tags:
+        - country
       parameters:
         - name: regionalbloc
           in: path
           required: true
           schema:
             type: string
-            enum: [EU, EFTA, CARICOM, PA, AU, USAN, EEU, AL, ASEAN, CAIS, CEFTA, NAFTA, SAARC]
         - $ref: '#/components/parameters/fieldsParam'
       responses:
         '200':
@@ -313,3 +336,23 @@ components:
                 items: { type: string }
         cioc:
           type: string
+      required:
+        - name
+        - alpha2Code
+        - alpha3Code
+        - callingCodes
+        - capital
+        - region
+        - subregion
+        - population
+        - latlng
+        - demonym
+        - area
+        - timezones
+        - borders
+        - nativeName
+        - numericCode
+        - currencies
+        - languages
+        - translations
+        - flag
