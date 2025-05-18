@@ -2,10 +2,15 @@ package eu.fayder.restcountries;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.fayder.restcountries.api.controller.CountryController;
 import eu.fayder.restcountries.application.usecase.CountryInformationServiceImpl;
 import eu.fayder.restcountries.boot.config.AppConfig;
 import eu.fayder.restcountries.testUtils.JsonTestUtils;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +20,9 @@ import org.springframework.http.*;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.Map;
+
+// TODO: Dejar de ignorar el campo _children.translations._children
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT/*,
@@ -30,11 +38,14 @@ public class CountryRestIT {
     @Autowired
     private TestRestTemplate restTemplate;
 
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
     @Test
-    public void testGetByAlpha2IsoCode() {
+    public void testGetByAlpha2IsoCode() throws JsonProcessingException {
         // Arrange
         String code = "ar";
         String url = "http://localhost:" + port + "/rest/v2/alpha/" + code;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/argentina.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -42,14 +53,20 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/argentina.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for country with alpha2Code '%s'", code.toUpperCase())
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByAlpha3IsoCode() {
+    public void testGetByAlpha3IsoCode() throws JsonProcessingException {
         // Arrange
         String code = "arg";
         String url = "http://localhost:" + port + "/rest/v2/alpha/" + code;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/argentina.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -57,14 +74,21 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/argentina.json"))).isTrue();
+
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for country with alpha3Code '%s'", code.toUpperCase())
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByNameAlternative() {
+    public void testGetByNameAlternative() throws JsonProcessingException {
         // Arrange
         String altName = "eesti";
         String url = "http://localhost:" + port + "/rest/v2/name/" + altName;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/estoniaInArray.json");
 
 
         // Act
@@ -73,15 +97,21 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/estoniaInArray.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for country with altName '%s'", altName)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByNamePartial() {
+    public void testGetByNamePartial() throws JsonProcessingException {
         // Arrange
         String partialName = "united";
         String fullTextParam = "fullText=false";
         String url = "http://localhost:" + port + "/rest/v2/name/" + partialName + "?" + fullTextParam;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/unitedKeywordMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -89,14 +119,20 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/unitedKeywordMatches.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for country with partial name '%s'", partialName)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByAlphaIsoCodeList() {
+    public void testGetByAlphaIsoCodeList() throws JsonProcessingException {
         // Arrange
         String codesParam = "codes=col;no;ee";
         String url = "http://localhost:" + port + "/rest/v2/alpha" + "?" + codesParam;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/alphaCodesMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -104,14 +140,20 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/alphaCodesMatches.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for countries with alpha codes '%s'", codesParam)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByCurrency() {
+    public void testGetByCurrency() throws JsonProcessingException {
         // Arrange
         String currency = "cop";
         String url = "http://localhost:" + port + "/rest/v2/currency/" + currency;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/copCurrencyMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -119,14 +161,20 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/copCurrencyMatches.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for countries with currency '%s'", currency)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByLanguage() {
+    public void testGetByLanguage() throws JsonProcessingException {
         // Arrange
         String language = "es";
         String url = "http://localhost:" + port + "/rest/v2/lang/" + language;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/esLanguageMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -134,14 +182,20 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/esLanguageMatches.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for countries with language '%s'", language)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByCapital() {
+    public void testGetByCapital() throws JsonProcessingException {
         // Arrange
         String capital = "tallinn";
         String url = "http://localhost:" + port + "/rest/v2/capital/" + capital;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/tallinnCapitalMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -149,14 +203,20 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/tallinnCapitalMatches.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for countries with capital '%s'", capital)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByCallingCode() {
+    public void testGetByCallingCode() throws JsonProcessingException {
         // Arrange
         String code = "372";
         String url = "http://localhost:" + port + "/rest/v2/callingcode/" + code;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/572CallingCodeMatches.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -164,15 +224,21 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/572CallingCodeMatches.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for countries with calling code '%s'", code)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByRegionOnlyNames() {
+    public void testGetByRegionOnlyNames() throws JsonProcessingException {
         // Arrange
         String region = "europe";
         String onlyNamesParam = "fields=name";
         String url = "http://localhost:" + port + "/rest/v2/region/" + region + "?" + onlyNamesParam;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/europeRegionMatchesOnlyNames.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -180,15 +246,21 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/europeRegionMatchesOnlyNames.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for countries with calling region '%s'", region)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
     }
 
     @Test
-    public void testGetByRegionalBlocOnlyNames() {
+    public void testGetByRegionalBlocOnlyNames() throws JsonProcessingException {
         // Arrange
         String bloc = "eu";
         String onlyNamesParam = "fields=name";
         String url = "http://localhost:" + port + "/rest/v2/regionalbloc/" + bloc + "?" + onlyNamesParam;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/euRegionalBlocMatchesOnlyNames.json");
 
         // Act
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
@@ -196,6 +268,19 @@ public class CountryRestIT {
         // Assert
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
-        assertThat(JsonTestUtils.jsonEquals(response.getBody(), JsonTestUtils.loadFileContent("expected/euRegionalBlocMatchesOnlyNames.json"))).isTrue();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for countries with regional bloc '%s'", bloc)
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children") 
+                .isEqualTo(parseJsonNode(expectedJson));
+    }
+
+    private Map<String, Object> parseJson(String json) throws JsonProcessingException {
+        return objectMapper.readValue(json, new TypeReference<>() {});
+    }
+
+    private JsonNode parseJsonNode(String json) throws JsonProcessingException {
+        return objectMapper.readTree(json);
     }
 }

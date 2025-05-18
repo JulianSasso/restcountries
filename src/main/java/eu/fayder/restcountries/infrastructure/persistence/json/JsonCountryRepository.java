@@ -126,7 +126,7 @@ public class JsonCountryRepository implements CountryRepository {
     @Override
     public List<Country> findByRegionalBloc(String regionalBloc) {
         return countries.stream()
-                .filter(country -> country.getRegionalBlocs().stream()
+                .filter(country -> country.getRegionalBlocs() != null && country.getRegionalBlocs().stream()
                         .anyMatch(bloc -> bloc.isAlternativeName(regionalBloc)))
                 .toList();
     }
