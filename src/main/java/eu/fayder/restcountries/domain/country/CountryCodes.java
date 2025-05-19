@@ -1,12 +1,15 @@
 package eu.fayder.restcountries.domain.country;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import java.util.List;
 
 @Getter
-@Accessors(fluent = false)
+@AllArgsConstructor
+@NoArgsConstructor
 public class CountryCodes {
 
     private List<String> topLevelDomain;

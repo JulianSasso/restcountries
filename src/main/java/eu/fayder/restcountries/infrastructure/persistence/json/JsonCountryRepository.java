@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.fayder.restcountries.domain.CountryRepository;
 import eu.fayder.restcountries.domain.country.Country;
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
@@ -15,18 +16,23 @@ import java.util.Optional;
 
 @Repository
 @ConditionalOnProperty(name = "repository.type", havingValue = "json")
+@RequiredArgsConstructor
 public class JsonCountryRepository implements CountryRepository {
 
     private List<Country> countries;
     private static final String JSON_PATH = "countriesV2.json";
 
+    private final CountryJsonMapper mapper;
+
     @PostConstruct
     private void init() {
         System.out.println("Loading countries from JSON file: " + JSON_PATH);
         try {
-            ObjectMapper mapper = new ObjectMapper();
+            ObjectMapper objectMapper = new ObjectMapper();
             InputStream is = getClass().getClassLoader().getResourceAsStream(JSON_PATH);
-            countries = mapper.readValue(is, new TypeReference<>() {});
+            List<CountryJson> rawList = objectMapper.readValue(is, new TypeReference<>() {
+            });
+            countries = mapper.toDomainList(rawList);
         } catch (Exception e) {
             throw new RuntimeException("Error loading countries JSON", e);
         }
@@ -57,7 +63,7 @@ public class JsonCountryRepository implements CountryRepository {
         return countries.stream()
                 .filter(country ->
                         containsIgnoreCase(normalize(country.getName()), normalizedCountryName)
-                        || country.getGeography().getAltSpellings().stream()
+                                || country.getGeography().getAltSpellings().stream()
                                 .anyMatch(altSpelling
                                         -> containsIgnoreCase(normalize(altSpelling), normalizedCountryName)))
                 .toList();
@@ -138,6 +144,9 @@ public class JsonCountryRepository implements CountryRepository {
     }
 
     private String normalize(String string) {
+        if (string == null) {
+            return null;
+        }
         return Normalizer.normalize(string, Normalizer.Form.NFD)
                 .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
