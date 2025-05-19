@@ -9,4 +9,4 @@ backup/
 .idea/
 *.iml
 google*.html
-src/main/resources/application.yml
+application.yml

@@ -40,14 +40,14 @@ public class JsonCountryRepository implements CountryRepository {
     @Override
     public Optional<Country> findByAlpha2Code(String code) {
         return countries.stream()
-                .filter(country -> country.getAlpha2Code().equalsIgnoreCase(code))
+                .filter(country -> country.getCodes().getAlpha2Code().equalsIgnoreCase(code))
                 .findFirst();
     }
 
     @Override
     public Optional<Country> findByAlpha3Code(String code) {
         return countries.stream()
-                .filter(country -> country.getAlpha3Code().equalsIgnoreCase(code))
+                .filter(country -> country.getCodes().getAlpha3Code().equalsIgnoreCase(code))
                 .findFirst();
     }
 
@@ -57,7 +57,7 @@ public class JsonCountryRepository implements CountryRepository {
         return countries.stream()
                 .filter(country ->
                         containsIgnoreCase(normalize(country.getName()), normalizedCountryName)
-                        || country.getAltSpellings().stream()
+                        || country.getGeography().getAltSpellings().stream()
                                 .anyMatch(altSpelling
                                         -> containsIgnoreCase(normalize(altSpelling), normalizedCountryName)))
                 .toList();
@@ -66,7 +66,7 @@ public class JsonCountryRepository implements CountryRepository {
     @Override
     public List<Country> findByCallingCode(String code) {
         return countries.stream()
-                .filter(country -> country.getCallingCodes().contains(code))
+                .filter(country -> country.getCodes().getCallingCodes().contains(code))
                 .toList();
     }
 
@@ -74,21 +74,21 @@ public class JsonCountryRepository implements CountryRepository {
     public List<Country> findByCapitalContaining(String partialCapital) {
         String normalizedPartialCapital = normalize(partialCapital);
         return countries.stream()
-                .filter(country -> containsIgnoreCase(normalize(country.getCapital()), normalizedPartialCapital))
+                .filter(country -> containsIgnoreCase(normalize(country.getGeography().getCapital()), normalizedPartialCapital))
                 .toList();
     }
 
     @Override
     public List<Country> findByRegion(String region) {
         return countries.stream()
-                .filter(country -> country.getRegion().equalsIgnoreCase(region))
+                .filter(country -> country.getGeography().getRegion().equalsIgnoreCase(region))
                 .toList();
     }
 
     @Override
     public List<Country> findBySubregion(String subregion) {
         return countries.stream()
-                .filter(country -> country.getSubregion().equalsIgnoreCase(subregion))
+                .filter(country -> country.getGeography().getSubregion().equalsIgnoreCase(subregion))
                 .toList();
     }
 
@@ -121,7 +121,7 @@ public class JsonCountryRepository implements CountryRepository {
     public List<Country> findByDemonym(String demonym) {
         String normalizedDemonym = normalize(demonym);
         return countries.stream()
-                .filter(country -> normalize(country.getDemonym()).equalsIgnoreCase(normalizedDemonym))
+                .filter(country -> normalize(country.getDemographics().getDemonym()).equalsIgnoreCase(normalizedDemonym))
                 .toList();
     }
 
