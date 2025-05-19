@@ -3,29 +3,5 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package eu.fayder.restcountries.domain.country;
 
-import lombok.Getter;
-
-@Getter
-public class Language {
-
-    private String iso639_1;
-    private String iso639_2;
-    private String name;
-    private String nativeName;
-
-    public void setIso639_1(String code) {
-        this.iso639_1 = code;
-    }
-
-    public void setIso639_2(String iso639_2) {
-        this.iso639_2 = iso639_2;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setNativeName(String nativeName) {
-        this.nativeName = nativeName;
-    }
+public record Language(String iso639_1, String iso639_2, String name, String nativeName) {
 }

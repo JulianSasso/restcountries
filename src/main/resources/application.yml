@@ -6,4 +6,5 @@ spring:
       collection: countries
 
 repository:
-  type: mongodb # or json
+  # type: mongodb
+  type: json

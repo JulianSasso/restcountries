@@ -8,7 +8,7 @@ import java.net.URI;
 
 @Mapper(componentModel = "spring", uses = {LanguageMapper.class})
 public interface CountryMapper {
-    
+
     CountryResponse toResponse(Country country);
 
     default URI map(String value) {

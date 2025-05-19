@@ -3,24 +3,5 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package eu.fayder.restcountries.domain.country;
 
-import lombok.Getter;
-
-@Getter
-public class Currency {
-
-    private String code;
-    private String name;
-    private String symbol;
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
+public record Currency(String code, String name, String symbol) {
 }

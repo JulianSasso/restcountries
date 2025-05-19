@@ -97,7 +97,7 @@ public class JsonCountryRepository implements CountryRepository {
     public List<Country> findByCurrency(String currency) {
         return countries.stream()
                 .filter(country -> country.getCurrencies().stream()
-                        .anyMatch(curr -> curr.getCode() != null && curr.getCode().equalsIgnoreCase(currency)))
+                        .anyMatch(curr -> curr.code() != null && curr.code().equalsIgnoreCase(currency)))
                 .toList();
     }
 
@@ -105,7 +105,7 @@ public class JsonCountryRepository implements CountryRepository {
     public List<Country> findByLanguageTwoLetterIsoCode(String language) {
         return countries.stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_1().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.iso639_1() != null && lang.iso639_1().equalsIgnoreCase(language)))
                 .toList();
     }
 
@@ -113,7 +113,7 @@ public class JsonCountryRepository implements CountryRepository {
     public List<Country> findByLanguageThreeLetterIsoCode(String language) {
         return countries.stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.getIso639_2() != null && lang.getIso639_2().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.iso639_2() != null && lang.iso639_2().equalsIgnoreCase(language)))
                 .toList();
     }
 
