@@ -14,8 +14,6 @@ public class JsonTestUtils {
         try {
             JsonNode actual = mapper.readTree(actualJson);
             JsonNode expected = mapper.readTree(expectedJson);
-//            System.out.println("\n\n\n\n\nActual JSON: " + actual);
-//            System.out.println("\n\n\n\n\nExpected JSON: " + expected);
             return actual.equals(expected);
         } catch (Exception e) {
             throw new RuntimeException("Error comparing JSON", e);
