@@ -1,299 +1,133 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package eu.fayder.restcountries.api.controller;
 
-import com.google.gson.*;
+import eu.fayder.restcountries.api.CountryApi;
+import eu.fayder.restcountries.api.mapper.country.CountryMapper;
+import eu.fayder.restcountries.domain.CountryResponse;
 import eu.fayder.restcountries.domain.CountryInformationService;
-import eu.fayder.restcountries.domain.country.ResponseEntity;
-import eu.fayder.restcountries.domain.country.Country;
 import lombok.RequiredArgsConstructor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.ws.rs.core.Response;
-import java.util.*;
+import java.util.List;
+import java.util.Set;
 
-//@RequestMapping("rest/v2")
-//@RestController
+@RequestMapping("rest/v2")
+@RestController
 @RequiredArgsConstructor
-public class CountryController {
+public class CountryController implements CountryApi {
 
     private final CountryInformationService countryService;
+    private final CountryMapper countryMapper;
 
-    private static final Logger LOG = LoggerFactory.getLogger(CountryController.class);
-    private static final String SEPARATOR = ";";
-
+    @Override
     @GetMapping("all")
-    public Object getAllCountries(@RequestParam(required = false) String fields) {
-        return this.getCountries(fields);
+    public ResponseEntity<List<CountryResponse>> getAllCountries(String fields) {
+        return ResponseEntity.ok(countryService.getAll()
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
-    public Object getCountries(String fields) {
-        LOG.info("Getting all");
-        List<Country> countries = countryService.getAll();
-        return parsedCountries(countries, fields);
-    }
-
-    @GetMapping("alpha/{alphacode}")
-    public Object getByAlpha(@PathVariable("alphacode") String alpha, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by alpha " + alpha);
-        if (isEmpty(alpha) || alpha.length() < 2 || alpha.length() > 3) {
-            return getResponse(Response.Status.BAD_REQUEST);
-        }
-        Optional<Country> optCountry = countryService.getByAlpha(alpha);
-        if (optCountry.isPresent()) {
-            return parsedCountry(optCountry.get(), fields);
-        }
-        return getResponse(Response.Status.NOT_FOUND);
-    }
-
+    @Override
     @GetMapping("alpha")
-    public Object getByAlphaList(@RequestParam("codes") String codes, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by list " + codes);
-        if (isEmpty(codes) || codes.length() < 2 || (codes.length() > 3 && !codes.contains(";"))) {
-            return getResponse(Response.Status.BAD_REQUEST);
+    public ResponseEntity<List<CountryResponse>> getCountriesByAlphaCodes(String codes, String fields) {
+        if(codes == null || codes.isEmpty()) {
+            return ResponseEntity.badRequest().build();
         }
-        try {
-            Set<String> codeSet = Set.of(codes.split(SEPARATOR));
-            List<Country> countries = countryService.getByAlphaCodeList(codeSet);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
+
+        Set<String> codeSet = Set.of(codes.split(";"));
+        return ResponseEntity.ok(countryService.getByAlphaCodeList(codeSet)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
-    @GetMapping("currency/{currency}")
-    public Object getByCurrency(@PathVariable("currency") String currency, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by currency " + currency);
-        if (isEmpty(currency) || currency.length() != 3) {
-            return getResponse(Response.Status.BAD_REQUEST);
+    @Override
+    @GetMapping("alpha/{code}")
+    public ResponseEntity<CountryResponse> getCountryByAlphaCode(@PathVariable String code, String fields) {
+        if(code == null || code.length() < 2 || code.length() > 3) {
+            return ResponseEntity.badRequest().build();
         }
-        try {
-            List<Country> countries = countryService.getByCurrency(currency);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
+
+        return countryService.getByAlpha(code)
+                .map(countryMapper::toResponse)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("name/{name}")
-    public Object getByName(@PathVariable("name") String name, @RequestParam(required = false, defaultValue = "false") Boolean fullText, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by name " + name);
-        try {
-            List<Country> countries = countryService.getByNameContaining(name);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
+
+    @Override
+    @GetMapping("callingcode/{callingCode}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByCallingCode(@PathVariable String callingCode, String fields) {
+        return ResponseEntity.ok(countryService.getByCallingCode(callingCode)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
-    @GetMapping("callingcode/{callingcode}")
-    public Object getByCallingCode(@PathVariable("callingcode") String callingcode, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by calling code " + callingcode);
-        try {
-            List<Country> countries = countryService.getByCallingCode(callingcode);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
-    }
-
+    @Override
     @GetMapping("capital/{capital}")
-    public Object getByCapital(@PathVariable("capital") String capital, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by capital " + capital);
-        try {
-            List<Country> countries = countryService.getByCapital(capital);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
+    public ResponseEntity<List<CountryResponse>> getCountriesByCapital(@PathVariable String capital, String fields) {
+        return ResponseEntity.ok(countryService.getByCapital(capital)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
+    @Override
+    @GetMapping("currency/{currency}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByCurrency(@PathVariable String currency, String fields) {
+        return ResponseEntity.ok(countryService.getByCurrency(currency)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
+    }
+
+    @Override
+    @GetMapping("lang/{language}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByLanguage(@PathVariable String language, String fields) {
+        return ResponseEntity.ok(countryService.getByLanguage(language)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
+    }
+
+    @Override
+    @GetMapping("name/{name}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByName(@PathVariable String name, String fields) {
+        return ResponseEntity.ok(countryService.getByNameContaining(name)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
+    }
+
+    @Override
     @GetMapping("region/{region}")
-    public Object getByRegion(@PathVariable("region") String region, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by region " + region);
-        try {
-            List<Country> countries = countryService.getByRegion(region);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
+    public ResponseEntity<List<CountryResponse>> getCountriesByRegion(@PathVariable String region, String fields) {
+        return ResponseEntity.ok(countryService.getByRegion(region)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
-    @GetMapping("subregion/{subregion}")
-    public Object getBySubRegion(@PathVariable("subregion") String subregion, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by sub region " + subregion);
-        try {
-            List<Country> countries = countryService.getBySubregion(subregion);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
+    @Override
+    @GetMapping("regionalbloc/{regionalBloc}")
+    public ResponseEntity<List<CountryResponse>> getCountriesByRegionalBloc(@PathVariable String regionalBloc, String fields) {
+        return ResponseEntity.ok(countryService.getByRegionalBloc(regionalBloc)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 
-    @GetMapping("lang/{lang}")
-    public Object getByLanguage(@PathVariable("lang") String language, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by language " + language);
-        try {
-            List<Country> countries = countryService.getByLanguage(language);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
-    }
-
+    @Override
     @GetMapping("demonym/{demonym}")
-    public Object getByDemonym(@PathVariable("demonym") String demonym, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by demonym " + demonym);
-        try {
-            List<Country> countries = countryService.getByDemonym(demonym);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @GetMapping("regionalbloc/{regionalbloc}")
-    public Object getByRegionalBloc(@PathVariable("regionalbloc") String regionalBlock, @RequestParam(required = false) String fields) {
-        LOG.info("Getting by regional bloc " + regionalBlock);
-        try {
-            List<Country> countries = countryService.getByRegionalBloc(regionalBlock);
-            if (!countries.isEmpty()) {
-                return parsedCountries(countries, fields);
-            }
-            return getResponse(Response.Status.NOT_FOUND);
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            return getResponse(Response.Status.INTERNAL_SERVER_ERROR);
-        }
-    }
-
-
-    private Response getResponse(Response.Status status) {
-        Gson gson = new Gson();
-        return Response
-                .status(status)
-                .entity(gson.toJson(new ResponseEntity(status.getStatusCode(),
-                        status.getReasonPhrase()))).build();
-    }
-
-    private Object parsedCountry(Country country, String fields) {
-        if (fields == null || fields.isEmpty()) {
-            return country;
-        } else {
-            return getCountryJson(country, Arrays.asList(fields.split(SEPARATOR)));
-        }
-    }
-
-    private Object parsedCountries(List<Country> countries, String excludedFields) {
-        if (excludedFields == null || excludedFields.isEmpty()) {
-            return countries;
-        } else {
-            return getCountriesJson(countries, Arrays.asList(excludedFields.split(SEPARATOR)));
-        }
-    }
-
-    private String getCountryJson(Country country, List<String> fields) {
-        Gson gson = new Gson();
-        JsonParser parser = new JsonParser();
-        JsonObject jsonObject = parser.parse(gson.toJson(country)).getAsJsonObject();
-
-        List<String> excludedFields = getExcludedFields(fields);
-        for (String field : excludedFields) {
-            jsonObject.remove(field);
-        }
-        return jsonObject.toString();
-    }
-
-    private String getCountriesJson(List<Country> countries, List<String> fields) {
-        Gson gson = new Gson();
-        JsonParser parser = new JsonParser();
-        JsonArray jsonArray = parser.parse(gson.toJson(countries)).getAsJsonArray();
-        JsonArray resultArray = new JsonArray();
-        for (int i = 0; i < jsonArray.size(); i++) {
-            JsonObject jsonObject = (JsonObject) jsonArray.get(i);
-
-            List<String> excludedFields = getExcludedFields(fields);
-            for (String excludedField : excludedFields) {
-                jsonObject.remove(excludedField);
-            }
-            resultArray.add(jsonObject);
-        }
-        return resultArray.toString();
-    }
-
-    private List<String> getExcludedFields(List<String> fields) {
-        List<String> excludedFields = new ArrayList<>(Arrays.asList(COUNTRY_FIELDS));
-        excludedFields.removeAll(fields);
-        return excludedFields;
-    }
-
-    private static final String[] COUNTRY_FIELDS = new String[]{
-            "name",
-            "topLevelDomain",
-            "alpha2Code",
-            "alpha3Code",
-            "callingCodes",
-            "capital",
-            "altSpellings",
-            "region",
-            "subregion",
-            "translations",
-            "population",
-            "latlng",
-            "demonym",
-            "area",
-            "gini",
-            "timezones",
-            "borders",
-            "nativeName",
-            "numericCode",
-            "currencies",
-            "languages",
-            "flag",
-            "regionalBlocs",
-            "cioc"
-    };
-
-    private boolean isEmpty(String value) {
-        return value == null || value.isEmpty();
+    public ResponseEntity<List<CountryResponse>> getCountriesByDemonym(@PathVariable String demonym, String fields) {
+        return ResponseEntity.ok(countryService.getByDemonym(demonym)
+                .stream()
+                .map(countryMapper::toResponse)
+                .toList());
     }
 }
