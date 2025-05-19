@@ -3,6 +3,7 @@ package eu.fayder.restcountries.infrastructure.persistence.mongodb;
 import eu.fayder.restcountries.boot.config.MongoProperties;
 import eu.fayder.restcountries.domain.CountryRepository;
 import eu.fayder.restcountries.domain.country.Country;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -14,12 +15,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-@ConditionalOnProperty(name = "repository.type", havingValue = "mongodb", matchIfMissing = true)
+@ConditionalOnProperty(name = "repository.type", havingValue = "mongodb")
 public class MongoDbCountryRepository implements CountryRepository {
 
     private final MongoTemplate mongoTemplate;
     private final String collectionName;
 
+    @Autowired
     public MongoDbCountryRepository(MongoTemplate mongoTemplate, MongoProperties mongoProperties) {
         this.mongoTemplate = mongoTemplate;
         this.collectionName = mongoProperties.getCollection();
