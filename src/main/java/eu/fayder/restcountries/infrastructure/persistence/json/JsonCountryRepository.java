@@ -32,7 +32,7 @@ public class JsonCountryRepository implements CountryRepository {
             InputStream is = getClass().getClassLoader().getResourceAsStream(JSON_PATH);
             List<CountryJson> rawList = objectMapper.readValue(is, new TypeReference<>() {
             });
-            countries = mapper.toDomainList(rawList);
+            countries = rawList.stream().map(mapper::toDomain).toList();
         } catch (Exception e) {
             throw new RuntimeException("Error loading countries JSON", e);
         }

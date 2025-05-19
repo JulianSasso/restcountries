@@ -7,5 +7,4 @@ import java.util.List;
 public interface CountryJsonMapper {
     Country toDomain(CountryJson json);
 
-    List<Country> toDomainList(List<CountryJson> list);
 }

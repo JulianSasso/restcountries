@@ -6,28 +6,22 @@ import eu.fayder.restcountries.domain.country.Demographics;
 import eu.fayder.restcountries.domain.country.Geography;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-
 @Component
 public class CountryJsonMapperImpl implements CountryJsonMapper {
 
     @Override
     public Country toDomain(CountryJson json) {
         return new Country(
-            json.name,
-            new CountryCodes(json.topLevelDomain, json.alpha2Code, json.alpha3Code, json.numericCode, json.cioc, json.callingCodes),
-            new Geography(json.capital, json.altSpellings, json.region, json.subregion, json.latlng, json.timezones, json.borders),
-            new Demographics(json.population, json.demonym, json.area, json.gini, json.nativeName),
-            json.currencies,
-            json.languages,
-            json.translations,
-            json.flag,
-            json.regionalBlocs
+                json.getName(),
+            new CountryCodes(json.getTopLevelDomain(), json.getAlpha2Code(), json.getAlpha3Code(), json.getNumericCode(), json.getCioc(), json.getCallingCodes()),
+            new Geography(json.getCapital(), json.getAltSpellings(), json.getRegion(), json.getSubregion(), json.getLatlng(), json.getTimezones(), json.getBorders()),
+            new Demographics(json.getPopulation(), json.getDemonym(), json.getArea(), json.getGini(), json.getNativeName()),
+                json.getCurrencies(),
+                json.getLanguages(),
+                json.getTranslations(),
+                json.getFlag(),
+                json.getRegionalBlocs()
         );
     }
 
-    @Override
-    public List<Country> toDomainList(List<CountryJson> list) {
-        return list.stream().map(this::toDomain).toList();
-    }
 }
