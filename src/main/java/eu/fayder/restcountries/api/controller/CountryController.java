@@ -4,13 +4,12 @@
 package eu.fayder.restcountries.api.controller;
 
 import com.google.gson.*;
-import eu.fayder.restcountries.domain.countryinfo.CountryInformationService;
-import eu.fayder.restcountries.domain.countryinfo.country.ResponseEntity;
-import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import eu.fayder.restcountries.domain.CountryInformationService;
+import eu.fayder.restcountries.domain.country.ResponseEntity;
+import eu.fayder.restcountries.domain.country.Country;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.core.Response;

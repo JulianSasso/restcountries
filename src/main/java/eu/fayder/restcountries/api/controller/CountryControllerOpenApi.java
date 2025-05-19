@@ -3,7 +3,7 @@ package eu.fayder.restcountries.api.controller;
 import eu.fayder.restcountries.api.CountryApi;
 import eu.fayder.restcountries.api.mapper.country.CountryMapper;
 import eu.fayder.restcountries.domain.CountryResponse;
-import eu.fayder.restcountries.domain.countryinfo.CountryInformationService;
+import eu.fayder.restcountries.domain.CountryInformationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

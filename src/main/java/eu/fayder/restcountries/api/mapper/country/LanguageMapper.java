@@ -1,7 +1,7 @@
 package eu.fayder.restcountries.api.mapper.country;
 
 import eu.fayder.restcountries.domain.LanguageResponse;
-import eu.fayder.restcountries.domain.countryinfo.country.Language;
+import eu.fayder.restcountries.domain.country.Language;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

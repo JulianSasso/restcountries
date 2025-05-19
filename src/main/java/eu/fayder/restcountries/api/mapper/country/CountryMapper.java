@@ -1,9 +1,8 @@
 package eu.fayder.restcountries.api.mapper.country;
 
 import eu.fayder.restcountries.domain.CountryResponse;
-import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import eu.fayder.restcountries.domain.country.Country;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 
 import java.net.URI;
 

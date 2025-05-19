@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.domain.countryinfo.country;
+package eu.fayder.restcountries.domain.country;
 
 import lombok.Getter;
 

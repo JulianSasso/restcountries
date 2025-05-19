@@ -1,8 +1,8 @@
 package eu.fayder.restcountries.infrastructure.persistence.mongodb;
 
 import eu.fayder.restcountries.boot.config.MongoProperties;
-import eu.fayder.restcountries.domain.countryinfo.CountryRepository;
-import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import eu.fayder.restcountries.domain.CountryRepository;
+import eu.fayder.restcountries.domain.country.Country;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

@@ -1,8 +1,8 @@
 package eu.fayder.restcountries.application.usecase;
 
-import eu.fayder.restcountries.domain.countryinfo.CountryInformationService;
-import eu.fayder.restcountries.domain.countryinfo.CountryRepository;
-import eu.fayder.restcountries.domain.countryinfo.country.*;
+import eu.fayder.restcountries.domain.country.Country;
+import eu.fayder.restcountries.domain.CountryInformationService;
+import eu.fayder.restcountries.domain.CountryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

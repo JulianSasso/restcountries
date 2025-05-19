@@ -2,8 +2,8 @@ package eu.fayder.restcountries.infrastructure.persistence.json;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import eu.fayder.restcountries.domain.countryinfo.CountryRepository;
-import eu.fayder.restcountries.domain.countryinfo.country.Country;
+import eu.fayder.restcountries.domain.CountryRepository;
+import eu.fayder.restcountries.domain.country.Country;
 import jakarta.annotation.PostConstruct;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
