@@ -1,8 +1,6 @@
-package eu.fayder.restcountries.infrastructure.persistence.mongodb;
+package eu.fayder.restcountries.infrastructure.persistence.nosql;
 
 import eu.fayder.restcountries.boot.config.MongoProperties;
-import eu.fayder.restcountries.domain.CountryRepository;
-import eu.fayder.restcountries.domain.country.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -16,38 +14,38 @@ import java.util.Optional;
 
 @Repository
 @ConditionalOnProperty(name = "repository.type", havingValue = "mongodb")
-public class MongoDbCountryRepository implements CountryRepository {
+public class CountryDocumentMongoDbRepositoryImpl implements CountryDocumentMongoDbRepository {
 
     private final MongoTemplate mongoTemplate;
     private final String collectionName;
 
     @Autowired
-    public MongoDbCountryRepository(MongoTemplate mongoTemplate, MongoProperties mongoProperties) {
+    public CountryDocumentMongoDbRepositoryImpl(MongoTemplate mongoTemplate, MongoProperties mongoProperties) {
         this.mongoTemplate = mongoTemplate;
         this.collectionName = mongoProperties.getCollection();
     }
 
     @Override
-    public List<Country> findAll() {
-        return mongoTemplate.findAll(Country.class, collectionName);
+    public List<CountryDocument> findAll() {
+        return mongoTemplate.findAll(CountryDocument.class, collectionName);
     }
 
     @Override
-    public Optional<Country> findByAlpha2Code(String code) {
+    public Optional<CountryDocument> findByAlpha2Code(String code) {
         Query query = new Query(Criteria.where("alpha2Code").regex(code, "i"));
-        Country country = mongoTemplate.findOne(query, Country.class, collectionName);
+        CountryDocument country = mongoTemplate.findOne(query, CountryDocument.class, collectionName);
         return Optional.ofNullable(country);
     }
 
     @Override
-    public Optional<Country> findByAlpha3Code(String code) {
+    public Optional<CountryDocument> findByAlpha3Code(String code) {
         Query query = new Query(Criteria.where("alpha3Code").regex(code, "i"));
-        Country country = mongoTemplate.findOne(query, Country.class, collectionName);
+        CountryDocument country = mongoTemplate.findOne(query, CountryDocument.class, collectionName);
         return Optional.ofNullable(country);
     }
 
     @Override
-    public List<Country> findByNameContaining(String countryName) {
+    public List<CountryDocument> findByNameContaining(String countryName) {
         String normalizedCountryName = normalize(countryName);
 
         Criteria criteria = new Criteria().orOperator(
@@ -57,61 +55,61 @@ public class MongoDbCountryRepository implements CountryRepository {
 
         Query query = new Query(criteria);
 
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByCallingCode(String code) {
+    public List<CountryDocument> findByCallingCode(String code) {
         Query query = new Query(Criteria.where("callingCodes").in(code));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByCapitalContaining(String partialCapital) {
+    public List<CountryDocument> findByCapitalContaining(String partialCapital) {
         String normalizedPartialCapital = normalize(partialCapital);
         Query query = new Query(Criteria.where("capital").regex(normalizedPartialCapital, "i"));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByRegion(String region) {
+    public List<CountryDocument> findByRegion(String region) {
         Query query = new Query(Criteria.where("region").regex("^" + region + "$", "i"));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findBySubregion(String subregion) {
+    public List<CountryDocument> findBySubregion(String subregion) {
         Query query = new Query(Criteria.where("subregion").regex("^" + subregion + "$", "i"));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByCurrency(String currency) {
+    public List<CountryDocument> findByCurrency(String currency) {
         Query query = new Query(Criteria.where("currencies.code").regex("^" + currency + "$", "i"));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByLanguageTwoLetterIsoCode(String language) {
+    public List<CountryDocument> findByLanguageTwoLetterIsoCode(String language) {
         Query query = new Query(Criteria.where("languages.iso639_1").regex("^" + language + "$", "i"));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByLanguageThreeLetterIsoCode(String language) {
+    public List<CountryDocument> findByLanguageThreeLetterIsoCode(String language) {
         Query query = new Query(Criteria.where("languages.iso639_2").regex("^" + language + "$", "i"));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByDemonym(String demonym) {
+    public List<CountryDocument> findByDemonym(String demonym) {
         String normalizedDemonym = normalize(demonym);
         Query query = new Query(Criteria.where("demonym").regex("^" + normalizedDemonym + "$", "i"));
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     @Override
-    public List<Country> findByRegionalBloc(String regionalBloc) {
+    public List<CountryDocument> findByRegionalBloc(String regionalBloc) {
         Criteria criteria = new Criteria().orOperator(
                 Criteria.where("regionalBlocs.acronym").regex("^" + regionalBloc + "$", "i"),
                 Criteria.where("regionalBlocs.otherAcronyms").regex("^" + regionalBloc + "$", "i"),
@@ -121,7 +119,7 @@ public class MongoDbCountryRepository implements CountryRepository {
 
         Query query = new Query(criteria);
 
-        return mongoTemplate.find(query, Country.class, collectionName);
+        return mongoTemplate.find(query, CountryDocument.class, collectionName);
     }
 
     private String normalize(String string) {
