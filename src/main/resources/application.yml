@@ -8,3 +8,5 @@ spring:
 repository:
 #  type: mongodb
   type: json
+  json:
+    filePath: countriesV2.json

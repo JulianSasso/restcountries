@@ -6,6 +6,7 @@ import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
+import eu.fayder.restcountries.boot.config.JsonFileProperties;
 
 import java.io.InputStream;
 import java.text.Normalizer;
@@ -21,14 +22,13 @@ import java.util.stream.Collectors;
 public class CountryJsonRepositoryImpl implements CountryJsonRepository {
 
     private Map<String, CountryJson> countries;
-    private static final String JSON_PATH = "countriesV2.json";
+    private final JsonFileProperties properties;
 
     @PostConstruct
     private void init() {
-        System.out.println("Loading countries from JSON file: " + JSON_PATH);
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            InputStream is = getClass().getClassLoader().getResourceAsStream(JSON_PATH);
+            InputStream is = getClass().getClassLoader().getResourceAsStream(properties.getFilePath());
             List<CountryJson> countryList = objectMapper.readValue(is, new TypeReference<>() {});
             countries = countryList.stream()
                 .collect(Collectors.toMap(countryJson -> countryJson.getAlpha3Code().toUpperCase(), Function.identity()));
@@ -95,7 +95,6 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
                 .toList();
     }
 
-    // TODO: Asegurarnos que no llegan NULL a este punto
     @Override
     public List<CountryJson> findByCurrency(String currency) {
         return countries.values().stream()
