@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.infrastructure.persistence.nosql;
+package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
 
 import org.springframework.stereotype.Repository;
 

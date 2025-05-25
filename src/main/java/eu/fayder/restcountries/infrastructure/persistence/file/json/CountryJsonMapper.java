@@ -1,12 +1,10 @@
-package eu.fayder.restcountries.infrastructure.persistence.json;
+package eu.fayder.restcountries.infrastructure.persistence.file.json;
 
 import eu.fayder.restcountries.domain.country.Country;
 import eu.fayder.restcountries.domain.country.CountryCodes;
 import eu.fayder.restcountries.domain.country.Demographics;
 import eu.fayder.restcountries.domain.country.Geography;
 import org.mapstruct.Mapper;
-
-import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface CountryJsonMapper {

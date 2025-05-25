@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.infrastructure.persistence.json;
+package eu.fayder.restcountries.infrastructure.persistence.file.json;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;

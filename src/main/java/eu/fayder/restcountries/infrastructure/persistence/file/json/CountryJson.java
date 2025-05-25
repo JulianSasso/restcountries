@@ -1,20 +1,17 @@
-package eu.fayder.restcountries.infrastructure.persistence.nosql;
+package eu.fayder.restcountries.infrastructure.persistence.file.json;
 
-import eu.fayder.restcountries.domain.country.*;
-import lombok.Data;
+import eu.fayder.restcountries.domain.country.Currency;
+import eu.fayder.restcountries.domain.country.Language;
+import eu.fayder.restcountries.domain.country.RegionalBloc;
 import lombok.Getter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Map;
 
-@Document(collection = "${spring.data.mongodb.collection}")
 @Getter
-public class CountryDocument {
-
-    @Id
-    private String id;
+@NoArgsConstructor
+public class CountryJson {
     private String name;
     private List<String> topLevelDomain;
     private String alpha2Code;

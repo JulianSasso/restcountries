@@ -1,8 +1,8 @@
 package eu.fayder.restcountries.infrastructure.persistence.mongodb;
 
 import eu.fayder.restcountries.boot.config.MongoProperties;
-import eu.fayder.restcountries.infrastructure.persistence.nosql.CountryDocument;
-import eu.fayder.restcountries.infrastructure.persistence.nosql.CountryDocumentMongoDbRepositoryImpl;
+import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.CountryDocument;
+import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.CountryDocumentMongoDbRepositoryImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;

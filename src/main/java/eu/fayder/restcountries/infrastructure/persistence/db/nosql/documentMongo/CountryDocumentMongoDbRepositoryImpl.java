@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.infrastructure.persistence.nosql;
+package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
 
 import eu.fayder.restcountries.boot.config.MongoProperties;
 import org.springframework.beans.factory.annotation.Autowired;
