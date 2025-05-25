@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.infrastructure.persistence.mongodb;
+package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
 
 import eu.fayder.restcountries.domain.country.Country;
 import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.CountryDocument;
