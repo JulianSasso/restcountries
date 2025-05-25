@@ -7,7 +7,7 @@ import eu.fayder.restcountries.domain.country.Geography;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-interface CountryDocumentMapper {
+public interface CountryDocumentMapper {
 
     default Country toDomain(CountryDocument country){
         return new Country(
