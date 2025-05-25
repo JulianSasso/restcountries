@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface FinalCountryDocumentMongoRepository extends MongoRepository<CountryDocument, String> {
+public interface CountryDocumentMongoRepository extends MongoRepository<CountryDocument, String> {
 
     // Exact match (case-insensitive)
     Optional<CountryDocument> findByAlpha2CodeIgnoreCase(String code);

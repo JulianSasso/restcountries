@@ -13,9 +13,9 @@ import java.util.Optional;
 @Repository
 @RequiredArgsConstructor
 @ConditionalOnProperty(name = "repository.type", havingValue = "mongodb")
-public class DocumentOrientedCountryRepository implements CountryRepository {
+public class MongoDbCountryRepository implements CountryRepository {
 
-    private final FinalCountryDocumentMongoRepository mongoRepository;
+    private final CountryDocumentMongoRepository mongoRepository;
     private final CountryDocumentMapper mapper;
 
     @Override
