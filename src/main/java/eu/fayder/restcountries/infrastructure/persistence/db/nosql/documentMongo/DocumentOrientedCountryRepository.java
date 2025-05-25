@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
+import java.text.Normalizer;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,7 +15,7 @@ import java.util.Optional;
 @ConditionalOnProperty(name = "repository.type", havingValue = "mongodb")
 public class DocumentOrientedCountryRepository implements CountryRepository {
 
-    private final CountryDocumentMongoDbRepository mongoRepository;
+    private final FinalCountryDocumentMongoRepository mongoRepository;
     private final CountryDocumentMapper mapper;
 
     @Override
@@ -27,19 +28,20 @@ public class DocumentOrientedCountryRepository implements CountryRepository {
 
     @Override
     public Optional<Country> findByAlpha2Code(String code) {
-        return mongoRepository.findByAlpha2Code(code)
+        return mongoRepository.findByAlpha2CodeIgnoreCase(code)
                 .map(mapper::toDomain);
     }
 
     @Override
     public Optional<Country> findByAlpha3Code(String code) {
-        return mongoRepository.findByAlpha3Code(code)
+        return mongoRepository.findByAlpha3CodeIgnoreCase(code)
                 .map(mapper::toDomain);
     }
 
     @Override
     public List<Country> findByNameContaining(String countryName) {
-        return mongoRepository.findByNameContaining(countryName)
+        String normalizedCountryName = normalize(countryName);
+        return mongoRepository.findByNameOrAltSpellingsNormalized(normalizedCountryName)
                 .stream()
                 .map(mapper::toDomain)
                 .toList();
@@ -55,7 +57,8 @@ public class DocumentOrientedCountryRepository implements CountryRepository {
 
     @Override
     public List<Country> findByCapitalContaining(String partialCapital) {
-        return mongoRepository.findByCapitalContaining(partialCapital)
+        String normalizedCapital = normalize(partialCapital);
+        return mongoRepository.findByCapitalNormalized(normalizedCapital)
                 .stream()
                 .map(mapper::toDomain)
                 .toList();
@@ -103,7 +106,8 @@ public class DocumentOrientedCountryRepository implements CountryRepository {
 
     @Override
     public List<Country> findByDemonym(String demonym) {
-        return mongoRepository.findByDemonym(demonym)
+        String normalizedDemonym = normalize(demonym);
+        return mongoRepository.findByDemonymNormalized(normalizedDemonym)
                 .stream()
                 .map(mapper::toDomain)
                 .toList();
@@ -111,9 +115,15 @@ public class DocumentOrientedCountryRepository implements CountryRepository {
 
     @Override
     public List<Country> findByRegionalBloc(String regionalBloc) {
-        return mongoRepository.findByRegionalBloc(regionalBloc)
+        return mongoRepository.findByRegionalBlocFlexible(regionalBloc)
                 .stream()
                 .map(mapper::toDomain)
                 .toList();
+    }
+
+
+    private String normalize(String string) {
+        return Normalizer.normalize(string, Normalizer.Form.NFD)
+                .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
     }
 }

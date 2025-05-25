@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "eu.fayder.restcountries.infrastructure.persistence.mongodb")
+@EnableMongoRepositories(basePackages = "eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo")
 @EnableMongoAuditing
 public class MongoConfig extends AbstractMongoClientConfiguration {
 
