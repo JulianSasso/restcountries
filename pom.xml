@@ -13,6 +13,7 @@
         <module>domain</module>
         <module>api</module>
         <module>application</module>
+        <module>boot</module>
     </modules>
 
     <groupId>eu.fayder</groupId>

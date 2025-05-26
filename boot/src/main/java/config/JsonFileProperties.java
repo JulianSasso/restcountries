@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.boot.config;
+package config;
 
 import lombok.Getter;
 import lombok.Setter;
