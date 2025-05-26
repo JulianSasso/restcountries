@@ -1,13 +1,13 @@
-package eu.fayder.restcountries.application.usecase;
+package usecase;
 
-import eu.fayder.restcountries.domain.country.Country;
-import eu.fayder.restcountries.domain.CountryInformationService;
-import eu.fayder.restcountries.domain.CountryRepository;
+import country.Country;
+import countryInfo.CountryInformationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import repository.CountryRepository;
 
 import java.util.ArrayList;
 import java.util.List;
