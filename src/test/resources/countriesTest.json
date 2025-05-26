@@ -1,0 +1,200 @@
+[
+  {
+    "name": "Argentina",
+    "topLevelDomain": [
+      ".ar"
+    ],
+    "alpha2Code": "AR",
+    "alpha3Code": "ARG",
+    "callingCodes": [
+      "54"
+    ],
+    "capital": "Buenos Aires",
+    "altSpellings": [
+      "AR",
+      "Argentine Republic",
+      "República Argentina"
+    ],
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 45376763,
+    "latlng": [
+      -34.0,
+      -64.0
+    ],
+    "demonym": "Argentinean",
+    "area": 2780400.0,
+    "gini": 44.5,
+    "timezones": [
+      "UTC-03:00"
+    ],
+    "borders": [
+      "BOL",
+      "BRA",
+      "CHL",
+      "PRY",
+      "URY"
+    ],
+    "nativeName": "Argentina",
+    "numericCode": "032",
+    "currencies": [
+      {
+        "code": "ARS",
+        "name": "Argentine peso",
+        "symbol": "$"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "es",
+        "iso639_2": "spa",
+        "name": "Spanish",
+        "nativeName": "Español"
+      },
+      {
+        "iso639_1": "gn",
+        "iso639_2": "grn",
+        "name": "Guaraní",
+        "nativeName": "Avañe'ẽ"
+      }
+    ],
+    "translations": {
+      "br": "Argentina",
+      "de": "Argentinien",
+      "es": "Argentina",
+      "fa": "آرژانتین",
+      "fr": "Argentine",
+      "hr": "Argentina",
+      "it": "Argentina",
+      "ja": "アルゼンチン",
+      "nl": "Argentinië",
+      "pt": "Argentina",
+      "ru": "Аргентина",
+      "pl": "Argentyna",
+      "cs": "Argentina",
+      "zh": "阿根廷共和国",
+      "hu": "Argentína",
+      "se": "Argentina"
+    },
+    "flag": "https://restcountries.eu/data/arg.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "USAN",
+        "name": "Union of South American Nations",
+        "otherAcronyms": [
+          "UNASUR",
+          "UNASUL",
+          "UZAN"
+        ],
+        "otherNames": [
+          "Unión de Naciones Suramericanas",
+          "União de Nações Sul-Americanas",
+          "Unie van Zuid-Amerikaanse Naties",
+          "South American Union"
+        ]
+      }
+    ],
+    "cioc": "ARG"
+  },
+  {
+    "name": "Brazil",
+    "topLevelDomain": [
+      ".br"
+    ],
+    "alpha2Code": "BR",
+    "alpha3Code": "BRA",
+    "callingCodes": [
+      "55"
+    ],
+    "capital": "Brasília",
+    "altSpellings": [
+      "BR",
+      "Brasil",
+      "Federative Republic of Brazil",
+      "República Federativa do Brasil"
+    ],
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 212559409,
+    "latlng": [
+      -10.0,
+      -55.0
+    ],
+    "demonym": "Brazilian",
+    "area": 8515767.0,
+    "gini": 54.7,
+    "timezones": [
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC-02:00"
+    ],
+    "borders": [
+      "ARG",
+      "BOL",
+      "COL",
+      "FRA",
+      "GUF",
+      "GUY",
+      "PRY",
+      "PER",
+      "SUR",
+      "URY",
+      "VEN"
+    ],
+    "nativeName": "Brasil",
+    "numericCode": "076",
+    "currencies": [
+      {
+        "code": "BRL",
+        "name": "Brazilian real",
+        "symbol": "R$"
+      }
+    ],
+    "languages": [
+      {
+        "iso639_1": "pt",
+        "iso639_2": "por",
+        "name": "Portuguese",
+        "nativeName": "Português"
+      }
+    ],
+    "translations": {
+      "br": "Brasil",
+      "de": "Brasilien",
+      "es": "Brasil",
+      "fa": "برزیل",
+      "fr": "Brésil",
+      "hr": "Brazil",
+      "it": "Brasile",
+      "ja": "ブラジル",
+      "nl": "Brazilië",
+      "pt": "Brasil",
+      "ru": "Бразилия",
+      "pl": "Brazylia",
+      "cs": "Brazílie",
+      "zh": "巴西联邦共和国",
+      "hu": "Brazília",
+      "se": "Brasilien"
+    },
+    "flag": "https://restcountries.eu/data/bra.svg",
+    "regionalBlocs": [
+      {
+        "acronym": "USAN",
+        "name": "Union of South American Nations",
+        "otherAcronyms": [
+          "UNASUR",
+          "UNASUL",
+          "UZAN"
+        ],
+        "otherNames": [
+          "Unión de Naciones Suramericanas",
+          "União de Nações Sul-Americanas",
+          "Unie van Zuid-Amerikaanse Naties",
+          "South American Union"
+        ]
+      }
+    ],
+    "cioc": "BRA"
+  }
+]
