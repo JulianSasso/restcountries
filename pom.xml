@@ -9,10 +9,14 @@
         <relativePath/>
     </parent>
 
+    <modules>
+        <module>domain</module>
+    </modules>
+
     <groupId>eu.fayder</groupId>
     <artifactId>restcountries</artifactId>
     <version>3.0.0</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>restcountries</name>
     <description>REST interface to get data about countries</description>
@@ -44,6 +48,7 @@
         <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
     </properties>
 
+    <dependencyManagement>
     <dependencies>
         <!-- Core Spring Boot -->
         <dependency>
@@ -124,6 +129,7 @@
 
 
     </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

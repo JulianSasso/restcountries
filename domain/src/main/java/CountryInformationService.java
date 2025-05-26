@@ -1,6 +1,5 @@
-package eu.fayder.restcountries.domain;
 
-import eu.fayder.restcountries.domain.country.Country;
+import country.Country;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.domain.country;
+package country;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
