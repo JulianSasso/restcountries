@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.api.mapper.country;
+package mapper.country;
 
 import eu.fayder.restcountries.domain.LanguageResponse;
 import eu.fayder.restcountries.domain.country.Language;

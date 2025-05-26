@@ -11,6 +11,7 @@
 
     <modules>
         <module>domain</module>
+        <module>api</module>
     </modules>
 
     <groupId>eu.fayder</groupId>
@@ -161,7 +162,7 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
                 <executions>
                     <execution>
@@ -186,8 +187,8 @@
                 </executions>
                 <groupId>org.openapitools</groupId>
                 <version>7.4.0</version>
-            </plugin>
-            <plugin>
+            </plugin>-->
+            <!--<plugin>
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <executions>
                     <execution>
@@ -205,7 +206,7 @@
                 </executions>
                 <groupId>org.codehaus.mojo</groupId>
                 <version>3.5.0</version>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
