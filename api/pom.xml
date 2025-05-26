@@ -24,14 +24,16 @@
             <artifactId>spring-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>eu.fayder</groupId>
-            <artifactId>domain</artifactId>
-            <version>3.0.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.openapitools</groupId>
             <artifactId>jackson-databind-nullable</artifactId>
+        </dependency>
+        <dependency>
+            <artifactId>mapstruct</artifactId>
+            <groupId>org.mapstruct</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>lombok-mapstruct-binding</artifactId>
+            <groupId>org.projectlombok</groupId>
         </dependency>
     </dependencies>
 

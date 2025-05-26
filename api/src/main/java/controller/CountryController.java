@@ -1,6 +1,8 @@
 package controller;
 
+import countryInfo.CountryInformationService;
 import eu.fayder.restcountries.domain.CountryResponse;
+import eu.fayder.restcountries.api.CountryApi;
 import lombok.RequiredArgsConstructor;
 import mapper.country.CountryMapper;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +17,7 @@ import java.util.Set;
 @RequestMapping("rest/v2")
 @RestController
 @RequiredArgsConstructor
-public class CountryController implements eu.fayder.restcountries.api.CountryApi {
+public class CountryController implements CountryApi {
 
     private final CountryInformationService countryService;
     private final CountryMapper countryMapper;

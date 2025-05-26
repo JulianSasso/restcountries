@@ -1,3 +1,4 @@
+package countryInfo;
 
 import country.Country;
 
