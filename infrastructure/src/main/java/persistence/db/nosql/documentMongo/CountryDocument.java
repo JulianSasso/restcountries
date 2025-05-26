@@ -1,6 +1,8 @@
-package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
+package persistence.db.nosql.documentMongo;
 
-import eu.fayder.restcountries.domain.country.*;
+import country.Currency;
+import country.Language;
+import country.RegionalBloc;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

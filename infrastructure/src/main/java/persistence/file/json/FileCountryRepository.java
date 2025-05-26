@@ -1,9 +1,9 @@
-package eu.fayder.restcountries.infrastructure.persistence.file.json;
+package persistence.file.json;
 
-import eu.fayder.restcountries.domain.CountryRepository;
-import eu.fayder.restcountries.domain.country.Country;
+import country.Country;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import repository.CountryRepository;
 
 import java.util.List;
 import java.util.Optional;

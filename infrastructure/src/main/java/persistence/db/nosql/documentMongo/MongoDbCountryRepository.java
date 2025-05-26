@@ -1,10 +1,10 @@
-package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
+package persistence.db.nosql.documentMongo;
 
-import eu.fayder.restcountries.domain.CountryRepository;
-import eu.fayder.restcountries.domain.country.Country;
+import country.Country;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
+import repository.CountryRepository;
 
 import java.text.Normalizer;
 import java.util.List;

@@ -1,8 +1,8 @@
-package eu.fayder.restcountries.infrastructure.persistence.file.json;
+package persistence.file.json;
 
-import eu.fayder.restcountries.domain.country.Currency;
-import eu.fayder.restcountries.domain.country.Language;
-import eu.fayder.restcountries.domain.country.RegionalBloc;
+import country.Currency;
+import country.Language;
+import country.RegionalBloc;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

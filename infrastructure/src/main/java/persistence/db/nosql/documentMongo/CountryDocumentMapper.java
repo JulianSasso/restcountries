@@ -1,9 +1,9 @@
-package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
+package persistence.db.nosql.documentMongo;
 
-import eu.fayder.restcountries.domain.country.Country;
-import eu.fayder.restcountries.domain.country.CountryCodes;
-import eu.fayder.restcountries.domain.country.Demographics;
-import eu.fayder.restcountries.domain.country.Geography;
+import country.Country;
+import country.CountryCodes;
+import country.Demographics;
+import country.Geography;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

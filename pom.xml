@@ -14,6 +14,7 @@
         <module>api</module>
         <module>application</module>
         <module>boot</module>
+        <module>infrastructure</module>
     </modules>
 
     <groupId>eu.fayder</groupId>

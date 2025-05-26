@@ -1,4 +1,4 @@
-package eu.fayder.restcountries.infrastructure.persistence.file.json;
+package persistence.file.json;
 
 import java.util.List;
 import java.util.Optional;

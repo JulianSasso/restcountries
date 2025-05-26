@@ -1,12 +1,12 @@
-package eu.fayder.restcountries.infrastructure.persistence.file.json;
+package persistence.file.json;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import config.JsonFileProperties;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
-import eu.fayder.restcountries.boot.config.JsonFileProperties;
 
 import java.io.InputStream;
 import java.text.Normalizer;
