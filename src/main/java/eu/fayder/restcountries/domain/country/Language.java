@@ -8,7 +8,6 @@ import lombok.*;
 
 
 @Getter
-//@AllArgsConstructor
 @Builder
 public class Language {
     private String isoTwoLetterCode;

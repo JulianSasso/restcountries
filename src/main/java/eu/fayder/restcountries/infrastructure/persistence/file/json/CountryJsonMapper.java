@@ -8,17 +8,16 @@ import eu.fayder.restcountries.infrastructure.persistence.file.json.country.Regi
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface CountryJsonMapper {
     default Country toDomain(CountryJson json){
-        final Coordinates coordinates = json.getLatlng() != null && json.getLatlng().size() == 2
-                ? new Coordinates(json.getLatlng().get(0), json.getLatlng().get(1))
-                : null;
         return new Country(
                 json.getName(),
-            new CountryCodes(json.getTopLevelDomain(), json.getAlpha2Code(), json.getAlpha3Code(), json.getNumericCode(), json.getCioc(), json.getCallingCodes()),
-            new Geography(json.getCapital(), json.getAltSpellings(), json.getRegion(), json.getSubregion(), coordinates, json.getTimezones(), json.getBorders()),
-            new Demographics(json.getPopulation(), json.getDemonym(), json.getArea(), json.getGini(), json.getNativeName()),
+            countryCodesFromCountryJson(json),
+            geographyFromCountryJson(json),
+            demographicsFromCountryJson(json),
                 json.getCurrencies().stream().map(this::toDomain).toList(),
                 json.getLanguages().stream().map(this::toDomain).toList(),
                 json.getTranslations(),
@@ -34,4 +33,48 @@ public interface CountryJsonMapper {
     Currency toDomain(CurrencyJson json);
 
     RegionalBloc toDomain(RegionalBlocJson json);
+
+    default Demographics demographicsFromCountryJson(CountryJson country) {
+        return Demographics.builder()
+                .population(country.getPopulation())
+                .demonym(country.getDemonym())
+                .area(country.getArea())
+                .giniCoefficient(country.getGini())
+                .nativeName(country.getNativeName())
+                .build();
+    }
+
+    default CountryCodes countryCodesFromCountryJson(CountryJson country) {
+        return CountryCodes.builder()
+                .topLevelDomain(country.getTopLevelDomain())
+                .isoAlpha2Code(country.getAlpha2Code())
+                .isoAlpha3Code(country.getAlpha3Code())
+                .isoNumericCode(country.getNumericCode())
+                .iocCode(country.getCioc())
+                .callingCodes(country.getCallingCodes())
+                .build();
+    }
+
+    default Geography geographyFromCountryJson(CountryJson country){
+        return Geography.builder()
+                .capital(country.getCapital())
+                .alternativeSpellings(country.getAltSpellings())
+                .region(country.getRegion())
+                .subregion(country.getSubregion())
+                .coordinates(coordinatesFromLatlng(country.getLatlng()))
+                .timezones(country.getTimezones())
+                .borders(country.getBorders())
+                .build();
+    }
+
+    default Coordinates coordinatesFromLatlng(List<Double> latlng){
+        if(latlng == null || latlng.size() != 2) {
+            return null;
+        }
+
+        return  Coordinates.builder()
+                    .latitude(latlng.get(0))
+                    .longitude(latlng.get(1))
+                    .build();
+    }
 }

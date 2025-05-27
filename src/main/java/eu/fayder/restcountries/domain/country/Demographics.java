@@ -1,13 +1,13 @@
 package eu.fayder.restcountries.domain.country;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
+@Builder
 public class Demographics {
     private Integer population;
     private String demonym;

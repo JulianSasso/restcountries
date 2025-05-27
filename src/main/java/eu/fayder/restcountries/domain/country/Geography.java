@@ -1,12 +1,13 @@
 package eu.fayder.restcountries.domain.country;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
-@AllArgsConstructor
+@Builder
 public class Geography {
     private String capital;
     private List<String> alternativeSpellings;
