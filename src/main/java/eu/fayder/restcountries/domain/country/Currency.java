@@ -3,5 +3,18 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package eu.fayder.restcountries.domain.country;
 
-public record Currency(String code, String name, String symbol) {
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Currency {
+    private String code;
+    private String name;
+    private String symbol;
 }

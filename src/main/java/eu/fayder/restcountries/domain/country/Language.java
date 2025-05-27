@@ -3,5 +3,18 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 package eu.fayder.restcountries.domain.country;
 
-public record Language(String iso639_1, String iso639_2, String name, String nativeName) {
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Language {
+    private String iso639_1;
+    private String iso639_2;
+    private String name;
+    private String nativeName;
 }

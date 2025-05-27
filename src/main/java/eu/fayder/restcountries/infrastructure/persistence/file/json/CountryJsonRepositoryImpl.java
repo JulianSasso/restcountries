@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 import eu.fayder.restcountries.boot.config.JsonFileProperties;
+import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
 import java.text.Normalizer;
@@ -16,9 +17,9 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Repository
-@ConditionalOnProperty(name = "repository.type", havingValue = "json")
+@Service
 @RequiredArgsConstructor
+@ConditionalOnProperty(name = "repository.type", havingValue = "json")
 public class CountryJsonRepositoryImpl implements CountryJsonRepository {
 
     private Map<String, CountryJson> countries;
@@ -99,7 +100,7 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     public List<CountryJson> findByCurrency(String currency) {
         return countries.values().stream()
                 .filter(country -> country.getCurrencies().stream()
-                        .anyMatch(curr -> curr.code() != null && curr.code().equalsIgnoreCase(currency)))
+                        .anyMatch(curr -> curr.getCode() != null && curr.getCode().equalsIgnoreCase(currency)))
                 .toList();
     }
 
@@ -107,7 +108,7 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     public List<CountryJson> findByLanguageTwoLetterIsoCode(String language) {
         return countries.values().stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.iso639_1() != null && lang.iso639_1().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_2().equalsIgnoreCase(language)))
                 .toList();
     }
 
@@ -115,7 +116,7 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     public List<CountryJson> findByLanguageThreeLetterIsoCode(String language) {
         return countries.values().stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.iso639_2() != null && lang.iso639_2().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_2().equalsIgnoreCase(language)))
                 .toList();
     }
 

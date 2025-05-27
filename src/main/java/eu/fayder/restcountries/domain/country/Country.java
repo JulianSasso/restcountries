@@ -14,7 +14,6 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Country {
-
     private String name;
     private CountryCodes codes;
     private Geography geography;

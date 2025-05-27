@@ -6,7 +6,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import eu.fayder.restcountries.api.controller.CountryController;
 import eu.fayder.restcountries.boot.CountriesApplication;
+import eu.fayder.restcountries.infrastructure.persistence.file.json.FileCountryRepository;
 import eu.fayder.restcountries.testUtils.JsonTestUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -23,7 +25,7 @@ import java.util.Map;
 // TODO: Dejar de ignorar el campo _children.translations._children
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-classes = CountriesApplication.class)
+classes = {CountriesApplication.class/*, CountryController.class, FileCountryRepository.class*/})
 public class CountryRestIT {
 
     @LocalServerPort

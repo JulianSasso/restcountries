@@ -4,12 +4,15 @@ import eu.fayder.restcountries.domain.CountryRepository;
 import eu.fayder.restcountries.domain.country.Country;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
+@ConditionalOnProperty(name = "repository.type", havingValue = "json")
 public class FileCountryRepository implements CountryRepository {
 
     private final CountryJsonRepository jsonRepository;
