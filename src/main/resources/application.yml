@@ -6,7 +6,7 @@ spring:
       collection: countries
 
 repository:
-#  type: mongodb
-  type: json
+  type: mongodb
+#  type: json
   json:
     filePath: countriesV2.json

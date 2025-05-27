@@ -1,6 +1,5 @@
 package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.country;
 
-import eu.fayder.restcountries.domain.country.*;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -32,10 +31,10 @@ public class CountryDocument {
     private List<String> borders;
     private String nativeName;
     private String numericCode;
-    private List<Currency> currencies;
-    private List<Language> languages;
+    private List<CurrencyDocument> currencies;
+    private List<LanguageDocument> languages;
     private Map<String, String> translations;
     private String flag;
-    private List<RegionalBloc> regionalBlocs;
+    private List<RegionalBlocDocument> regionalBlocs;
     private String cioc;
 }
