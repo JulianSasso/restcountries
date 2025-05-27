@@ -1,11 +1,15 @@
 package eu.fayder.restcountries.api.mapper.country;
 
 import eu.fayder.restcountries.domain.CountryResponse;
+import eu.fayder.restcountries.domain.country.Coordinates;
 import eu.fayder.restcountries.domain.country.Country;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
+import java.math.BigDecimal;
 import java.net.URI;
+import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {LanguageMapper.class})
 public interface CountryMapper {
@@ -21,7 +25,7 @@ public interface CountryMapper {
     @Mapping(source = "geography.altSpellings", target = "altSpellings")
     @Mapping(source = "geography.region", target = "region")
     @Mapping(source = "geography.subregion", target = "subregion")
-    @Mapping(source = "geography.latlng", target = "latlng")
+    @Mapping(target = "latlng", source = "geography.coordinates", qualifiedByName = "coordinatesToLatLng")
     @Mapping(source = "geography.timezones", target = "timezones")
     @Mapping(source = "geography.borders", target = "borders")
 
@@ -34,6 +38,13 @@ public interface CountryMapper {
 
     default URI map(String value) {
         return value != null ? URI.create(value) : null;
+    }
+
+    @Named("coordinatesToLatLng")
+    static List<BigDecimal> coordinatesToLatLng(Coordinates coordinates) {
+        if (coordinates == null) return null;
+        return List.of(BigDecimal.valueOf(coordinates.getLatitude()),
+                BigDecimal.valueOf(coordinates.getLongitude()));
     }
 
 }

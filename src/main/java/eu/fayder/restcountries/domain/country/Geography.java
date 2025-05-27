@@ -15,7 +15,7 @@ public class Geography {
     private List<String> altSpellings;
     private String region;
     private String subregion;
-    private List<Double> latlng; // [lat, lng]
+    private Coordinates coordinates; // [lat, lng]
     private List<String> timezones;
     private List<String> borders;
 }
