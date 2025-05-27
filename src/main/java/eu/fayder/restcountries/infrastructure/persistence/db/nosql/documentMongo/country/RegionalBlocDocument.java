@@ -1,12 +1,13 @@
 package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.country;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Getter
-@NoArgsConstructor
+@Builder
 public class RegionalBlocDocument {
     private String acronym;
     private String name;
