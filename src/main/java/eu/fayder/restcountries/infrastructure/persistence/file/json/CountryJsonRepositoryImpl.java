@@ -108,7 +108,7 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     public List<CountryJson> findByLanguageTwoLetterIsoCode(String language) {
         return countries.values().stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_2().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_1().equalsIgnoreCase(language)))
                 .toList();
     }
 
@@ -116,7 +116,7 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     public List<CountryJson> findByLanguageThreeLetterIsoCode(String language) {
         return countries.values().stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_2().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.getIso639_2() != null && lang.getIso639_2().equalsIgnoreCase(language)))
                 .toList();
     }
 
