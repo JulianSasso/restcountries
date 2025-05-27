@@ -9,6 +9,7 @@ import org.mapstruct.Named;
 
 import java.math.BigDecimal;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {LanguageMapper.class})
@@ -42,7 +43,8 @@ public interface CountryMapper {
 
     @Named("coordinatesToLatLng")
     static List<BigDecimal> coordinatesToLatLng(Coordinates coordinates) {
-        if (coordinates == null) return null;
+        if (coordinates == null)
+            return new ArrayList<>();
         return List.of(BigDecimal.valueOf(coordinates.getLatitude()),
                 BigDecimal.valueOf(coordinates.getLongitude()));
     }

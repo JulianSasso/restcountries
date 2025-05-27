@@ -1,31 +1,35 @@
 package eu.fayder.restcountries;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import eu.fayder.restcountries.api.controller.CountryController;
 import eu.fayder.restcountries.boot.CountriesApplication;
-import eu.fayder.restcountries.infrastructure.persistence.file.json.FileCountryRepository;
 import eu.fayder.restcountries.testUtils.JsonTestUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.http.*;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Map;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 // TODO: Dejar de ignorar el campo _children.translations._children
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
-classes = {CountriesApplication.class/*, CountryController.class, FileCountryRepository.class*/})
+        classes = {CountriesApplication.class/*, CountryController.class, FileCountryRepository.class*/})
+@TestPropertySource(properties = {
+        "repository.type=json",
+        "repository.json.file-path=countriesV2.json",
+})
 public class CountryRestIT {
 
     @LocalServerPort
@@ -53,7 +57,7 @@ public class CountryRestIT {
                 .as("Comparing fields for country with alpha2Code '%s'", code.toUpperCase())
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -75,7 +79,7 @@ public class CountryRestIT {
                 .as("Comparing fields for country with alpha3Code '%s'", code.toUpperCase())
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -97,7 +101,7 @@ public class CountryRestIT {
                 .as("Comparing fields for country with altName '%s'", altName)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -119,7 +123,7 @@ public class CountryRestIT {
                 .as("Comparing fields for country with partial name '%s'", partialName)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -140,7 +144,7 @@ public class CountryRestIT {
                 .as("Comparing fields for countries with alpha codes '%s'", codesParam)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -161,7 +165,7 @@ public class CountryRestIT {
                 .as("Comparing fields for countries with currency '%s'", currency)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -182,7 +186,7 @@ public class CountryRestIT {
                 .as("Comparing fields for countries with language '%s'", language)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -203,7 +207,7 @@ public class CountryRestIT {
                 .as("Comparing fields for countries with capital '%s'", capital)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -224,7 +228,7 @@ public class CountryRestIT {
                 .as("Comparing fields for countries with calling code '%s'", code)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -246,7 +250,7 @@ public class CountryRestIT {
                 .as("Comparing fields for countries with calling region '%s'", region)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
@@ -268,12 +272,13 @@ public class CountryRestIT {
                 .as("Comparing fields for countries with regional bloc '%s'", bloc)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
-                .ignoringFields("_children.translations._children") 
+                .ignoringFields("_children.translations._children")
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
     private Map<String, Object> parseJson(String json) throws JsonProcessingException {
-        return objectMapper.readValue(json, new TypeReference<>() {});
+        return objectMapper.readValue(json, new TypeReference<>() {
+        });
     }
 
     private JsonNode parseJsonNode(String json) throws JsonProcessingException {
