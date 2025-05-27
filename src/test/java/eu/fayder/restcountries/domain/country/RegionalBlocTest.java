@@ -11,7 +11,10 @@ public class RegionalBlocTest {
     @Test
     void givenRegionalBlocWithPrimaryName_whenCheckingSameName_thenReturnTrue() {
         // Given
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("European Union");
@@ -23,7 +26,10 @@ public class RegionalBlocTest {
     @Test
     void givenRegionalBloc_whenCheckingNameWithDifferentCase_thenReturnTrue() {
         // Given
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("european union");
@@ -35,7 +41,10 @@ public class RegionalBlocTest {
     @Test
     void givenRegionalBloc_whenCheckingPrimaryAcronym_thenReturnTrue() {
         // Given
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("EU");
@@ -47,7 +56,10 @@ public class RegionalBlocTest {
     @Test
     void givenRegionalBloc_whenCheckingPrimaryAcronymWithDifferentCase_thenReturnTrue() {
         // Given
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("eu");
@@ -60,7 +72,11 @@ public class RegionalBlocTest {
     void givenRegionalBlocWithOtherNames_whenCheckingOtherName_thenReturnTrue() {
         // Given
         List<String> otherNames = List.of("Europe", "Union of Europe");
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, otherNames);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .otherNames(otherNames)
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("Europe");
@@ -73,7 +89,11 @@ public class RegionalBlocTest {
     void givenRegionalBlocWithOtherNames_whenCheckingOtherNameWithDifferentCase_thenReturnTrue() {
         // Given
         List<String> otherNames = List.of("Europe", "Union of Europe");
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, otherNames);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .otherNames(otherNames)
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("europe");
@@ -86,7 +106,11 @@ public class RegionalBlocTest {
     void givenRegionalBlocWithOtherAcronyms_whenCheckingOtherAcronym_thenReturnTrue() {
         // Given
         List<String> otherAcronyms = List.of("EUR", "EUU");
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", otherAcronyms, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .otherAcronyms(otherAcronyms)
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("EUR");
@@ -99,7 +123,11 @@ public class RegionalBlocTest {
     void givenRegionalBlocWithOtherAcronyms_whenCheckingOtherAcronymWithDifferentCase_thenReturnTrue() {
         // Given
         List<String> otherAcronyms = List.of("EUR", "EUU");
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", otherAcronyms, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .otherAcronyms(otherAcronyms)
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("eur");
@@ -113,7 +141,12 @@ public class RegionalBlocTest {
         // Given
         List<String> otherAcronyms = List.of("EUR", "EUU");
         List<String> otherNames = List.of("Europe", "Union of Europe");
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", otherAcronyms, otherNames);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .otherAcronyms(otherAcronyms)
+                                        .otherNames(otherNames)
+                                        .build();
 
         // When
         boolean result = bloc.isAlternativeName("Asia");
@@ -126,7 +159,12 @@ public class RegionalBlocTest {
     void givenRegionalBlocWithNullOtherNames_whenCheckingNames_thenReturnExpectedResults() {
         // Given
         List<String> otherAcronyms = List.of("EUR", "EUU");
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", otherAcronyms, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        .otherAcronyms(otherAcronyms)
+                                        
+                                        .build();
 
         // When & Then
         assertTrue(bloc.isAlternativeName("EUR"));
@@ -137,7 +175,12 @@ public class RegionalBlocTest {
     void givenRegionalBlocWithNullOtherAcronyms_whenCheckingNames_thenReturnExpectedResults() {
         // Given
         List<String> otherNames = List.of("Europe", "Union of Europe");
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, otherNames);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        
+                                        .otherNames(otherNames)
+                                        .build();
 
         // When & Then
         assertTrue(bloc.isAlternativeName("Europe"));
@@ -147,7 +190,12 @@ public class RegionalBlocTest {
     @Test
     void givenRegionalBlocWithNullLists_whenCheckingNames_thenReturnExpectedResults() {
         // Given
-        RegionalBloc bloc = new RegionalBloc("EU", "European Union", null, null);
+        RegionalBloc bloc = RegionalBloc.builder()
+                                        .acronym("EU")
+                                        .name("European Union")
+                                        
+                                        
+                                        .build();
 
         // When & Then
         assertTrue(bloc.isAlternativeName("EU"));

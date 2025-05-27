@@ -24,9 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ComponentScan(basePackages = "eu.fayder.restcountries")
 @ContextConfiguration(classes = CountriesApplication.class)
 @TestPropertySource(properties = {
-        "spring.data.mongodb.database=restcountries-test",
-        "spring.data.mongodb.port=27017",
-        "spring.data.mongodb.host=localhost"
+        "repository.type=mongodb",
 })
 class CountryDocumentMongoRepositoryIT {
 
