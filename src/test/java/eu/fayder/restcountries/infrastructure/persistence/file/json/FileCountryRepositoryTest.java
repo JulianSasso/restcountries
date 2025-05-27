@@ -1,6 +1,7 @@
 package eu.fayder.restcountries.infrastructure.persistence.file.json;
 
 import eu.fayder.restcountries.domain.country.Country;
+import eu.fayder.restcountries.infrastructure.persistence.file.json.country.CountryJson;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

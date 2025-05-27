@@ -11,8 +11,7 @@ import lombok.NoArgsConstructor;
 
 
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
+@Builder
 public class Currency {
     private String code;
     private String name;

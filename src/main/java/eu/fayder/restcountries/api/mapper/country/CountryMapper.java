@@ -14,15 +14,15 @@ import java.util.List;
 @Mapper(componentModel = "spring", uses = {LanguageMapper.class})
 public interface CountryMapper {
 
-    @Mapping(source = "codes.alpha2Code", target = "alpha2Code")
-    @Mapping(source = "codes.alpha3Code", target = "alpha3Code")
+    @Mapping(source = "codes.isoAlpha2Code", target = "alpha2Code")
+    @Mapping(source = "codes.isoAlpha3Code", target = "alpha3Code")
     @Mapping(source = "codes.callingCodes", target = "callingCodes")
-    @Mapping(source = "codes.numericCode", target = "numericCode")
+    @Mapping(source = "codes.isoNumericCode", target = "numericCode")
     @Mapping(source = "codes.topLevelDomain", target = "topLevelDomain")
-    @Mapping(source = "codes.cioc", target = "cioc")
+    @Mapping(source = "codes.iocCode", target = "cioc")
 
     @Mapping(source = "geography.capital", target = "capital")
-    @Mapping(source = "geography.altSpellings", target = "altSpellings")
+    @Mapping(source = "geography.alternativeSpellings", target = "altSpellings")
     @Mapping(source = "geography.region", target = "region")
     @Mapping(source = "geography.subregion", target = "subregion")
     @Mapping(target = "latlng", source = "geography.coordinates", qualifiedByName = "coordinatesToLatLng")
@@ -32,7 +32,7 @@ public interface CountryMapper {
     @Mapping(source = "demographics.population", target = "population")
     @Mapping(source = "demographics.demonym", target = "demonym")
     @Mapping(source = "demographics.area", target = "area")
-    @Mapping(source = "demographics.gini", target = "gini")
+    @Mapping(source = "demographics.giniCoefficient", target = "gini")
     @Mapping(source = "demographics.nativeName", target = "nativeName")
     CountryResponse toResponse(Country country);
 

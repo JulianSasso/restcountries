@@ -1,5 +1,7 @@
 package eu.fayder.restcountries.infrastructure.persistence.file.json;
 
+import eu.fayder.restcountries.infrastructure.persistence.file.json.country.CountryJson;
+
 import java.util.List;
 import java.util.Optional;
 

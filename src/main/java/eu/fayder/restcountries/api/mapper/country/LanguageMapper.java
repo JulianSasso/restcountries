@@ -7,7 +7,7 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface LanguageMapper {
-    @Mapping(source = "iso639_1", target = "iso6391")
-    @Mapping(source = "iso639_2", target = "iso6392")
+    @Mapping(source = "isoTwoLetterCode", target = "iso6391")
+    @Mapping(source = "isoThreeLetterCode", target = "iso6392")
     LanguageResponse toResponse(Language language);
 }

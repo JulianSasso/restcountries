@@ -1,6 +1,7 @@
 package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
 
 import eu.fayder.restcountries.domain.country.*;
+import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.country.CountryDocument;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

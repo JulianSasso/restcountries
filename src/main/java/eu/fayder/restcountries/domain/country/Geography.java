@@ -9,10 +9,10 @@ import java.util.List;
 @AllArgsConstructor
 public class Geography {
     private String capital;
-    private List<String> altSpellings;
+    private List<String> alternativeSpellings;
     private String region;
     private String subregion;
-    private Coordinates coordinates; // [lat, lng]
+    private Coordinates coordinates;
     private List<String> timezones;
     private List<String> borders;
 }

@@ -4,17 +4,15 @@
 package eu.fayder.restcountries.domain.country;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
 @Getter
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+@Builder
 public class Language {
-    private String iso639_1;
-    private String iso639_2;
+    private String isoTwoLetterCode;
+    private String isoThreeLetterCode;
     private String name;
     private String nativeName;
 }

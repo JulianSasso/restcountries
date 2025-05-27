@@ -1,10 +1,7 @@
 package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
 
 import eu.fayder.restcountries.domain.country.Country;
-import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.CountryDocument;
-import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.CountryDocumentMapper;
-import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.CountryDocumentMongoRepository;
-import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.MongoDbCountryRepository;
+import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.country.CountryDocument;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

@@ -2,10 +2,10 @@ package eu.fayder.restcountries.infrastructure.persistence.file.json;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import eu.fayder.restcountries.infrastructure.persistence.file.json.country.CountryJson;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.stereotype.Repository;
 import eu.fayder.restcountries.boot.config.JsonFileProperties;
 import org.springframework.stereotype.Service;
 
@@ -108,7 +108,7 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     public List<CountryJson> findByLanguageTwoLetterIsoCode(String language) {
         return countries.values().stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_2().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_1().equalsIgnoreCase(language)))
                 .toList();
     }
 
@@ -116,7 +116,7 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     public List<CountryJson> findByLanguageThreeLetterIsoCode(String language) {
         return countries.values().stream()
                 .filter(country -> country.getLanguages().stream()
-                        .anyMatch(lang -> lang.getIso639_1() != null && lang.getIso639_2().equalsIgnoreCase(language)))
+                        .anyMatch(lang -> lang.getIso639_2() != null && lang.getIso639_2().equalsIgnoreCase(language)))
                 .toList();
     }
 

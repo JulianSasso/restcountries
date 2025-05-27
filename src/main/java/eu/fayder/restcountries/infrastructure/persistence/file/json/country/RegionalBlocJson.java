@@ -1,15 +1,13 @@
-package eu.fayder.restcountries.domain.country;
+package eu.fayder.restcountries.infrastructure.persistence.file.json.country;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Getter
-@Builder
-public class RegionalBloc {
+@NoArgsConstructor
+public class RegionalBlocJson {
     private String acronym;
     private String name;
     private List<String> otherAcronyms;
@@ -34,5 +32,4 @@ public class RegionalBloc {
         }
         return false;
     }
-
 }

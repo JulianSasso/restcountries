@@ -12,6 +12,6 @@ public class Demographics {
     private Integer population;
     private String demonym;
     private Double area;
-    private Double gini;
+    private Double giniCoefficient;
     private String nativeName;
 }

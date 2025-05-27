@@ -12,9 +12,9 @@ import java.util.List;
 public class CountryCodes {
 
     private List<String> topLevelDomain;
-    private String alpha2Code;
-    private String alpha3Code;
-    private String numericCode;
-    private String cioc;
+    private String isoAlpha2Code;
+    private String isoAlpha3Code;
+    private String isoNumericCode;
+    private String iocCode;
     private List<String> callingCodes;
 }

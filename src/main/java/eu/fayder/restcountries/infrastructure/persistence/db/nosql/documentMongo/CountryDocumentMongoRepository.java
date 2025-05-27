@@ -1,5 +1,6 @@
 package eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo;
 
+import eu.fayder.restcountries.infrastructure.persistence.db.nosql.documentMongo.country.CountryDocument;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
