@@ -13,17 +13,17 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface CountryJsonMapper {
     default Country toDomain(CountryJson json){
-        return new Country(
-                json.getName(),
-            countryCodesFromCountryJson(json),
-            geographyFromCountryJson(json),
-            demographicsFromCountryJson(json),
-                json.getCurrencies().stream().map(this::toDomain).toList(),
-                json.getLanguages().stream().map(this::toDomain).toList(),
-                json.getTranslations(),
-                json.getFlag(),
-                json.getRegionalBlocs().stream().map(this::toDomain).toList()
-        );
+        return Country.builder()
+                .name(json.getName())
+                .codes(countryCodesFromCountryJson(json))
+                .geography(geographyFromCountryJson(json))
+                .demographics(demographicsFromCountryJson(json))
+                .currencies(json.getCurrencies().stream().map(this::toDomain).toList())
+                .languages(json.getLanguages().stream().map(this::toDomain).toList())
+                .translations(json.getTranslations())
+                .flag(json.getFlag())
+                .regionalBlocs(json.getRegionalBlocs().stream().map(this::toDomain).toList())
+                .build();
     }
 
     @Mapping(source = "iso639_1", target = "isoTwoLetterCode")

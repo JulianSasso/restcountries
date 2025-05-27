@@ -10,17 +10,17 @@ import java.util.List;
 public interface CountryDocumentMapper {
 
     default Country toDomain(CountryDocument country) {
-        return new Country(
-                country.getName(),
-                countryCodesFromCountryDocument(country),
-                geographyFromCountryDocument(country),
-                demographicsFromCountryDocument(country),
-                country.getCurrencies(),
-                country.getLanguages(),
-                country.getTranslations(),
-                country.getFlag(),
-                country.getRegionalBlocs()
-        );
+        return Country.builder()
+                .name(country.getName())
+                .codes(countryCodesFromCountryDocument(country))
+                .geography(geographyFromCountryDocument(country))
+                .demographics(demographicsFromCountryDocument(country))
+                .currencies(country.getCurrencies())
+                .languages(country.getLanguages())
+                .translations(country.getTranslations())
+                .flag(country.getFlag())
+                .regionalBlocs(country.getRegionalBlocs())
+                .build();
     }
 
     default Demographics demographicsFromCountryDocument(CountryDocument country) {
