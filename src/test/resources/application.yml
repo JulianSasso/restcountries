@@ -1,9 +1,9 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/
-      database: restcountries
-      collection: countries
+      uri: mongodb://root:example@localhost:27017/
+      database: restcountries_test
+      collection: countries_test
 
 repository:
   type: mongodb
