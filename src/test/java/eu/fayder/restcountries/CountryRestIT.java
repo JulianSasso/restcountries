@@ -24,7 +24,6 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-// TODO: Dejar de ignorar el campo _children.translations._children
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
         classes = {CountriesApplication.class, CountryController.class})
