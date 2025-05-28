@@ -19,9 +19,8 @@ public class FileCountryRepository implements CountryRepository {
     private final CountryJsonMapper mapper;
 
     @Override
-    public List<Country> findAll() {
-        return jsonRepository.findAll()
-                .stream()
+    public List<Country> findAll(Integer page, Integer pageSize) {
+        return jsonRepository.findAll(page, pageSize).stream()
                 .map(mapper::toDomain)
                 .toList();
     }
@@ -117,4 +116,5 @@ public class FileCountryRepository implements CountryRepository {
                 .map(mapper::toDomain)
                 .toList();
     }
+
 }

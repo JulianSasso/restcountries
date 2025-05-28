@@ -22,8 +22,8 @@ public class CountryInformationServiceImpl implements CountryInformationService 
     private final CountryRepository countryRepository;
 
     @Override
-    public List<Country> getAll() {
-        return countryRepository.findAll();
+    public List<Country> getAll(Integer page, Integer pageSize) {
+        return countryRepository.findAll(page, pageSize);
     }
 
     @Override

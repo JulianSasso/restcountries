@@ -27,7 +27,7 @@ public class CountryController implements CountryApi {
     @Override
     @GetMapping("all")
     public ResponseEntity<List<CountryResponse>> getAllCountries(String fields, @Min(1) Integer page, @Min(1) @Max(50) Integer pageSize) {
-        return ResponseEntity.ok(countryService.getAll()
+        return ResponseEntity.ok(countryService.getAll(page, pageSize)
                 .stream()
                 .map(countryMapper::toResponse)
                 .toList());

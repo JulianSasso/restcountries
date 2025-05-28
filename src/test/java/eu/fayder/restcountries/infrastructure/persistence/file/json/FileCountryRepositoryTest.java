@@ -34,12 +34,12 @@ class FileCountryRepositoryTest {
         Country country1 = mock(Country.class);
         Country country2 = mock(Country.class);
 
-        when(jsonRepository.findAll()).thenReturn(List.of(countryJson1, countryJson2));
+        when(jsonRepository.findAll(any(), any())).thenReturn(List.of(countryJson1, countryJson2));
         when(mapper.toDomain(countryJson1)).thenReturn(country1);
         when(mapper.toDomain(countryJson2)).thenReturn(country2);
 
         // When
-        List<Country> result = fileCountryRepository.findAll();
+        List<Country> result = fileCountryRepository.findAll(null, null);
 
         // Then
         assertEquals(2, result.size());

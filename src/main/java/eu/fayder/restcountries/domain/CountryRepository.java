@@ -7,7 +7,11 @@ import java.util.Optional;
 
 public interface CountryRepository {
 
-    List<Country> findAll();
+    default List<Country> findAll(){
+        return findAll(null, null);
+    }
+
+    List<Country> findAll(Integer page, Integer pageSize);
 
     Optional<Country> findByAlpha2Code(String code);
 

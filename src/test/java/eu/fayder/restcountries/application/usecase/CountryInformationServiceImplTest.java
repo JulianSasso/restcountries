@@ -28,7 +28,7 @@ class CountryInformationServiceImplTest {
         // given
         Country country1 = mock(Country.class);
         Country country2 = mock(Country.class);
-        when(countryRepository.findAll()).thenReturn(List.of(country1, country2));
+        when(countryRepository.findAll(any(), any())).thenReturn(List.of(country1, country2));
 
         // when
         List<Country> result = countryService.getAll();

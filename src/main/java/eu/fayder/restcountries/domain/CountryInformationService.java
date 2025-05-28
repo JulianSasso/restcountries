@@ -8,7 +8,10 @@ import java.util.Set;
 
 public interface CountryInformationService {
 
-    List<Country> getAll();
+    default List<Country> getAll(){
+        return getAll(null, null);
+    }
+    List<Country> getAll(Integer page, Integer pageSize);
 
     Optional<Country> getByAlpha(String alpha);
 

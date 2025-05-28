@@ -39,8 +39,15 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
     }
 
     @Override
-    public List<CountryJson> findAll() {
-        return countries.values().stream().toList();
+    public List<CountryJson> findAll(Integer page, Integer pageSize) {
+        if (page == null || pageSize == null) {
+            return findAllNoLimit();
+        }
+
+        return countries.values().stream()
+                .skip((long) (page - 1) * pageSize)
+                .limit(pageSize)
+                .toList();
     }
 
     @Override
@@ -134,6 +141,10 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
                 .filter(country -> country.getRegionalBlocs() != null && country.getRegionalBlocs().stream()
                         .anyMatch(bloc -> bloc.isAlternativeName(regionalBloc)))
                 .toList();
+    }
+
+    private List<CountryJson> findAllNoLimit() {
+        return countries.values().stream().toList();
     }
 
     private boolean containsIgnoreCase(String str, String searchStr) {

@@ -6,7 +6,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CountryJsonRepository {
-    List<CountryJson> findAll();
+
+    default List<CountryJson> findAll(){
+        return findAll(null, null);
+    }
+
+    List<CountryJson> findAll(Integer page, Integer pageSize);
 
     Optional<CountryJson> findByAlpha2Code(String code);
 

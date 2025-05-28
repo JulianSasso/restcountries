@@ -22,9 +22,13 @@ public class MongoDbCountryRepository implements CountryRepository {
     private final CountryDocumentMapper mapper;
 
     @Override
-    public List<Country> findAll() {
-        //Pageable pageable = PageRequest.of(20 / 10, 10, Sort.by("name").ascending());
-        return mongoRepository.findAll(/*pageable*/)
+    public List<Country> findAll(Integer page, Integer pageSize) {
+        if(page == null || pageSize == null) {
+            return findAllNoLimit();
+        }
+
+        Pageable pageable = PageRequest.of(page, pageSize, Sort.by("name").ascending());
+        return mongoRepository.findAll(pageable)
                 .stream()
                 .map(mapper::toDomain)
                 .toList();
@@ -120,6 +124,13 @@ public class MongoDbCountryRepository implements CountryRepository {
     @Override
     public List<Country> findByRegionalBloc(String regionalBloc) {
         return mongoRepository.findByRegionalBlocFlexible(regionalBloc)
+                .stream()
+                .map(mapper::toDomain)
+                .toList();
+    }
+
+    private List<Country> findAllNoLimit() {
+        return mongoRepository.findAll()
                 .stream()
                 .map(mapper::toDomain)
                 .toList();
