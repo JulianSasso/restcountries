@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.List;
 import java.util.Set;
 
@@ -24,7 +26,7 @@ public class CountryController implements CountryApi {
 
     @Override
     @GetMapping("all")
-    public ResponseEntity<List<CountryResponse>> getAllCountries(String fields) {
+    public ResponseEntity<List<CountryResponse>> getAllCountries(String fields, @Min(1) Integer page, @Min(1) @Max(50) Integer pageSize) {
         return ResponseEntity.ok(countryService.getAll()
                 .stream()
                 .map(countryMapper::toResponse)
@@ -37,7 +39,6 @@ public class CountryController implements CountryApi {
         if(codes == null || codes.isEmpty()) {
             return ResponseEntity.badRequest().build();
         }
-
         Set<String> codeSet = Set.of(codes.split(";"));
         return ResponseEntity.ok(countryService.getByAlphaCodeList(codeSet)
                 .stream()

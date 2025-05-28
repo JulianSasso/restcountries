@@ -14,6 +14,22 @@ paths:
         - country
       parameters:
         - $ref: '#/components/parameters/fieldsParam'
+        - name: page
+          in: query
+          description: Page number (must be greater than 0)
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+        - name: pageSize
+          in: query
+          description: Number of results per page (must be > 0 and < 50)
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+
       responses:
         '200':
           description: A list of all countries

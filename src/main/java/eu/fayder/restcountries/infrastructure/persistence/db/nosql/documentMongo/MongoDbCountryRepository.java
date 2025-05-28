@@ -4,6 +4,9 @@ import eu.fayder.restcountries.domain.CountryRepository;
 import eu.fayder.restcountries.domain.country.Country;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 
 import java.text.Normalizer;
@@ -20,7 +23,8 @@ public class MongoDbCountryRepository implements CountryRepository {
 
     @Override
     public List<Country> findAll() {
-        return mongoRepository.findAll()
+        //Pageable pageable = PageRequest.of(20 / 10, 10, Sort.by("name").ascending());
+        return mongoRepository.findAll(/*pageable*/)
                 .stream()
                 .map(mapper::toDomain)
                 .toList();
