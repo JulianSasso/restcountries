@@ -1,0 +1,817 @@
+[
+    {
+        "name": "Aruba",
+        "topLevelDomain": [
+            ".aw"
+        ],
+        "alpha2Code": "AW",
+        "alpha3Code": "ABW",
+        "callingCodes": [
+            "297"
+        ],
+        "capital": "Oranjestad",
+        "altSpellings": [
+            "AW"
+        ],
+        "region": "Americas",
+        "subregion": "Caribbean",
+        "population": 106766,
+        "latlng": [
+            12.5,
+            -69.96666666
+        ],
+        "demonym": "Aruban",
+        "area": 180.0,
+        "gini": null,
+        "timezones": [
+            "UTC-04:00"
+        ],
+        "borders": [],
+        "nativeName": "Aruba",
+        "numericCode": "533",
+        "currencies": [
+            {
+                "code": "AWG",
+                "name": "Aruban florin",
+                "symbol": "ƒ"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "nl",
+                "iso639_2": "nld",
+                "name": "Dutch",
+                "nativeName": "Nederlands"
+            },
+            {
+                "iso639_1": "",
+                "iso639_2": "pap",
+                "name": "Papiamento",
+                "nativeName": "Papiamentu"
+            }
+        ],
+        "translations": {
+            "br": "Aruba",
+            "de": "Aruba",
+            "es": "Aruba",
+            "fa": "آروبا",
+            "fr": "Aruba",
+            "hr": "Aruba",
+            "it": "Aruba",
+            "ja": "アルバ",
+            "nl": "Aruba",
+            "pt": "Aruba",
+            "pl": "Aruba",
+            "cs": "Aruba",
+            "ru": "Aruba",
+            "zh": "阿鲁巴",
+            "hu": "Aruba",
+            "se": "Aruba"
+        },
+        "flag": "https://restcountries.eu/data/abw.svg",
+        "regionalBlocs": [],
+        "cioc": "ARU"
+    },
+    {
+        "name": "Afghanistan",
+        "topLevelDomain": [
+            ".af"
+        ],
+        "alpha2Code": "AF",
+        "alpha3Code": "AFG",
+        "callingCodes": [
+            "93"
+        ],
+        "capital": "Kabul",
+        "altSpellings": [
+            "AF",
+            "Afġānistān"
+        ],
+        "region": "Asia",
+        "subregion": "Southern Asia",
+        "population": 38928341,
+        "latlng": [
+            33.0,
+            65.0
+        ],
+        "demonym": "Afghan",
+        "area": 652230.0,
+        "gini": 27.8,
+        "timezones": [
+            "UTC+04:30"
+        ],
+        "borders": [
+            "IRN",
+            "PAK",
+            "TKM",
+            "UZB",
+            "TJK",
+            "CHN"
+        ],
+        "nativeName": "افغانستان",
+        "numericCode": "004",
+        "currencies": [
+            {
+                "code": "AFN",
+                "name": "Afghan afghani",
+                "symbol": "؋"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ps",
+                "iso639_2": "pus",
+                "name": "Pashto",
+                "nativeName": "پښتو"
+            },
+            {
+                "iso639_1": "uz",
+                "iso639_2": "uzb",
+                "name": "Uzbek",
+                "nativeName": "Oʻzbek"
+            },
+            {
+                "iso639_1": "tk",
+                "iso639_2": "tuk",
+                "name": "Turkmen",
+                "nativeName": "Türkmen"
+            }
+        ],
+        "translations": {
+            "br": "Afeganistão",
+            "de": "Afghanistan",
+            "es": "Afganistán",
+            "fa": "افغانستان",
+            "fr": "Afghanistan",
+            "hr": "Afganistan",
+            "it": "Afghanistan",
+            "ja": "アフガニスタン",
+            "nl": "Afghanistan",
+            "pt": "Afeganistão",
+            "ru": "Афганистан",
+            "pl": "Afganistan",
+            "cs": "Afgánistán",
+            "zh": "阿富汗伊斯兰共和国",
+            "hu": "Afganisztán",
+            "se": "Afghanistan"
+        },
+        "flag": "https://restcountries.eu/data/afg.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "SAARC",
+                "name": "South Asian Association for Regional Cooperation",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "AFG"
+    },
+    {
+        "name": "Angola",
+        "topLevelDomain": [
+            ".ao"
+        ],
+        "alpha2Code": "AO",
+        "alpha3Code": "AGO",
+        "callingCodes": [
+            "244"
+        ],
+        "capital": "Luanda",
+        "altSpellings": [
+            "AO",
+            "República de Angola",
+            "ʁɛpublika de an'ɡɔla"
+        ],
+        "region": "Africa",
+        "subregion": "Middle Africa",
+        "population": 32866268,
+        "latlng": [
+            -12.5,
+            18.5
+        ],
+        "demonym": "Angolan",
+        "area": 1246700.0,
+        "gini": 58.6,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "COG",
+            "COD",
+            "ZMB",
+            "NAM"
+        ],
+        "nativeName": "Angola",
+        "numericCode": "024",
+        "currencies": [
+            {
+                "code": "AOA",
+                "name": "Angolan kwanza",
+                "symbol": "Kz"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "pt",
+                "iso639_2": "por",
+                "name": "Portuguese",
+                "nativeName": "Português"
+            }
+        ],
+        "translations": {
+            "br": "Angola",
+            "de": "Angola",
+            "es": "Angola",
+            "fa": "آنگولا",
+            "fr": "Angola",
+            "hr": "Angola",
+            "it": "Angola",
+            "ja": "アンゴラ",
+            "nl": "Angola",
+            "pt": "Angola",
+            "ru": "Ангола",
+            "pl": "Angola",
+            "cs": "Angola",
+            "zh": "安哥拉共和国",
+            "hu": "Angola",
+            "se": "Angola"
+        },
+        "flag": "https://restcountries.eu/data/ago.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AU",
+                "name": "African Union",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "الاتحاد الأفريقي",
+                    "Union africaine",
+                    "União Africana",
+                    "Unión Africana",
+                    "Umoja wa Afrika"
+                ]
+            }
+        ],
+        "cioc": "ANG"
+    },
+    {
+        "name": "Anguilla",
+        "topLevelDomain": [
+            ".ai"
+        ],
+        "alpha2Code": "AI",
+        "alpha3Code": "AIA",
+        "callingCodes": [
+            "1"
+        ],
+        "capital": "The Valley",
+        "altSpellings": [
+            "AI"
+        ],
+        "region": "Americas",
+        "subregion": "Caribbean",
+        "population": 13452,
+        "latlng": [
+            18.25,
+            -63.16666666
+        ],
+        "demonym": "Anguillian",
+        "area": 91.0,
+        "gini": null,
+        "timezones": [
+            "UTC-04:00"
+        ],
+        "borders": [],
+        "nativeName": "Anguilla",
+        "numericCode": "660",
+        "currencies": [
+            {
+                "code": "XCD",
+                "name": "East Caribbean dollar",
+                "symbol": "$"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "en",
+                "iso639_2": "eng",
+                "name": "English",
+                "nativeName": "English"
+            }
+        ],
+        "translations": {
+            "br": "Anguila",
+            "de": "Anguilla",
+            "es": "Anguilla",
+            "fa": "آنگویلا",
+            "fr": "Anguilla",
+            "hr": "Angvila",
+            "it": "Anguilla",
+            "ja": "アンギラ",
+            "nl": "Anguilla",
+            "pt": "Anguila",
+            "pl": "Anguilla",
+            "cs": "Anguilla",
+            "ru": "Anguilla",
+            "zh": "安圭拉",
+            "hu": "Anguilla",
+            "se": "Anguilla"
+        },
+        "flag": "https://restcountries.eu/data/aia.svg",
+        "regionalBlocs": [],
+        "cioc": ""
+    },
+    {
+        "name": "Åland Islands",
+        "topLevelDomain": [
+            ".ax"
+        ],
+        "alpha2Code": "AX",
+        "alpha3Code": "ALA",
+        "callingCodes": [
+            "358"
+        ],
+        "capital": "Mariehamn",
+        "altSpellings": [
+            "AX",
+            "Aaland",
+            "Aland",
+            "Ahvenanmaa"
+        ],
+        "region": "Europe",
+        "subregion": "Northern Europe",
+        "population": 28875,
+        "latlng": [
+            60.116667,
+            19.9
+        ],
+        "demonym": "Ålandish",
+        "area": 1580.0,
+        "gini": null,
+        "timezones": [
+            "UTC+02:00"
+        ],
+        "borders": [],
+        "nativeName": "Åland",
+        "numericCode": "248",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sv",
+                "iso639_2": "swe",
+                "name": "Swedish",
+                "nativeName": "svenska"
+            }
+        ],
+        "translations": {
+            "br": "Ilhas de Aland",
+            "de": "Åland",
+            "es": "Alandia",
+            "fa": "جزایر الند",
+            "fr": "Åland",
+            "hr": "Ålandski otoci",
+            "it": "Isole Aland",
+            "ja": "オーランド諸島",
+            "nl": "Ålandeilanden",
+            "pt": "Ilhas de Aland",
+            "pl": "Wyspy Alandzkie",
+            "cs": "Ålandy",
+            "ru": "Åland Islands",
+            "zh": "奥兰群岛",
+            "hu": "Åland-szigetek",
+            "se": "Åland"
+        },
+        "flag": "https://restcountries.eu/data/ala.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EU",
+                "name": "European Union",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": ""
+    },
+    {
+        "name": "Albania",
+        "topLevelDomain": [
+            ".al"
+        ],
+        "alpha2Code": "AL",
+        "alpha3Code": "ALB",
+        "callingCodes": [
+            "355"
+        ],
+        "capital": "Tirana",
+        "altSpellings": [
+            "AL",
+            "Shqipëri",
+            "Shqipëria",
+            "Shqipnia"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 2837743,
+        "latlng": [
+            41.0,
+            20.0
+        ],
+        "demonym": "Albanian",
+        "area": 28748.0,
+        "gini": 34.5,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "MNE",
+            "GRC",
+            "MKD",
+            "UNK"
+        ],
+        "nativeName": "Shqipëria",
+        "numericCode": "008",
+        "currencies": [
+            {
+                "code": "ALL",
+                "name": "Albanian lek",
+                "symbol": "L"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "sq",
+                "iso639_2": "sqi",
+                "name": "Albanian",
+                "nativeName": "Shqip"
+            }
+        ],
+        "translations": {
+            "br": "Albânia",
+            "de": "Albanien",
+            "es": "Albania",
+            "fa": "آلبانی",
+            "fr": "Albanie",
+            "hr": "Albanija",
+            "it": "Albania",
+            "ja": "アルバニア",
+            "nl": "Albanië",
+            "pt": "Albânia",
+            "ru": "Албания",
+            "pl": "Albania",
+            "cs": "Albánie",
+            "zh": "阿尔巴尼亚共和国",
+            "hu": "Albánia",
+            "se": "Albanien"
+        },
+        "flag": "https://restcountries.eu/data/alb.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "CEFTA",
+                "name": "Central European Free Trade Agreement",
+                "otherAcronyms": [],
+                "otherNames": []
+            }
+        ],
+        "cioc": "ALB"
+    },
+    {
+        "name": "Andorra",
+        "topLevelDomain": [
+            ".ad"
+        ],
+        "alpha2Code": "AD",
+        "alpha3Code": "AND",
+        "callingCodes": [
+            "376"
+        ],
+        "capital": "Andorra la Vella",
+        "altSpellings": [
+            "AD",
+            "Principality of Andorra",
+            "Principat d'Andorra"
+        ],
+        "region": "Europe",
+        "subregion": "Southern Europe",
+        "population": 77265,
+        "latlng": [
+            42.5,
+            1.5
+        ],
+        "demonym": "Andorran",
+        "area": 468.0,
+        "gini": null,
+        "timezones": [
+            "UTC+01:00"
+        ],
+        "borders": [
+            "FRA",
+            "ESP"
+        ],
+        "nativeName": "Andorra",
+        "numericCode": "020",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ca",
+                "iso639_2": "cat",
+                "name": "Catalan",
+                "nativeName": "català"
+            }
+        ],
+        "translations": {
+            "br": "Andorra",
+            "de": "Andorra",
+            "es": "Andorra",
+            "fa": "آندورا",
+            "fr": "Andorre",
+            "hr": "Andora",
+            "it": "Andorra",
+            "ja": "アンドラ",
+            "nl": "Andorra",
+            "pt": "Andorra",
+            "ru": "Андорра",
+            "pl": "Andora",
+            "cs": "Andorra",
+            "zh": "安道尔公国",
+            "hu": "Andorra",
+            "se": "Andorra"
+        },
+        "flag": "https://restcountries.eu/data/and.svg",
+        "regionalBlocs": [],
+        "cioc": "AND"
+    },
+    {
+        "name": "United Arab Emirates",
+        "topLevelDomain": [
+            ".ae"
+        ],
+        "alpha2Code": "AE",
+        "alpha3Code": "ARE",
+        "callingCodes": [
+            "971"
+        ],
+        "capital": "Abu Dhabi",
+        "altSpellings": [
+            "AE",
+            "UAE"
+        ],
+        "region": "Asia",
+        "subregion": "Western Asia",
+        "population": 9890400,
+        "latlng": [
+            24.0,
+            54.0
+        ],
+        "demonym": "Emirati",
+        "area": 83600.0,
+        "gini": null,
+        "timezones": [
+            "UTC+04"
+        ],
+        "borders": [
+            "OMN",
+            "SAU"
+        ],
+        "nativeName": "دولة الإمارات العربية المتحدة",
+        "numericCode": "784",
+        "currencies": [
+            {
+                "code": "AED",
+                "name": "United Arab Emirates dirham",
+                "symbol": "د.إ"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "ar",
+                "iso639_2": "ara",
+                "name": "Arabic",
+                "nativeName": "العربية"
+            }
+        ],
+        "translations": {
+            "br": "Emirados árabes Unidos",
+            "de": "Vereinigte Arabische Emirate",
+            "es": "Emiratos Árabes Unidos",
+            "fa": "امارات متحده عربی",
+            "fr": "Émirats arabes unis",
+            "hr": "Ujedinjeni Arapski Emirati",
+            "it": "Emirati Arabi Uniti",
+            "ja": "アラブ首長国連邦",
+            "nl": "Verenigde Arabische Emiraten",
+            "pt": "Emirados árabes Unidos",
+            "ru": "ОАЭ",
+            "pl": "Zjednoczone Emiraty Arabskie",
+            "cs": "Spojené arabské emiráty",
+            "zh": "阿拉伯联合酋长国",
+            "hu": "Egyesült Arab Emírségek",
+            "se": "Förenade Arabemiraten"
+        },
+        "flag": "https://restcountries.eu/data/are.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "AL",
+                "name": "Arab League",
+                "otherAcronyms": [],
+                "otherNames": [
+                    "جامعة الدول العربية",
+                    "Jāmiʻat ad-Duwal al-ʻArabīyah",
+                    "League of Arab States"
+                ]
+            }
+        ],
+        "cioc": "UAE"
+    },
+    {
+        "name": "Argentina",
+        "topLevelDomain": [
+            ".ar"
+        ],
+        "alpha2Code": "AR",
+        "alpha3Code": "ARG",
+        "callingCodes": [
+            "54"
+        ],
+        "capital": "Buenos Aires",
+        "altSpellings": [
+            "AR",
+            "Argentine Republic",
+            "República Argentina"
+        ],
+        "region": "Americas",
+        "subregion": "South America",
+        "population": 45376763,
+        "latlng": [
+            -34.0,
+            -64.0
+        ],
+        "demonym": "Argentinean",
+        "area": 2780400.0,
+        "gini": 44.5,
+        "timezones": [
+            "UTC-03:00"
+        ],
+        "borders": [
+            "BOL",
+            "BRA",
+            "CHL",
+            "PRY",
+            "URY"
+        ],
+        "nativeName": "Argentina",
+        "numericCode": "032",
+        "currencies": [
+            {
+                "code": "ARS",
+                "name": "Argentine peso",
+                "symbol": "$"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "es",
+                "iso639_2": "spa",
+                "name": "Spanish",
+                "nativeName": "Español"
+            },
+            {
+                "iso639_1": "gn",
+                "iso639_2": "grn",
+                "name": "Guaraní",
+                "nativeName": "Avañe'ẽ"
+            }
+        ],
+        "translations": {
+            "br": "Argentina",
+            "de": "Argentinien",
+            "es": "Argentina",
+            "fa": "آرژانتین",
+            "fr": "Argentine",
+            "hr": "Argentina",
+            "it": "Argentina",
+            "ja": "アルゼンチン",
+            "nl": "Argentinië",
+            "pt": "Argentina",
+            "ru": "Аргентина",
+            "pl": "Argentyna",
+            "cs": "Argentina",
+            "zh": "阿根廷共和国",
+            "hu": "Argentína",
+            "se": "Argentina"
+        },
+        "flag": "https://restcountries.eu/data/arg.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "USAN",
+                "name": "Union of South American Nations",
+                "otherAcronyms": [
+                    "UNASUR",
+                    "UNASUL",
+                    "UZAN"
+                ],
+                "otherNames": [
+                    "Unión de Naciones Suramericanas",
+                    "União de Nações Sul-Americanas",
+                    "Unie van Zuid-Amerikaanse Naties",
+                    "South American Union"
+                ]
+            }
+        ],
+        "cioc": "ARG"
+    },
+    {
+        "name": "Armenia",
+        "topLevelDomain": [
+            ".am"
+        ],
+        "alpha2Code": "AM",
+        "alpha3Code": "ARM",
+        "callingCodes": [
+            "374"
+        ],
+        "capital": "Yerevan",
+        "altSpellings": [
+            "AM",
+            "Hayastan",
+            "Republic of Armenia",
+            "Հայաստանի Հանրապետություն"
+        ],
+        "region": "Asia",
+        "subregion": "Western Asia",
+        "population": 2963234,
+        "latlng": [
+            40.0,
+            45.0
+        ],
+        "demonym": "Armenian",
+        "area": 29743.0,
+        "gini": 30.9,
+        "timezones": [
+            "UTC+04:00"
+        ],
+        "borders": [
+            "AZE",
+            "GEO",
+            "IRN",
+            "TUR"
+        ],
+        "nativeName": "Հայաստան",
+        "numericCode": "051",
+        "currencies": [
+            {
+                "code": "AMD",
+                "name": "Armenian dram",
+                "symbol": "֏"
+            }
+        ],
+        "languages": [
+            {
+                "iso639_1": "hy",
+                "iso639_2": "hye",
+                "name": "Armenian",
+                "nativeName": "Հայերեն"
+            }
+        ],
+        "translations": {
+            "br": "Armênia",
+            "de": "Armenien",
+            "es": "Armenia",
+            "fa": "ارمنستان",
+            "fr": "Arménie",
+            "hr": "Armenija",
+            "it": "Armenia",
+            "ja": "アルメニア",
+            "nl": "Armenië",
+            "pt": "Arménia",
+            "ru": "Армения",
+            "pl": "Armenia",
+            "cs": "Arménie",
+            "zh": "亚美尼亚共和国",
+            "hu": "Örményország",
+            "se": "Armenien"
+        },
+        "flag": "https://restcountries.eu/data/arm.svg",
+        "regionalBlocs": [
+            {
+                "acronym": "EEU",
+                "name": "Eurasian Economic Union",
+                "otherAcronyms": [
+                    "EAEU"
+                ],
+                "otherNames": []
+            }
+        ],
+        "cioc": "ARM"
+    }
+]

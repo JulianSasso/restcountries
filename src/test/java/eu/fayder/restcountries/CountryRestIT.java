@@ -39,6 +39,28 @@ public class CountryRestIT {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
+    public void testGetFirst10Countries() throws JsonProcessingException {
+        // Arrange
+        int pageParam = 1;
+        int pageSizeParam = 10;
+        String url = "http://localhost:%d/rest/v2/all?page=%d&pageSize=%d".formatted(port, pageParam, pageSizeParam);
+        String expectedJson = JsonTestUtils.loadFileContent("expected/10FirstCountries.json");
+
+        // Act
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
+        // Assert
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isNotNull();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for first 10 countries")
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children")
+                .isEqualTo(parseJsonNode(expectedJson));
+    }
+
+    @Test
     public void testGetByAlpha2IsoCode() throws JsonProcessingException {
         // Arrange
         String code = "ar";
@@ -75,6 +97,28 @@ public class CountryRestIT {
 
         Assertions.assertThat(parseJsonNode(response.getBody()))
                 .as("Comparing fields for country with alpha3Code '%s'", code.toUpperCase())
+                .usingRecursiveComparison()
+                .withStrictTypeChecking()
+                .ignoringFields("_children.translations._children")
+                .isEqualTo(parseJsonNode(expectedJson));
+    }
+
+    @Test
+    public void testGetByDemonym() throws JsonProcessingException {
+        // Arrange
+        String demonym = "Estonian";
+        String url = "http://localhost:" + port + "/rest/v2/demonym/" + demonym;
+        String expectedJson = JsonTestUtils.loadFileContent("expected/estoniaInArray.json");
+
+
+        // Act
+        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
+
+        // Assert
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isNotNull();
+        Assertions.assertThat(parseJsonNode(response.getBody()))
+                .as("Comparing fields for country with demonym '%s'", demonym)
                 .usingRecursiveComparison()
                 .withStrictTypeChecking()
                 .ignoringFields("_children.translations._children")
@@ -274,10 +318,6 @@ public class CountryRestIT {
                 .isEqualTo(parseJsonNode(expectedJson));
     }
 
-    private Map<String, Object> parseJson(String json) throws JsonProcessingException {
-        return objectMapper.readValue(json, new TypeReference<>() {
-        });
-    }
 
     private JsonNode parseJsonNode(String json) throws JsonProcessingException {
         return objectMapper.readTree(json);

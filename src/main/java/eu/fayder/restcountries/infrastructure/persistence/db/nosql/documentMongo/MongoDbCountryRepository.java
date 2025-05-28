@@ -27,7 +27,7 @@ public class MongoDbCountryRepository implements CountryRepository {
             return findAllNoLimit();
         }
 
-        Pageable pageable = PageRequest.of(page, pageSize, Sort.by("name").ascending());
+        Pageable pageable = PageRequest.of(page-1, pageSize, Sort.by("alpha3Code").ascending());
         return mongoRepository.findAll(pageable)
                 .stream()
                 .map(mapper::toDomain)

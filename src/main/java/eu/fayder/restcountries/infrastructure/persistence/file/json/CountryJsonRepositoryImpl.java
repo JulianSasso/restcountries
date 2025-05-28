@@ -2,11 +2,11 @@ package eu.fayder.restcountries.infrastructure.persistence.file.json;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import eu.fayder.restcountries.boot.config.JsonFileProperties;
 import eu.fayder.restcountries.infrastructure.persistence.file.json.country.CountryJson;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import eu.fayder.restcountries.boot.config.JsonFileProperties;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
@@ -14,6 +14,7 @@ import java.text.Normalizer;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -30,9 +31,15 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             InputStream is = getClass().getClassLoader().getResourceAsStream(properties.getFilePath());
-            List<CountryJson> countryList = objectMapper.readValue(is, new TypeReference<>() {});
+            List<CountryJson> countryList = objectMapper.readValue(is, new TypeReference<>() {
+            });
             countries = countryList.stream()
-                .collect(Collectors.toMap(countryJson -> countryJson.getAlpha3Code().toUpperCase(), Function.identity()));
+                    .collect(Collectors.toMap(
+                            countryJson -> countryJson.getAlpha3Code().toUpperCase(),
+                            Function.identity(),
+                            (a, b) -> a, // en caso de claves duplicadas, quedate con el primero
+                            TreeMap::new // <-- esta es la clave: usar TreeMap para ordenar por clave
+                    ));
         } catch (Exception e) {
             throw new RuntimeException("Error loading countries JSON", e);
         }
@@ -44,9 +51,11 @@ public class CountryJsonRepositoryImpl implements CountryJsonRepository {
             return findAllNoLimit();
         }
 
-        return countries.values().stream()
+        return countries.entrySet().stream()
+                //.sorted(Map.Entry.comparingByValue(Comparator.comparing(CountryJson::getAlpha3Code)))
                 .skip((long) (page - 1) * pageSize)
                 .limit(pageSize)
+                .map(Map.Entry::getValue)
                 .toList();
     }
 
